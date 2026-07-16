@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Clapperboard, Target } from "lucide-react";
+import { ChevronLeft, ChevronRight, Layers, Compass } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 import s1 from "@/assets/av-step-1.jpg";
@@ -20,42 +20,42 @@ type Etapa = {
 const etapas: Etapa[] = [
   {
     tempId: 0,
-    nome: "Posicionamento de Diretor",
-    descricao: "Sai da categoria fornecedor de captação e entra na de consultor de narrativa. Bio, portfólio e primeira mensagem reformulados.",
+    nome: "Diagnóstico Individual",
+    descricao: "Mapeamos como você recebe, em quais moedas, quais custos enfrenta e o nível atual de familiaridade com Web3.",
     etapa: "Etapa 1",
-    foco: "Posicionamento",
+    foco: "Diagnóstico",
     img: s1,
   },
   {
     tempId: 1,
-    nome: "Briefing de Diagnóstico",
-    descricao: "Doze perguntas que fazem o cliente explicar o problema. Quem faz a pergunta certa controla o preço da reunião.",
+    nome: "Acesso",
+    descricao: "Caminhos para entrada e saída de recursos — receber em reais ou moeda estrangeira, converter para stablecoins e reduzir etapas.",
     etapa: "Etapa 2",
-    foco: "Diagnóstico",
+    foco: "Recebimento",
     img: s2,
   },
   {
     tempId: 2,
-    nome: "Apresentação Cinematográfica",
-    descricao: "Transforma orçamento de planilha em proposta narrativa que o cliente lê até o fim e responde no mesmo dia.",
+    nome: "Autocustódia",
+    descricao: "Estrutura segura para controle dos próprios ativos: carteiras, senhas, frases de recuperação, Trezor e prevenção contra golpes.",
     etapa: "Etapa 3",
-    foco: "Proposta",
+    foco: "Segurança",
     img: s3,
   },
   {
     tempId: 3,
-    nome: "Negociação que Filtra",
-    descricao: "Roteiro de objeção testado em mais de 400 reuniões. A resposta certa para tá caro, vou pensar e vou comparar.",
+    nome: "Alocação",
+    descricao: "Stablecoins, DeFi, protocolos, origem de rendimentos, riscos de contrato e critérios reais para avaliar estratégias.",
     etapa: "Etapa 4",
-    foco: "Fechamento",
+    foco: "Educação",
     img: s4,
   },
   {
     tempId: 4,
-    nome: "Pauta Renovável",
-    descricao: "Transforma cliente único em recorrente. Contrato anual, gatilhos de renovação e pós que cria o próximo projeto.",
+    nome: "Autonomia",
+    descricao: "Integração com LiberWallet, LiberPass, cartões internacionais e rotinas de segurança na sua vida financeira.",
     etapa: "Etapa 5",
-    foco: "Recorrência",
+    foco: "Integração",
     img: s5,
   },
 ];
@@ -110,7 +110,7 @@ const EtapaCard: React.FC<CardProps> = ({
         />
         <div className="flex h-2/5 flex-col justify-between p-5">
           <div>
-            <h3 className="display text-[18px] leading-tight md:text-[20px]">
+            <h3 className="display text-[22px] leading-tight md:text-[26px]">
               {etapa.nome}
             </h3>
             <p className="mt-1.5 line-clamp-2 text-[12.5px] leading-snug text-muted-foreground">
@@ -119,12 +119,12 @@ const EtapaCard: React.FC<CardProps> = ({
           </div>
           <div className="flex items-center gap-4 text-[11.5px] font-medium text-foreground/80">
             <span className="inline-flex items-center gap-1.5">
-              <Clapperboard className="size-3.5 text-ember" />
+              <Layers className="size-3.5 text-ember" />
               {etapa.etapa}
             </span>
-            
+
             <span className="inline-flex items-center gap-1.5">
-              <Target className="size-3.5 text-ember" />
+              <Compass className="size-3.5 text-ember" />
               {etapa.foco}
             </span>
           </div>

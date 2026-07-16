@@ -89,7 +89,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Receba, converta, armazene e utilize seu dinheiro com Web3, dólares digitais e autocustódia — em 3 meses de acompanhamento personalizado.",
+          "12 encontros individuais para construir uma estrutura financeira mais autônoma com stablecoins, autocustódia e ferramentas Web3.",
       },
     ],
   }),

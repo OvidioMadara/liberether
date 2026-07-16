@@ -9,13 +9,13 @@ import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
-  Clapperboard,
-  Film,
+  Layers,
   Users,
-  MessageCircle,
-  Headphones,
   Calendar,
+  Headphones,
   FileText,
+  BookOpen,
+  Compass,
 } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 
@@ -44,11 +44,11 @@ import bonus03 from "@/assets/av-bonus-3.png";
 import kit from "@/assets/av-kit.png";
 import flatlay from "@/assets/av-flatlay.jpg";
 
-import floatCamera from "@/assets/av-float-camera.png";
-import floatLens from "@/assets/av-float-lens.png";
-import floatMic from "@/assets/av-float-mic.png";
-import floatClapper from "@/assets/av-float-clapper.png";
-import floatReel from "@/assets/av-float-reel.png";
+import floatCoin from "@/assets/av-float-camera.png";
+import floatWallet from "@/assets/av-float-lens.png";
+import floatKey from "@/assets/av-float-mic.png";
+import floatShield from "@/assets/av-float-clapper.png";
+import floatStack from "@/assets/av-float-reel.png";
 
 import shameStill from "@/assets/av-shame.jpg";
 
@@ -79,17 +79,17 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Método Pauta Premium — Cobre mais por audiovisual" },
+      { title: "Mentoria Autonomia Global — LiberEther" },
       {
         name: "description",
         content:
-          "Estrutura de 5 etapas para profissionais de audiovisual cobrarem de 3 a 10x mais por projeto. O cliente decide o preço na primeira conversa, não na proposta.",
+          "12 encontros individuais para construir uma estrutura financeira mais autônoma com stablecoins, autocustódia e ferramentas Web3.",
       },
-      { property: "og:title", content: "Método Pauta Premium" },
+      { property: "og:title", content: "Mentoria Autonomia Global — LiberEther" },
       {
         property: "og:description",
         content:
-          "Quem cobra barato em audiovisual filma de graça. Aprenda a vender o projeto antes de apertar o REC.",
+          "Receba, converta, armazene e utilize seu dinheiro com Web3, dólares digitais e autocustódia — em 3 meses de acompanhamento personalizado.",
       },
     ],
   }),
@@ -130,13 +130,18 @@ function TopMark() {
   return (
     <header className="absolute inset-x-0 top-0 z-20">
       <Container className="flex items-center justify-center pt-8">
-        <img
-          src={logo}
-          alt="Método Pauta Premium"
-          width={1024}
-          height={1024}
-          className="h-12 w-auto md:h-14"
-        />
+        <div className="flex items-center gap-3">
+          <img
+            src={logo}
+            alt="LiberEther"
+            width={1024}
+            height={1024}
+            className="h-10 w-auto md:h-12"
+          />
+          <span className="font-display text-[20px] tracking-[-0.01em] text-foreground md:text-[22px]">
+            LiberEther
+          </span>
+        </div>
       </Container>
     </header>
   );
@@ -223,7 +228,7 @@ function Hero() {
           className="absolute -top-32 left-1/2 h-[640px] w-[1100px] -translate-x-1/2 rounded-full opacity-30 blur-3xl"
           style={{
             background:
-              "radial-gradient(ellipse at center, oklch(0.78 0.12 205 / 0.35), transparent 60%)",
+              "radial-gradient(ellipse at center, oklch(0.74 0.14 275 / 0.4), transparent 60%)",
           }}
         />
         <div className="absolute inset-0 grain opacity-50" />
@@ -232,38 +237,37 @@ function Hero() {
       <FloatingFood
         containerRef={heroRef}
         items={[
-          { src: floatLens, alt: "", className: "left-[3%] top-[18%] w-[110px] md:w-[150px]", depth: 0.6, rotate: -8 },
-          { src: floatClapper, alt: "", className: "right-[4%] top-[12%] w-[120px] md:w-[160px]", depth: 0.45, rotate: 14, delay: 0.1 },
-          { src: floatMic, alt: "", className: "left-[8%] bottom-[14%] w-[90px] md:w-[120px]", depth: 0.7, rotate: 12, delay: 0.15 },
-          { src: floatCamera, alt: "", className: "right-[6%] bottom-[20%] w-[120px] md:w-[160px]", depth: 0.55, rotate: -10, delay: 0.05 },
-          { src: floatReel, alt: "", className: "hidden md:block left-[12%] top-[55%] w-[110px]", depth: 0.35, rotate: -6, delay: 0.2 },
+          { src: floatWallet, alt: "", className: "left-[3%] top-[18%] w-[110px] md:w-[150px]", depth: 0.6, rotate: -8 },
+          { src: floatShield, alt: "", className: "right-[4%] top-[12%] w-[120px] md:w-[160px]", depth: 0.45, rotate: 14, delay: 0.1 },
+          { src: floatKey, alt: "", className: "left-[8%] bottom-[14%] w-[90px] md:w-[120px]", depth: 0.7, rotate: 12, delay: 0.15 },
+          { src: floatCoin, alt: "", className: "right-[6%] bottom-[20%] w-[120px] md:w-[160px]", depth: 0.55, rotate: -10, delay: 0.05 },
+          { src: floatStack, alt: "", className: "hidden md:block left-[12%] top-[55%] w-[110px]", depth: 0.35, rotate: -6, delay: 0.2 },
         ]}
       />
 
       <Container className="relative z-10">
-        <div className="fade-up mx-auto max-w-[900px] text-center">
-          <h1 className="display display-tight text-balance text-[34px] sm:text-[48px] md:text-[64px]">
-            Quem domina a{" "}
+        <div className="fade-up mx-auto max-w-[920px] text-center">
+          <h1 className="display display-tight text-balance text-[36px] sm:text-[52px] md:text-[68px]">
+            Construa uma estrutura financeira mais{" "}
             <AnimatedTextCycle
-              words={["pauta", "proposta", "negociação", "narrativa", "recorrência"]}
+              words={["autônoma", "segura", "internacional", "resiliente", "sua"]}
               interval={2600}
-              className="text-ember"
+              className="italic text-ember"
             />{" "}
-            cobra caro em audiovisual.
+            em 12 encontros individuais.
           </h1>
 
-          <p className="mx-auto mt-7 max-w-[680px] text-pretty text-[16px] leading-relaxed text-muted-foreground md:text-[17.5px]">
-            O mercado audiovisual brasileiro cresceu 38% nos últimos três anos,
-            o preço médio de diária caiu pela metade, e quem aprendeu a vender o
-            projeto antes de apertar o REC fatura por mês o que o concorrente
-            fatura por semestre.
+          <p className="mx-auto mt-7 max-w-[720px] text-pretty text-[16px] leading-relaxed text-muted-foreground md:text-[17.5px]">
+            Aprenda a receber, converter, armazenar e utilizar seu dinheiro com
+            stablecoins, autocustódia e ferramentas Web3, por meio de um
+            acompanhamento personalizado durante três meses.
           </p>
 
-          <ul className="mx-auto mt-10 grid max-w-[960px] gap-3 text-left sm:grid-cols-3">
+          <ul className="mx-auto mt-10 grid max-w-[980px] gap-3 text-left sm:grid-cols-3">
             {[
-              "Cada orçamento mandado em três linhas no WhatsApp é uma chance de perder R$ 25 mil sem entrar na sala.",
-              "Concorrente que filma de celular fecha o trabalho que era seu porque domina venda, não captação.",
-              "Diretor de fotografia premiado fatura menos que social media iniciante por não saber precificar autoria.",
+              "Receba pagamentos nacionais e internacionais com mais flexibilidade e menos intermediários.",
+              "Converta reais ou outras moedas em dólares digitais e organize uma reserva estável.",
+              "Assuma o controle dos próprios ativos com autocustódia, Trezor e um plano de segurança real.",
             ].map((t) => (
               <li
                 key={t}
@@ -281,7 +285,7 @@ function Hero() {
           <div className="relative mx-auto aspect-video max-w-[820px] overflow-hidden rounded-3xl bg-black shadow-float">
             <img
               src={hero}
-              alt="Set de filmagem cinematográfico com câmera profissional"
+              alt="Workspace Web3 com carteira física, laptop e smartphone"
               width={1600}
               height={1024}
               className="size-full object-cover opacity-90"
@@ -289,20 +293,20 @@ function Hero() {
             <div className="pointer-events-none absolute inset-0 grid place-items-center">
               <div className="flex items-center gap-3 rounded-full bg-background/90 px-5 py-3 text-[13px] font-medium text-foreground shadow-xl ring-1 ring-ember/40 backdrop-blur">
                 <span className="grid size-7 place-items-center rounded-full bg-ember text-primary-foreground">▶</span>
-                Insira sua VSL aqui
+                Insira sua apresentação aqui
               </div>
             </div>
           </div>
         </div>
 
         <div className="fade-up mt-12 flex flex-col items-center gap-6">
-          <PrimaryCTA>Quero ver o método completo de precificação</PrimaryCTA>
+          <PrimaryCTA>Quero conhecer a mentoria</PrimaryCTA>
           <div className="flex items-center gap-6 text-[12.5px] text-muted-foreground">
             <span className="inline-flex items-center gap-2">
               <ShieldCheck className="size-3.5 text-ember" />
-              15 dias de garantia incondicional
+              Compromisso contratual de entrega
             </span>
-            
+
             <span className="inline-flex items-center gap-2.5">
               <div className="flex -space-x-2">
                 {[avatarA, avatarB, avatarC, avatarD].map((src, i) => (
@@ -312,7 +316,7 @@ function Hero() {
                   </Avatar>
                 ))}
               </div>
-              Profissionais aplicando em todo o Brasil
+              Profissionais construindo autonomia com a LiberEther
             </span>
           </div>
         </div>
@@ -341,23 +345,24 @@ function AnatomiaMarmita() {
       <FloatingFood
         containerRef={sectionRef}
         items={[
-          { src: floatLens, alt: "", className: "left-[2%] top-[14%] w-[120px] md:w-[160px]", depth: 0.55, rotate: -14 },
-          { src: floatMic, alt: "", className: "right-[3%] top-[10%] w-[90px] md:w-[130px]", depth: 0.4, rotate: 12, delay: 0.1 },
-          { src: floatCamera, alt: "", className: "right-[6%] bottom-[12%] w-[120px] md:w-[160px]", depth: 0.65, rotate: -8, delay: 0.15 },
-          { src: floatClapper, alt: "", className: "left-[5%] bottom-[16%] w-[120px] md:w-[160px]", depth: 0.5, rotate: 18, delay: 0.2 },
-          { src: floatReel, alt: "", className: "hidden md:block left-[18%] top-[58%] w-[100px]", depth: 0.3, rotate: -22, delay: 0.25 },
+          { src: floatWallet, alt: "", className: "left-[2%] top-[14%] w-[120px] md:w-[160px]", depth: 0.55, rotate: -14 },
+          { src: floatKey, alt: "", className: "right-[3%] top-[10%] w-[90px] md:w-[130px]", depth: 0.4, rotate: 12, delay: 0.1 },
+          { src: floatCoin, alt: "", className: "right-[6%] bottom-[12%] w-[120px] md:w-[160px]", depth: 0.65, rotate: -8, delay: 0.15 },
+          { src: floatShield, alt: "", className: "left-[5%] bottom-[16%] w-[120px] md:w-[160px]", depth: 0.5, rotate: 18, delay: 0.2 },
+          { src: floatStack, alt: "", className: "hidden md:block left-[18%] top-[58%] w-[100px]", depth: 0.3, rotate: -22, delay: 0.25 },
         ]}
       />
 
       <Container className="relative z-10">
-        <div className="mx-auto max-w-[720px] text-center">
-          <h2 className="display display-tight text-balance text-[36px] md:text-[56px]">
-            5 etapas. 4 a 10 semanas. De 3 a 12x mais por projeto.
+        <div className="mx-auto max-w-[760px] text-center">
+          <h2 className="display display-tight text-balance text-[38px] md:text-[60px]">
+            Uma estrutura construída para a sua realidade — não uma fórmula genérica.
           </h2>
-          <p className="mx-auto mt-5 max-w-[600px] text-[16px] leading-relaxed text-muted-foreground md:text-[17px]">
-            O cliente decide o preço do seu projeto na primeira conversa, não na
-            proposta. Quando você manda orçamento, a decisão já foi tomada. O
-            método inverte a ordem da conversa, não o seu equipamento.
+          <p className="mx-auto mt-5 max-w-[640px] text-[16px] leading-relaxed text-muted-foreground md:text-[17px]">
+            Você não precisa aprender tudo sobre Web3. Precisa aprender o que
+            faz sentido para você. A partir do diagnóstico inicial, os 12
+            encontros são organizados para desenvolver a estrutura mais adequada
+            ao seu caso.
           </p>
         </div>
 
@@ -367,12 +372,12 @@ function AnatomiaMarmita() {
             className="absolute inset-10 rounded-full opacity-60 blur-3xl"
             style={{
               background:
-                "radial-gradient(ellipse at center, oklch(0.78 0.12 205 / 0.4), transparent 70%)",
+                "radial-gradient(ellipse at center, oklch(0.74 0.14 275 / 0.45), transparent 70%)",
             }}
           />
           <motion.img
             src={kit}
-            alt="Os componentes do Método Pauta Premium"
+            alt="Ecossistema LiberEther — Trezor, LiberWallet, notebook"
             width={1024}
             height={1024}
             loading="lazy"
@@ -387,17 +392,17 @@ function AnatomiaMarmita() {
         {/* phase chips */}
         <div className="relative mx-auto mt-12 grid max-w-[820px] grid-cols-2 gap-3 md:grid-cols-4">
           {[
-            ["32 aulas", "5 módulos em vídeo"],
-            ["14 horas", "de conteúdo total"],
-            ["38", "templates editáveis"],
-            ["6 meses", "de comunidade ao vivo"],
+            ["12", "encontros individuais"],
+            ["1h", "por semana"],
+            ["3 meses", "de acompanhamento"],
+            ["12 meses", "de plataforma LiberEther"],
           ].map(([n, l]) => (
             <div
               key={l}
               className="rounded-2xl bg-surface-raised/90 px-5 py-4 text-center shadow-float backdrop-blur-sm"
             >
-              <div className="display text-[22px] md:text-[26px]">{n}</div>
-              <div className="mt-1 text-[12px] uppercase tracking-wider text-muted-foreground">
+              <div className="display text-[26px] md:text-[30px]">{n}</div>
+              <div className="mt-1 font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
                 {l}
               </div>
             </div>
@@ -412,10 +417,10 @@ function AnatomiaMarmita() {
 
 function StatsStrip() {
   const stats = [
-    ["+38%", "crescimento do mercado audiovisual em 3 anos"],
-    ["3x a 12x", "aumento de tíquete documentado entre alunos"],
-    ["400+", "reuniões reais que validaram o roteiro"],
-    ["5", "etapas em sequência, do posicionamento à renovação"],
+    ["4 pilares", "Acesso, Autocustódia, Alocação, Autonomia"],
+    ["12 encontros", "de uma hora, individuais, semanais"],
+    ["1 ano", "de acesso à plataforma LiberEther"],
+    ["50% off", "em serviços elegíveis por 12 meses"],
   ];
   return (
     <section className="section-light py-12 md:py-16 bg-surface">
@@ -423,7 +428,7 @@ function StatsStrip() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {stats.map(([n, l]) => (
             <div key={l} className="text-center">
-              <div className="display text-[28px] text-foreground md:text-[34px]">{n}</div>
+              <div className="display text-[30px] text-foreground md:text-[36px]">{n}</div>
               <div className="mt-1 text-[12.5px] leading-tight text-foreground/70">
                 {l}
               </div>
@@ -435,7 +440,7 @@ function StatsStrip() {
   );
 }
 
-/* ---------- etapas carrossel ---------- */
+/* ---------- pilares carrossel ---------- */
 
 function Cardapios() {
   return (
@@ -448,19 +453,19 @@ function Cardapios() {
           className="absolute left-1/2 top-0 h-[520px] w-[1000px] -translate-x-1/2 rounded-full opacity-25 blur-3xl"
           style={{
             background:
-              "radial-gradient(ellipse at center, oklch(0.78 0.12 205 / 0.3), transparent 60%)",
+              "radial-gradient(ellipse at center, oklch(0.74 0.14 275 / 0.3), transparent 60%)",
           }}
         />
       </div>
       <Container>
-        <div className="mx-auto max-w-[720px] text-center">
-          <h2 className="display display-tight text-balance text-[36px] md:text-[54px]">
-            Toca pra conhecer as 5 etapas do método.
+        <div className="mx-auto max-w-[760px] text-center">
+          <h2 className="display display-tight text-balance text-[38px] md:text-[58px]">
+            A Estrutura Financeira 4A — os pilares da mentoria.
           </h2>
-          <p className="mx-auto mt-5 max-w-[600px] text-[15.5px] leading-relaxed text-muted-foreground md:text-[17px]">
-            Cada etapa cobre uma frente da venda: posicionamento, diagnóstico,
-            proposta, negociação e recorrência. Nenhuma depende de você trocar de
-            câmera.
+          <p className="mx-auto mt-5 max-w-[620px] text-[15.5px] leading-relaxed text-muted-foreground md:text-[17px]">
+            Uma estrutura financeira precisa funcionar como um sistema. Acesso,
+            Autocustódia, Alocação e Autonomia — precedidos por um diagnóstico
+            individual da sua realidade.
           </p>
         </div>
 
@@ -492,12 +497,12 @@ function Dor() {
       <Container>
         <div className="grid gap-16 md:grid-cols-12">
           <div className="md:col-span-5">
-            <h2 className="display text-[34px] md:text-[52px]">
-              Por que filmar 14 horas por dia te mantém pobre.
+            <h2 className="display text-[36px] md:text-[54px]">
+              Ter acesso às ferramentas não significa saber usá-las de forma integrada.
             </h2>
             <motion.img
               src={shameStill}
-              alt="Equipamento audiovisual caro parado — câmera, ótica e drone sem retorno"
+              alt="Ferramentas financeiras desconectadas — bancos, corretoras e apps espalhados"
               loading="lazy"
               width={1024}
               height={1024}
@@ -512,28 +517,30 @@ function Dor() {
             className="space-y-6 text-[16.5px] leading-[1.75] text-foreground/80 md:col-span-7 md:text-[17px]"
           >
             <p>
-              Você compra câmera de R$ 40 mil, ótica de R$ 20 mil, drone de R$ 8
-              mil, equipamento de áudio que passa de R$ 15 mil, e seu maior
-              cliente é o noivo que pede pra você cobrir o pacote do tio que já
-              topou fazer por R$ 1.800.
+              Hoje existem diferentes formas de receber pagamentos, converter
+              moedas, comprar stablecoins, armazenar ativos e acessar soluções
+              financeiras construídas sobre blockchain. O problema é que cada
+              parte costuma funcionar de maneira isolada.
             </p>
             <p>
-              Você passa três dias montando orçamento detalhado, grava vídeo de
-              explicação, manda proposta com mood board, e o cliente responde
-              "vou pensar com calma" antes de sumir no read.
+              Você recebe por uma plataforma, converte em outra, transfere para
+              um banco, envia para uma corretora e utiliza uma carteira que
+              talvez nunca tenha sido configurada corretamente. Vídeos, notícias
+              e conteúdos soltos apresentam possibilidades, mas raramente
+              explicam como construir uma operação completa para a sua realidade.
             </p>
             <p>
-              O amigo da família liga pra "tirar uma dúvida rápida" sobre o vídeo
-              dos 15 anos da filha. Vinte minutos depois, a "dúvida rápida" virou
-              três meses de pós-produção a troco de duas pizzas.
+              O resultado: dependência de contas e intermediários, custos
+              desnecessários em conversões, receio de guardar o próprio dinheiro,
+              desorganização com senhas e frases de recuperação, e exposição a
+              riscos que não foram compreendidos.
             </p>
             <p className="text-foreground">
-              A razão não é técnica. É estrutural. O mercado foi treinado a
-              precificar pela hora, pelo equipamento e pelo dia de set. Esse é o
-              modelo de um operador de câmera, não de um diretor.{" "}
-              <strong>Operador vende mão de obra. Diretor vende decisão.</strong>{" "}
-              E ninguém paga R$ 30 mil por mão de obra que o concorrente da
-              próxima rua faz por R$ 3 mil.
+              A questão não é apenas aprender sobre criptomoedas.{" "}
+              <strong>
+                É entender como utilizar essas tecnologias para resolver
+                necessidades financeiras reais.
+              </strong>
             </p>
           </motion.div>
         </div>
@@ -546,28 +553,28 @@ function Dor() {
 
 const proofs = [
   {
-    name: "Lucas Mendes",
-    role: "Videomaker de casamento, Curitiba",
+    name: "Lucas M.",
+    role: "Fotógrafo, clientes internacionais",
     avatar: a1,
-    before: "Cobrava R$ 2.500 por evento e fechava em média seis casamentos por mês.",
+    before: "Recebia por três plataformas diferentes, com IOF, spread e taxas empilhadas em cada conversão.",
     after:
-      "Em 4 meses aplicando o briefing, passou a cobrar R$ 18 mil por projeto e fechou três a mais que no ano anterior.",
+      "Estruturou um fluxo direto em stablecoins, reduziu custos operacionais e passou a receber em dólar digital sem depender de bancos intermediários.",
   },
   {
-    name: "Renata Vianna",
-    role: "Diretora de vídeo corporativo, SP",
+    name: "Renata V.",
+    role: "Médica com atendimentos externos",
     avatar: a2,
-    before: "Três clientes por mês com tíquete médio de R$ 4 mil.",
+    before: "Tinha criptoativos parados em uma corretora, sem carteira própria e com senhas anotadas no bloco de notas.",
     after:
-      "Agenda fechada com quatro contratos recorrentes de R$ 22 mil cada. Bateu R$ 80 mil/mês em 5 meses e meio.",
+      "Migrou para autocustódia com Trezor, organizou frases de recuperação, backups físicos e um plano de segurança documentado.",
   },
   {
-    name: "Diego Albuquerque",
-    role: "Diretor de fotografia, Salvador",
+    name: "Diego A.",
+    role: "Desenvolvedor freelancer",
     avatar: a3,
-    before: "Cobrava R$ 1.800 a diária e trabalhava 18 dias por mês para fechar o mês.",
+    before: "Convertia recebimentos em dólar por corretoras aleatórias, sem controle real do que estava alocado ou exposto.",
     after:
-      "Subiu a diária para R$ 7.500 em 7 meses e fechou primeiro contrato anual com agência por R$ 240 mil.",
+      "Estruturou uma reserva em stablecoins, entendeu os riscos de cada protocolo e passou a movimentar com clareza pela LiberWallet.",
   },
 ];
 
@@ -575,9 +582,9 @@ function ProvaSocial() {
   return (
     <section className="section-light relative bg-background py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[820px] text-center">
-          <h2 className="display text-[34px] md:text-[54px]">
-            O que três profissionais mudaram em menos de seis meses.
+        <div className="mx-auto max-w-[860px] text-center">
+          <h2 className="display text-[36px] md:text-[54px]">
+            O que muda quando a estrutura financeira funciona como um sistema.
           </h2>
         </div>
 
@@ -605,13 +612,13 @@ function ProvaSocial() {
 
               <div className="mt-7 space-y-4 text-[14.5px] leading-relaxed">
                 <div>
-                  <div className="text-[11px] tracking-[0.18em] text-muted-foreground/80 uppercase">
+                  <div className="font-mono text-[11px] tracking-[0.18em] text-muted-foreground/80 uppercase">
                     Antes
                   </div>
                   <p className="mt-1.5 text-foreground/80">{p.before}</p>
                 </div>
                 <div className="pt-4">
-                  <div className="text-[11px] tracking-[0.18em] text-ember uppercase">
+                  <div className="font-mono text-[11px] tracking-[0.18em] text-ember uppercase">
                     Depois
                   </div>
                   <p className="mt-1.5 text-foreground">{p.after}</p>
@@ -621,8 +628,8 @@ function ProvaSocial() {
           ))}
         </div>
 
-        <p className="mx-auto mt-10 max-w-[640px] text-center text-[12px] uppercase tracking-[0.18em] text-muted-foreground/60">
-          Depoimentos ilustrativos · substituir por casos reais
+        <p className="mx-auto mt-10 max-w-[640px] text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
+          Casos ilustrativos · substituir por depoimentos reais
         </p>
       </Container>
     </section>
@@ -647,13 +654,16 @@ function CTAMid() {
       <div className="pointer-events-none absolute inset-0 -z-10 grain opacity-40" />
 
       <Container>
-        <div className="mx-auto max-w-[860px] text-center">
-          <h2 className="display text-[34px] text-white md:text-[52px]">
-            Se cada projeto deste ano serviu pra cobrir conta, não pra construir
-            patrimônio, a estrutura abaixo foi feita pra você.
+        <div className="mx-auto max-w-[880px] text-center">
+          <h2 className="display text-[36px] text-white md:text-[54px]">
+            O primeiro passo é entender como a sua estrutura financeira funciona hoje.
           </h2>
+          <p className="mx-auto mt-6 max-w-[620px] text-[16px] leading-relaxed text-white/75 md:text-[17px]">
+            Antes de recomendar qualquer ferramenta, precisamos conhecer sua
+            rotina, seus objetivos e os problemas que deseja resolver.
+          </p>
           <div className="mt-10 flex justify-center">
-            <PrimaryCTA>Quero ver o método de precificação na íntegra</PrimaryCTA>
+            <PrimaryCTA>Quero solicitar um diagnóstico</PrimaryCTA>
           </div>
         </div>
       </Container>
@@ -666,38 +676,38 @@ function CTAMid() {
 const pillars = [
   {
     n: "01",
-    title: "Posicionamento de Diretor",
-    image: step1,
+    title: "Acesso",
+    image: step2,
     desc:
-      "Como sair da categoria fornecedor de captação e entrar na de consultor de narrativa. Inclui reformulação de bio, portfólio, primeira mensagem e abordagem inicial.",
+      "Construção dos caminhos para entrada e saída de recursos: recebimentos nacionais e internacionais, conversão para stablecoins, Pix como etapa de entrada e organização do fluxo até sua carteira.",
   },
   {
     n: "02",
-    title: "Briefing de Diagnóstico",
-    image: step2,
+    title: "Autocustódia",
+    image: step3,
     desc:
-      "Estrutura de doze perguntas que substituem o briefing de cliente. Em vez de perguntar quantos dias de filmagem, o cliente passa a explicar o problema dele.",
+      "Estrutura segura de controle dos próprios ativos: carteiras, proteção de senhas, frases de recuperação, cópias de segurança, Trezor e procedimentos de emergência.",
   },
   {
     n: "03",
-    title: "Apresentação Cinematográfica",
-    image: step3,
+    title: "Alocação",
+    image: step4,
     desc:
-      "Como transformar um orçamento de planilha em uma proposta narrativa que faz o cliente ler até o fim e responder no mesmo dia. Templates incluídos.",
+      "Educação prática sobre stablecoins, liquidez, riscos de protocolo e contrato inteligente, origem dos rendimentos e critérios para comparar estratégias no ecossistema Ethereum.",
   },
   {
     n: "04",
-    title: "Negociação que Filtra",
-    image: step4,
+    title: "Autonomia",
+    image: step5,
     desc:
-      "Roteiro de objeção testado em mais de 400 reuniões. O que falar quando o cliente diz está caro, vou comparar ou vou pensar. Fecha em até três contatos.",
+      "Integração das ferramentas à sua vida financeira: LiberWallet, LiberPass, movimentação de stablecoins, cartões internacionais e um plano financeiro pessoal em Web3.",
   },
   {
     n: "05",
-    title: "Pauta Renovável",
-    image: step5,
+    title: "Continuidade",
+    image: step1,
     desc:
-      "Como transformar cliente único em recorrente sem cair na armadilha do desconto por fidelidade. Inclui contrato anual, gatilhos de renovação e pós-produção que cria o próximo projeto.",
+      "Revisão da estrutura, organização das próximas etapas e entrega do guia operacional. Acompanhamento estendido pela plataforma LiberEther durante 12 meses.",
   },
 ];
 
@@ -726,24 +736,25 @@ function Metodo() {
     <section id="metodo" className="section-light relative bg-background py-28 md:py-36">
       <Container>
         <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-[720px]">
-            <h2 className="display text-[34px] md:text-[52px]">
-              O Método Pauta Premium inverte tudo o que você aprendeu sobre
-              precificar audiovisual.
+          <div className="max-w-[760px]">
+            <h2 className="display text-[36px] md:text-[54px]">
+              A Estrutura Financeira 4A — como a mentoria se organiza.
             </h2>
             <p className="mt-6 text-[16px] leading-relaxed text-muted-foreground">
-              A escola de cinema te ensinou a fazer um plano-sequência bonito.
-              Não te ensinou que o cliente decide o preço dentro dos primeiros
-              doze minutos de conversa. Se a conversa for sobre câmera e hora de
-              edição, o preço será de operador. Se for sobre o problema que o
-              vídeo precisa resolver, o preço será de diretor.
+              A partir do seu diagnóstico, os quatro pilares são adaptados ao seu
+              caso: fotógrafo que recebe do exterior, médico com rotina intensa,
+              tatuador com fluxo em dinheiro, empresário ou profissional de
+              tecnologia. Cada pilar resolve uma parte da mesma pergunta:{" "}
+              <strong className="text-foreground">
+                como fazer o seu dinheiro trabalhar por você com mais autonomia?
+              </strong>
             </p>
           </div>
 
           <div className="flex shrink-0 items-center gap-2">
             <button
               type="button"
-              aria-label="Etapa anterior"
+              aria-label="Pilar anterior"
               onClick={() => api?.scrollPrev()}
               disabled={!canPrev}
               className="grid size-11 place-items-center rounded-full text-foreground/80 transition hover:bg-foreground/[0.04] hover:text-foreground disabled:opacity-30"
@@ -752,7 +763,7 @@ function Metodo() {
             </button>
             <button
               type="button"
-              aria-label="Próxima etapa"
+              aria-label="Próximo pilar"
               onClick={() => api?.scrollNext()}
               disabled={!canNext}
               className="grid size-11 place-items-center rounded-full text-foreground/80 transition hover:bg-foreground/[0.04] hover:text-foreground disabled:opacity-30"
@@ -782,10 +793,10 @@ function Metodo() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/10" />
                       <div className="absolute top-5 left-5 font-mono text-[12px] tracking-[0.18em] text-ember">
-                        ETAPA {p.n}
+                        PILAR {p.n}
                       </div>
                       <div className="absolute inset-x-5 bottom-5">
-                        <h3 className="display text-[26px] leading-tight text-white md:text-[30px]">
+                        <h3 className="display text-[30px] leading-tight text-white md:text-[36px]">
                           {p.title}
                         </h3>
                         <p className="mt-3 text-[14px] leading-relaxed text-white/85">
@@ -804,7 +815,7 @@ function Metodo() {
               <button
                 key={i}
                 type="button"
-                aria-label={`Ir para etapa ${i + 1}`}
+                aria-label={`Ir para pilar ${i + 1}`}
                 onClick={() => api?.scrollTo(i)}
                 className={`h-1.5 rounded-full transition-all ${
                   current === i ? "w-8 bg-ember" : "w-4 bg-foreground/20"
@@ -817,39 +828,36 @@ function Metodo() {
         <div className="relative mt-20 grid gap-10 overflow-hidden rounded-3xl bg-surface p-8 md:grid-cols-2 md:items-center md:gap-12 md:p-12">
           <div>
             <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-ember">
-              O mecanismo
+              O princípio
             </div>
-            <h3 className="display mt-4 text-[26px] text-foreground md:text-[34px]">
-              Antes, o cliente pergunta sua diária. Depois, ele explica o
-              problema dele por vinte minutos.
+            <h3 className="display mt-4 text-[28px] text-foreground md:text-[38px]">
+              A autocustódia devolve o controle. E também a responsabilidade.
             </h3>
             <p className="mt-5 text-[15.5px] leading-relaxed text-foreground/75">
-              Antes do método, a reunião começa com "qual seu valor de diária".
-              Você cita números, o cliente pede desconto e fecha por R$ 3.500.
-              Depois do método, você pergunta "qual o resultado que esse vídeo
-              precisa gerar nos próximos noventa dias". O cliente fala vinte
-              minutos, percebe sozinho que o problema é maior, e fecha por R$ 28
-              mil. O custo do equipamento é o mesmo. Só a estrutura da conversa
-              mudou.
+              A LiberEther não ficará com o seu dinheiro. A proposta é ensinar
+              autocustódia: as carteiras, senhas e frases de recuperação
+              permanecem sob o seu controle. A mentoria apresenta possibilidades,
+              riscos e ferramentas — as decisões financeiras continuam sendo
+              tomadas por você, agora com mais conhecimento e menos improviso.
             </p>
           </div>
           <div className="grid gap-4">
             <div className="rounded-2xl bg-card p-6">
-              <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-                Conversa de operador
+              <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+                Modelo tradicional
               </div>
-              <div className="display mt-2 text-[28px] text-muted-foreground">R$ 3.500</div>
+              <div className="display mt-2 text-[30px] text-muted-foreground">Custódia terceirizada</div>
               <p className="mt-2 text-[13.5px] text-muted-foreground">
-                Preço comparado com o concorrente da próxima rua.
+                Bancos, corretoras e intermediários guardando seus ativos por você.
               </p>
             </div>
             <div className="rounded-2xl bg-ember/10 p-6 ring-1 ring-ember/30">
-              <div className="text-[11px] uppercase tracking-[0.18em] text-ember">
-                Conversa de diretor
+              <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-ember">
+                Modelo Web3
               </div>
-              <div className="display mt-2 text-[28px] text-foreground">R$ 28.000</div>
+              <div className="display mt-2 text-[30px] text-foreground">Você no controle</div>
               <p className="mt-2 text-[13.5px] text-foreground/75">
-                Preço comparado com o custo de não ter o vídeo certo.
+                Sua carteira, suas chaves, sua estrutura — com plano de segurança documentado.
               </p>
             </div>
           </div>
@@ -863,29 +871,29 @@ function Metodo() {
 
 function ParaQuem() {
   const yes = [
-    "Videomaker, cinegrafista, diretor, editor ou produtor com pelo menos um ano de mercado e portfólio formado",
-    "Fatura entre R$ 5 mil e R$ 40 mil por mês e quer subir para R$ 50 mil a R$ 150 mil sem dobrar a carga",
-    "Entrega trabalho bom tecnicamente, mas perde projeto por preço ou por orçamento mal apresentado",
-    "Estúdio pequeno (1 a 4 pessoas) querendo sair do modelo tabela por hora para valor por projeto",
-    "Já se cansou de filmar casamento, evento e treinamento no mesmo domingo",
+    "Empreendedores, autônomos e prestadores de serviço que querem mais autonomia financeira",
+    "Profissionais que recebem — ou desejam receber — em outras moedas, do Brasil ou do exterior",
+    "Pessoas que querem aprender a utilizar dólares digitais e reduzir a dependência de bancos",
+    "Quem já possui criptoativos mas não tem uma estrutura organizada, com autocustódia e segurança",
+    "Quem quer entender autocustódia antes de movimentar valores maiores com mais confiança",
   ];
   const no = [
-    "Nunca filmou um trabalho pago e ainda está construindo portfólio inicial",
-    "Quer cobrar mais sem mudar a forma como conversa com o cliente",
-    "Quer manter a base que paga R$ 800 e ao mesmo tempo cobrar R$ 30 mil de cliente novo",
-    "Espera resultado de R$ 50 mil por mês na primeira semana",
+    "Quem procura garantia de lucro ou promessa de enriquecimento rápido",
+    "Quem espera receber sinais de compra e venda ou gestão terceirizada de patrimônio",
+    "Quem não quer assumir responsabilidade pelas próprias credenciais e chaves",
+    "Quem busca apenas uma indicação rápida de qual ativo comprar",
   ];
 
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <h2 className="display mx-auto max-w-[820px] text-center text-[34px] md:text-[52px]">
-          Antes de continuar, vale checar se você está no perfil certo.
+        <h2 className="display mx-auto max-w-[860px] text-center text-[36px] md:text-[54px]">
+          Antes de continuar, veja se a mentoria faz sentido para você.
         </h2>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl bg-gradient-to-br from-ember/10 via-surface/60 to-surface/30 p-8 md:p-10">
-            <div className="text-[12px] tracking-[0.2em] text-ember uppercase">É pra você se</div>
+            <div className="font-mono text-[11px] tracking-[0.2em] text-ember uppercase">É pra você se</div>
             <ul className="mt-6 space-y-4">
               {yes.map((t) => (
                 <li
@@ -902,7 +910,7 @@ function ParaQuem() {
           </div>
 
           <div className="rounded-3xl bg-gradient-to-br from-muted/40 via-surface/40 to-surface/20 p-8 md:p-10">
-            <div className="text-[12px] tracking-[0.2em] text-muted-foreground uppercase">
+            <div className="font-mono text-[11px] tracking-[0.2em] text-muted-foreground uppercase">
               Não é pra você se
             </div>
             <ul className="mt-6 space-y-4">
@@ -928,12 +936,12 @@ function ParaQuem() {
 /* ---------- entregáveis ---------- */
 
 const modules = [
-  { t: "Módulo 1. Posicionamento de Diretor", s: "6 aulas (2h20) — bio, portfólio e abordagem", v: "R$ 297", img: mod01 },
-  { t: "Módulo 2. Briefing de Diagnóstico", s: "8 aulas (3h40) — as 12 perguntas-chave", v: "R$ 397", img: mod02 },
-  { t: "Módulo 3. Apresentação Cinematográfica", s: "7 aulas (2h50) — 11 templates editáveis", v: "R$ 497", img: mod03 },
-  { t: "Módulo 4. Negociação que Filtra", s: "5 aulas (2h10) — banco de respostas a objeção", v: "R$ 297", img: mod04 },
-  { t: "Módulo 5. Pauta Renovável", s: "6 aulas (2h40) — contrato anual e renovação", v: "R$ 297", img: mod05 },
-  { t: "Comunidade Pauta Premium", s: "6 meses — plantão semanal ao vivo", v: "R$ 1.182", img: mod06 },
+  { t: "1. Diagnóstico Financeiro", s: "Análise da sua rotina, moedas, plataformas e riscos atuais", v: "Encontro 1", img: mod01 },
+  { t: "2. Acesso e Recebimentos", s: "Canais de entrada, conversão em stablecoins e fluxo internacional", v: "Encontros 3–4", img: mod02 },
+  { t: "3. Autocustódia e Segurança", s: "Carteiras, senhas, frases de recuperação, Trezor e emergências", v: "Encontros 5–7", img: mod03 },
+  { t: "4. Stablecoins e DeFi", s: "Dólares digitais, protocolos, rendimentos e riscos reais", v: "Encontros 8–9", img: mod04 },
+  { t: "5. Ecossistema LiberEther", s: "LiberWallet, LiberPass e cartões internacionais", v: "Encontros 10–11", img: mod05 },
+  { t: "Plano de Continuidade", s: "Guia operacional personalizado e próximos 90 dias", v: "Encontro 12", img: mod06 },
 ];
 
 function Entregaveis() {
@@ -944,18 +952,18 @@ function Entregaveis() {
         className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-[720px] w-[1100px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-30 blur-3xl"
         style={{
           background:
-            "radial-gradient(closest-side, oklch(0.78 0.12 205 / 0.45), transparent 70%)",
+            "radial-gradient(closest-side, oklch(0.74 0.14 275 / 0.45), transparent 70%)",
         }}
       />
 
       <Container className="relative z-10">
-        <div className="mx-auto max-w-[820px] text-center">
-          <h2 className="display text-[34px] text-foreground md:text-[56px]">
-            O que entra quando você se inscreve hoje.
+        <div className="mx-auto max-w-[860px] text-center">
+          <h2 className="display text-[36px] text-foreground md:text-[58px]">
+            Os 12 encontros — três meses de acompanhamento individual.
           </h2>
           <p className="mt-5 text-[15px] text-foreground/75 md:text-[16px]">
-            Cinco módulos, biblioteca de templates e comunidade. Acesso liberado
-            no minuto da inscrição.
+            Uma organização possível dos encontros, sempre adaptada às suas
+            prioridades no diagnóstico.
           </p>
         </div>
 
@@ -992,8 +1000,8 @@ function Entregaveis() {
                   </div>
                   <div className="mt-auto flex flex-col gap-2 pt-10">
                     <h3
-                      className={`font-semibold leading-tight text-foreground  ${
-                        featured ? "display text-[28px] md:text-[36px]" : "text-[18px]"
+                      className={`font-medium leading-tight text-foreground  ${
+                        featured ? "display text-[32px] md:text-[42px]" : "text-[18px]"
                       }`}
                     >
                       {m.t}
@@ -1017,11 +1025,11 @@ function Entregaveis() {
             href="#oferta"
             className="group inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 text-[15px] font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-[1px] hover:shadow-[0_20px_60px_-20px_color-mix(in_oklab,var(--color-ember)_55%,transparent)]"
           >
-            <span>Ver oferta completa</span>
+            <span>Ver a oferta completa</span>
             <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
           </a>
           <div className="mt-6 font-mono text-[12.5px] text-foreground/80">
-            Inclui ainda a Biblioteca de 38 Templates Premium (R$ 297)
+            A sequência dos encontros pode ser alterada conforme suas prioridades.
           </div>
         </div>
       </Container>
@@ -1035,23 +1043,23 @@ function Bonus() {
   const bonuses = [
     {
       n: "01",
-      title: "Tabela Pauta 2026",
-      desc: "Precificação de referência por categoria (institucional, comercial, casamento, evento, documentário, reels, branded content), com faixa mínima, média e premium. Resolve a objeção não sei quanto cobrar.",
-      v: "R$ 297",
+      title: "1 ano de plataforma LiberEther",
+      desc: "12 meses de acesso à plataforma educacional com aulas e conteúdos sobre Web3, stablecoins, segurança digital, autocustódia, Ethereum e finanças descentralizadas.",
+      v: "12 meses de acesso",
       img: bonus01,
     },
     {
       n: "02",
-      title: "Roteiro 47",
-      desc: "Script completo de reunião de venda de 47 minutos, validado em mais de 400 negociações. Abertura, perguntas, ponto de virada, ancoragem de preço e fechamento. Resolve a objeção trava na hora de falar de dinheiro.",
-      v: "R$ 397",
+      title: "50% de desconto em serviços",
+      desc: "Durante os 12 meses após a mentoria, 50% off na contratação de serviços elegíveis: horas adicionais, novas aulas, revisões da estrutura e orientações complementares.",
+      v: "Válido por 12 meses",
       img: bonus02,
     },
     {
       n: "03",
-      title: "Kit Contratos Blindados",
-      desc: "Três contratos revisados por advogado (PJ, PF e anual recorrente), NDA, termo de cessão de imagem, briefing assinado e cronograma de aprovação. Resolve a objeção cliente sempre pede alteração extra.",
-      v: "R$ 297",
+      title: "Plano de Continuidade",
+      desc: "Ao final da mentoria você recebe um plano com as prioridades para os próximos 90 dias: revisões de segurança, ajustes na operação, temas para aprofundar e frequência de revisão.",
+      v: "Entregue no encontro 12",
       img: bonus03,
     },
   ];
@@ -1059,10 +1067,9 @@ function Bonus() {
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[820px] text-center">
-          <h2 className="display text-[34px] md:text-[52px]">
-            Três bônus que resolvem três objeções de quem trabalha com
-            audiovisual.
+        <div className="mx-auto max-w-[860px] text-center">
+          <h2 className="display text-[36px] md:text-[54px]">
+            A aprendizagem continua depois dos três meses de acompanhamento.
           </h2>
         </div>
 
@@ -1084,12 +1091,12 @@ function Bonus() {
                 <div className="font-mono text-[11px] tracking-[0.22em] text-ember">
                   BÔNUS {b.n}
                 </div>
-                <h3 className="display mt-5 text-[24px] leading-tight">{b.title}</h3>
+                <h3 className="display mt-5 text-[26px] leading-tight">{b.title}</h3>
                 <p className="mt-4 flex-1 text-[14.5px] leading-relaxed text-muted-foreground">
                   {b.desc}
                 </p>
                 <div className="mt-6 pt-4 font-mono text-[13px] text-foreground">
-                  Valor de mercado: {b.v}
+                  {b.v}
                 </div>
               </div>
             </article>
@@ -1104,40 +1111,40 @@ function Bonus() {
 
 const longTestimonials = [
   {
-    name: "Mariana Costa",
-    role: "Videomaker de casamento, BH",
+    name: "Mariana C.",
+    role: "Tatuadora, atende clientes internacionais",
     image: a1,
-    text: "Cobrava R$ 3.200 por casamento, fechava sete eventos por mês trabalhando todos os fins de semana. Apliquei o Briefing de Diagnóstico nas primeiras três reuniões, parei de mandar tabela de pacote. Passei a cobrar R$ 19 mil por casamento, reduzi para três eventos por mês e estou com agenda fechada até abril de 2027.",
+    text: "Recebia por PayPal, convertia em corretora e transferia para o banco perdendo em cada etapa. Depois do diagnóstico, estruturamos um fluxo direto em stablecoins com uma carteira própria. Agora recebo, guardo e movimento sem depender de três plataformas.",
   },
   {
-    name: "André Vasconcelos",
-    role: "Diretor de vídeo corporativo, Brasília",
+    name: "André V.",
+    role: "Médico, valores maiores em custódia",
     image: a2,
-    text: "Atendia três a cinco clientes mensais com tíquete médio de R$ 4.500, editando até meia-noite quase todo dia. Subi a primeira proposta de R$ 6 mil para R$ 28 mil seguindo o Módulo 3. Hoje são três contratos anuais de R$ 22 mil mensais cada, R$ 84 mil por mês estabilizado e fim de semana livre.",
+    text: "Tinha ativos parados em corretora sem nunca ter mexido em uma carteira. Configuramos a Trezor no encontro 7, organizamos frases de recuperação e um backup físico. Pela primeira vez sinto que o dinheiro é realmente meu — e sei o que fazer se algo acontecer comigo.",
   },
   {
-    name: "Camila Rocha",
-    role: "Produtora audiovisual, Recife",
+    name: "Camila R.",
+    role: "Consultora, projetos no exterior",
     image: a3,
-    text: "Cobrava R$ 5 mil para coordenar projeto institucional inteiro, trabalhando 13 horas por dia. Apliquei o roteiro do Bônus 2 numa reunião com farmacêutica grande. Mudei três perguntas, mudei o preço. Fechei contrato de R$ 47 mil para três peças em quatro semanas, depois renovei o mesmo cliente por R$ 92 mil.",
+    text: "Era um caos: banco daqui, banco de fora, corretora, aplicativo de conversão. No pilar de Acesso, mapeamos cada etapa e cortamos três intermediários. Meu custo por recebimento caiu drasticamente e ficou muito mais simples de operar semana a semana.",
   },
   {
-    name: "Pedro Henrique Lima",
-    role: "Diretor de fotografia, Porto Alegre",
+    name: "Pedro H.",
+    role: "Desenvolvedor, freelas internacionais",
     image: a4,
-    text: "Cobrava R$ 1.800 a diária de DOP, fazia 18 diárias por mês e fechava no vermelho. Apliquei Posicionamento de Diretor, reformulei portfólio e parei de aceitar diária abaixo de R$ 4 mil. Subi a diária para R$ 7.500 em cinco meses e fechei primeiro contrato anual com agência por R$ 240 mil.",
+    text: "Já tinha lido bastante sobre DeFi mas nunca tinha coragem de mover valores maiores. Entender liquidez, riscos de contrato e de onde vem o rendimento mudou totalmente a forma como eu tomo decisão. Não é sobre acreditar em número — é sobre entender o mecanismo.",
   },
   {
-    name: "Juliana Tavares",
-    role: "Diretora criativa de branded content, Floripa",
+    name: "Juliana T.",
+    role: "Empresária, fluxo em múltiplas moedas",
     image: a5,
-    text: "Cobrava pacote mensal de R$ 3.500 por marca, atendia cinco marcas com agenda esgotada. Criei um serviço de narrativa estendida usando a Apresentação Cinematográfica e ofereci como upgrade. As três marcas migraram em dois meses para R$ 12 mil mensais. Faturamento saltou de R$ 17.500 para R$ 41 mil atendendo menos marcas.",
+    text: "O que mais me marcou foi a etapa de Autonomia. A LiberWallet e o cartão internacional fecharam o ciclo: recebimento, custódia, alocação e uso no dia a dia sem depender de conta bancária tradicional para cada movimento.",
   },
   {
-    name: "Camila Rocha",
-    role: "Produtora audiovisual, Recife",
+    name: "Rafael S.",
+    role: "Fotógrafo, clientes no exterior",
     image: a1,
-    text: "Fui pra reunião com farmacêutica grande achando que ia fechar R$ 8 mil de um institucional. Usei só as três primeiras perguntas do Briefing de Diagnóstico e saí com contrato de R$ 47 mil para três peças. Demorou quatro semanas pra acreditar que tinha sido o mesmo cliente.",
+    text: "O diagnóstico já valeu por metade da mentoria. Ver, em uma planilha, quanto eu estava perdendo em custos e conversões durante um ano foi um choque. A partir dali cada encontro resolveu um pedaço concreto do problema.",
   },
 ];
 
@@ -1196,10 +1203,9 @@ function Depoimentos() {
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[820px] text-center">
-          <h2 className="display text-[34px] md:text-[52px]">
-            O que cinco profissionais fizeram quando trocaram orçamento por
-            proposta.
+        <div className="mx-auto max-w-[860px] text-center">
+          <h2 className="display text-[36px] md:text-[54px]">
+            Profissionais construindo autonomia — cada um a partir do seu próprio caso.
           </h2>
         </div>
 
@@ -1209,7 +1215,7 @@ function Depoimentos() {
           <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={20} />
         </div>
 
-        <p className="mx-auto mt-10 max-w-[640px] text-center text-[12px] uppercase tracking-[0.18em] text-muted-foreground/60">
+        <p className="mx-auto mt-10 max-w-[640px] text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
           Depoimentos ilustrativos · substituir por casos reais
         </p>
       </Container>
@@ -1228,55 +1234,58 @@ function Criador() {
             <div className="relative overflow-hidden rounded-3xl">
               <img
                 src={creator}
-                alt="Criador do Método Pauta Premium em set de filmagem"
+                alt="Mentor LiberEther"
                 loading="lazy"
                 width={1024}
                 height={1280}
                 className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
-                <div className="text-[18px] font-medium text-white">Diretor há 14 anos</div>
+                <div className="text-[18px] font-medium text-white">LiberEther</div>
                 <div className="mt-1 text-[12.5px] text-white/70">
-                  Maior projeto entregue: R$ 380 mil em um único contrato
+                  Educação, autocustódia e ferramentas Web3
                 </div>
               </div>
             </div>
           </div>
 
           <div className="md:col-span-7">
-            <h2 className="display text-[34px] md:text-[52px]">
-              Quem está por trás do método e por que decidiu ensinar.
+            <h2 className="display text-[36px] md:text-[54px]">
+              Educação e tecnologia para tornar a Web3 mais acessível.
             </h2>
 
             <div className="mt-8 space-y-5 text-[16px] leading-[1.75] text-muted-foreground md:text-[16.5px]">
               <p>
-                Dirige projetos audiovisuais há 14 anos, com direção de fotografia
-                e direção criativa para marcas reconhecidas e maior projeto
-                entregue em um único contrato comercial de R$ 380 mil.
+                A LiberEther é um ecossistema educacional e tecnológico voltado
+                à utilização prática da Web3. O trabalho integra educação
+                financeira, autocustódia, stablecoins, Ethereum, finanças
+                descentralizadas, segurança digital e ferramentas de gestão
+                financeira em um mesmo acompanhamento.
               </p>
               <p>
-                Em 2018, fechou o ano com R$ 47 mil de dívida em equipamento,
-                trabalhando 16 horas por dia em casamentos de R$ 1.500. Entrou
-                numa reunião para fechar um institucional de R$ 6 mil e saiu com
-                proposta de R$ 38 mil aceita no mesmo dia. Não tinha mudado
-                equipamento, portfólio nem equipe. Tinha mudado{" "}
-                <strong className="text-foreground">a primeira pergunta da conversa</strong>.
+                A proposta não é apenas apresentar novas tecnologias. É ajudar
+                pessoas a compreenderem essas ferramentas e utilizá-las de
+                maneira mais segura, clara e responsável — dentro do seu próprio
+                contexto profissional e financeiro.
               </p>
               <p>
-                Sistematizou o que aprendeu em cinco etapas e testou no próprio
-                estúdio: o faturamento passou de R$ 23 mil para R$ 94 mil mensais
-                em sete meses. Em 2024, virou treinamento formal.
+                Dentro do ecossistema, o cliente também conhece e utiliza
+                ferramentas como{" "}
+                <strong className="text-foreground">LiberWallet</strong>,{" "}
+                <strong className="text-foreground">LiberPass</strong>,
+                plataforma educacional, aulas, mentorias e conteúdos
+                especializados.
               </p>
             </div>
 
             <div className="mt-10 grid grid-cols-3 gap-6">
               {[
-                ["14 anos", "dirigindo projetos audiovisuais"],
-                ["R$ 380 mil", "maior projeto em um contrato"],
-                ["3x a 12x", "aumento de tíquete documentado"],
+                ["4 pilares", "Estrutura Financeira 4A"],
+                ["12 encontros", "individuais e semanais"],
+                ["1 ano", "de plataforma incluída"],
               ].map(([n, l]) => (
                 <div key={l} className="p-1">
-                  <div className="display text-[26px] md:text-[32px]">{n}</div>
+                  <div className="display text-[28px] md:text-[34px]">{n}</div>
                   <div className="mt-1 text-[12px] leading-tight text-muted-foreground">{l}</div>
                 </div>
               ))}
@@ -1294,46 +1303,47 @@ function Suporte() {
   const items = [
     {
       icon: Users,
-      title: "Comunidade fechada",
-      desc: "Discord com canais por etapa do método (posicionamento, briefing, proposta, negociação, pauta) e canal de oportunidades comerciais entre membros.",
+      title: "Acompanhamento individual",
+      desc: "Cada encontro começa com uma revisão do que foi implementado na semana anterior. Dificuldades são discutidas antes de avançar para a próxima etapa.",
     },
     {
       icon: Calendar,
-      title: "Plantão semanal ao vivo",
-      desc: "Toda quarta às 19h, uma hora de tira-dúvidas conduzida pelo criador e por dois mentores formados pela metodologia.",
+      title: "12 encontros semanais",
+      desc: "Uma hora por semana durante três meses, agendados conforme sua disponibilidade e adaptados às suas prioridades definidas no diagnóstico.",
     },
     {
       icon: FileText,
-      title: "Revisão de proposta",
-      desc: "Você manda uma proposta real enviada nos últimos 30 dias e a equipe devolve análise por escrito em até cinco dias úteis.",
+      title: "Revisão de configurações",
+      desc: "Compartilhamento de tela durante os encontros para revisar carteiras, fluxos de recebimento, configurações da Trezor e rotinas de segurança.",
     },
     {
       icon: Headphones,
-      title: "Resposta em 24h",
-      desc: "Dúvidas no canal de suporte respondidas em até 24 horas em dia útil, durante todo o período de acompanhamento.",
+      title: "Suporte entre encontros",
+      desc: "Dúvidas pontuais tratadas entre os encontros. Questões que exigem análise aprofundada são conduzidas nos encontros agendados.",
     },
     {
-      icon: Clapperboard,
-      title: "Acesso por 6 meses",
-      desc: "Acompanhamento ativo durante seis meses a partir da inscrição, com renovação opcional por R$ 197 mensais depois.",
+      icon: BookOpen,
+      title: "Plataforma por 12 meses",
+      desc: "Depois dos três meses, você continua com acesso à plataforma da LiberEther pelo período total de um ano para revisar conceitos e aprofundar temas.",
     },
     {
       icon: Sparkles,
-      title: "Mentores formados",
-      desc: "Além do criador, mentores que aplicaram a metodologia no próprio negócio acompanham os plantões e as revisões.",
+      title: "Guia operacional pessoal",
+      desc: "Documento com o fluxo, ferramentas, rotinas de segurança e decisões desenvolvidas ao longo da mentoria — entregue no último encontro.",
     },
   ];
 
   return (
     <section className="section-light relative py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[820px] text-center">
-          <h2 className="display text-balance text-[36px] md:text-[56px]">
-            Como você é acompanhado depois que entra.
+        <div className="mx-auto max-w-[860px] text-center">
+          <h2 className="display text-balance text-[38px] md:text-[58px]">
+            Como você é acompanhado durante e depois da mentoria.
           </h2>
-          <p className="mx-auto mt-7 max-w-[640px] text-[16.5px] leading-relaxed text-muted-foreground">
-            Comunidade, plantão ao vivo e revisão de proposta real durante seis
-            meses de acompanhamento ativo.
+          <p className="mx-auto mt-7 max-w-[660px] text-[16.5px] leading-relaxed text-muted-foreground">
+            Você não recebe apenas informações e precisa descobrir sozinho como
+            aplicá-las. O acompanhamento é ativo do primeiro ao último encontro
+            — e continua na plataforma pelos 12 meses seguintes.
           </p>
         </div>
 
@@ -1343,7 +1353,7 @@ function Suporte() {
               <div className="flex size-14 items-center justify-center text-ember">
                 <Icon className="size-9" strokeWidth={1.4} />
               </div>
-              <h3 className="display mt-6 text-[22px] md:text-[24px]">{title}</h3>
+              <h3 className="display mt-6 text-[24px] md:text-[28px]">{title}</h3>
               <p className="mt-3 max-w-[320px] text-[14.5px] leading-relaxed text-muted-foreground">
                 {desc}
               </p>
@@ -1355,7 +1365,7 @@ function Suporte() {
   );
 }
 
-/* ---------- garantia ---------- */
+/* ---------- garantia / compromisso ---------- */
 
 function Garantia() {
   return (
@@ -1364,7 +1374,7 @@ function Garantia() {
         <div className="mx-auto grid max-w-[1180px] items-center gap-10 p-4 md:grid-cols-[auto_1fr] md:gap-16 md:p-8">
           <img
             src={garantiaImg}
-            alt="Garantia incondicional de 15 dias"
+            alt="Compromisso contratual de entrega LiberEther"
             loading="lazy"
             width={1024}
             height={1024}
@@ -1372,17 +1382,26 @@ function Garantia() {
           />
 
           <div>
-            <h2 className="display text-[28px] md:text-[40px]">
-              Garantia incondicional de 15 dias. O risco fica do nosso lado.
+            <h2 className="display text-[30px] md:text-[44px]">
+              Nós garantimos aquilo que depende diretamente do nosso trabalho.
             </h2>
             <p className="mt-5 text-[15.5px] leading-relaxed text-muted-foreground md:text-[16.5px]">
-              Você se inscreve, acessa imediatamente os cinco módulos, baixa a
-              biblioteca de templates, entra na comunidade e participa do
-              primeiro plantão. Se em qualquer momento dentro dos quinze primeiros
-              dias decidir que o método não é para você, basta mandar um email
-              para o suporte com a frase "quero o reembolso" e devolvemos 100% do
-              valor em até cinco dias úteis. Sem questionário, sem prova, sem
-              ligação de retenção.
+              A LiberEther assume contratualmente o compromisso de entregar os
+              12 encontros individuais, o acompanhamento no período contratado,
+              o diagnóstico inicial, a personalização do conteúdo, a orientação
+              para criação de uma carteira de autocustódia, o desenvolvimento
+              de um plano de segurança, o acesso à plataforma pelo período
+              informado e o guia operacional personalizado.
+            </p>
+            <p className="mt-5 text-[14.5px] leading-relaxed text-muted-foreground/85">
+              A mentoria não oferece garantia de lucro, valorização de ativos,
+              renda fixa, rentabilidade mínima, eliminação de riscos, aprovação
+              em plataformas financeiras ou funcionamento permanente de
+              serviços de terceiros. Criptomoedas, stablecoins e protocolos
+              DeFi possuem riscos, apresentados durante a mentoria para que
+              você tome decisões com mais conhecimento. As regras de
+              cancelamento, remarcação e responsabilidades estão descritas em
+              contrato.
             </p>
           </div>
         </div>
@@ -1395,16 +1414,16 @@ function Garantia() {
 
 function Oferta() {
   const stack = [
-    ["Módulo 1. Posicionamento de Diretor", "R$ 297"],
-    ["Módulo 2. Briefing de Diagnóstico", "R$ 397"],
-    ["Módulo 3. Apresentação Cinematográfica", "R$ 497"],
-    ["Módulo 4. Negociação que Filtra", "R$ 297"],
-    ["Módulo 5. Pauta Renovável", "R$ 297"],
-    ["Biblioteca de Templates Premium", "R$ 297"],
-    ["Comunidade Pauta Premium (6 meses)", "R$ 1.182"],
-    ["Bônus 1. Tabela Pauta 2026", "R$ 297"],
-    ["Bônus 2. Roteiro 47", "R$ 397"],
-    ["Bônus 3. Kit Contratos Blindados", "R$ 297"],
+    ["Diagnóstico individual (Encontro 1)", "Incluído"],
+    ["12 encontros semanais de 1 hora", "3 meses"],
+    ["Estrutura de recebimento e conversão", "Personalizada"],
+    ["Configuração de autocustódia e Trezor", "Acompanhada"],
+    ["Educação sobre stablecoins e DeFi", "Incluída"],
+    ["Integração com LiberWallet e LiberPass", "Incluída"],
+    ["Guia operacional personalizado", "Encontro 12"],
+    ["Bônus 1 — Plataforma LiberEther", "12 meses"],
+    ["Bônus 2 — 50% off em serviços", "12 meses"],
+    ["Bônus 3 — Plano de Continuidade", "Entregue ao final"],
   ];
   return (
     <section
@@ -1412,12 +1431,12 @@ function Oferta() {
       className="section-light relative overflow-hidden bg-background py-28 md:py-36"
     >
       <Container>
-        <div className="mx-auto max-w-[760px] text-center">
-          <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+        <div className="mx-auto max-w-[820px] text-center">
+          <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
             A oferta
           </div>
-          <h2 className="display display-tight mt-5 text-[36px] md:text-[56px]">
-            O que entra na inscrição de hoje e por quanto.
+          <h2 className="display display-tight mt-5 text-[38px] md:text-[58px]">
+            O que entra na Mentoria Autonomia Global.
           </h2>
         </div>
 
@@ -1429,38 +1448,40 @@ function Oferta() {
                 className="flex items-baseline justify-between gap-6 py-5"
               >
                 <span className="text-[15px] text-foreground md:text-[16px]">{t}</span>
-                <span className="text-[13px] tabular-nums text-muted-foreground">{v}</span>
+                <span className="font-mono text-[12.5px] text-muted-foreground">{v}</span>
               </li>
             ))}
           </ul>
 
-          <div className="flex items-baseline justify-between gap-6 py-5 text-[13px] uppercase tracking-[0.2em] text-muted-foreground">
-            <span>Valor total dos componentes</span>
-            <span className="tabular-nums line-through">R$ 4.255</span>
+          <div className="flex items-baseline justify-between gap-6 py-5 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+            <span>Valor regular</span>
+            <span className="tabular-nums line-through">R$ 3.000</span>
           </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-[760px] text-center">
-          <div className="text-[12px] uppercase tracking-[0.22em] text-muted-foreground">
-            Hoje você paga
+        <div className="mx-auto mt-14 max-w-[820px] text-center">
+          <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+            Condição comercial atual
           </div>
-          <div className="display display-tight mt-3 text-[64px] leading-none md:text-[96px]">
-            R$ 1.997
+          <div className="display display-tight mt-3 text-[72px] leading-none md:text-[104px]">
+            R$ 2.500
           </div>
           <div className="mt-3 text-[14px] text-muted-foreground">
-            à vista ou 12× de R$ 197 no cartão · acesso liberado em minutos
+            Economia de R$ 500 sobre o valor regular · condições de parcelamento
+            apresentadas na conversa de diagnóstico
           </div>
 
           <div className="mt-10 flex justify-center">
-            <PrimaryCTA>Quero garantir minha vaga no Método Pauta Premium</PrimaryCTA>
+            <PrimaryCTA>Quero solicitar uma conversa de diagnóstico</PrimaryCTA>
           </div>
 
           <div className="mt-5 text-[12.5px] text-muted-foreground">
-            Garantia incondicional de 15 dias · sem formulário, sem ligação
+            Antes da contratação, entendemos sua necessidade e avaliamos se a
+            mentoria é o formato adequado para o seu objetivo.
           </div>
           <div className="mt-8 text-[12px] text-muted-foreground/70">
-            Ao continuar, você concorda com os termos de uso e a política de
-            privacidade.
+            As vagas dependem da disponibilidade de agenda para os 12 encontros
+            individuais. O valor poderá ser atualizado conforme a evolução da oferta.
           </div>
         </div>
       </Container>
@@ -1472,32 +1493,40 @@ function Oferta() {
 
 const faqs = [
   {
-    q: "Quanto tempo demora para eu ver retorno?",
-    a: "A primeira aplicação do Briefing de Diagnóstico costuma acontecer entre a segunda e a quinta semana, dependendo do volume de reuniões que você já tem. Existem casos documentados de fechamento de primeiro projeto premium em até trinta dias, e casos que levaram dez semanas. O fator que mais influencia é a quantidade de reuniões por semana, não o tempo de mercado.",
+    q: "Preciso entender de criptomoedas antes de começar?",
+    a: "Não. Os conceitos necessários são explicados durante os encontros. É recomendável ter familiaridade básica com aplicativos e tecnologia.",
   },
   {
-    q: "E se eu não tiver tempo agora? Filmo quase todo fim de semana.",
-    a: "O método tem 14 horas totais entre os cinco módulos, em aulas curtas (média de 18 minutos cada). A maioria consome um módulo por semana, em deslocamento ou pós-filmagem. Os templates funcionam independentemente: se assistir só o Módulo 3 e baixar a Biblioteca, já consegue mandar a próxima proposta diferente.",
+    q: "A mentoria vai me ensinar a receber pagamentos em dólar?",
+    a: "A mentoria apresenta e ajuda a estruturar os canais compatíveis com sua atividade, sua localização e as plataformas disponíveis. Nenhum canal específico pode ser garantido permanentemente, pois serviços de terceiros podem alterar regras e condições.",
   },
   {
-    q: "R$ 1.997 está caro pra mim agora. Tem como parcelar?",
-    a: "Sim, em 12 vezes de R$ 197 no cartão. Se um único projeto fechado com o método cobrir o valor anual do treinamento, ele se paga. O cálculo médio dos alunos é que o primeiro projeto premium paga o método de quatro a dez vezes. Se isso não acontecer nos primeiros quinze dias, a garantia cobre 100% do valor.",
+    q: "Vou conseguir deixar de usar bancos?",
+    a: "Você aprende a criar alternativas para receber, armazenar, converter e utilizar dinheiro. Isso pode reduzir a dependência de bancos, mas algumas operações ainda poderão utilizar instituições financeiras ou pontes entre moedas tradicionais e ativos digitais.",
   },
   {
-    q: "Funciona pra quem só faz casamento? E corporativo? E reels?",
-    a: "Funciona, e a Tabela Pauta 2026 traz faixas de preço específicas por categoria. A estrutura central do Briefing de Diagnóstico é a mesma; o que muda são as perguntas e os templates. O Módulo 2 inclui exemplos aplicados em sete nichos: casamento, corporativo, branded content, documentário, evento, reels e comercial.",
+    q: "A mentoria garante renda passiva?",
+    a: "Não. Você aprende como funcionam diferentes possibilidades de rendimento, de onde vêm as receitas e quais riscos estão envolvidos. Não existe garantia de retorno ou rentabilidade.",
   },
   {
-    q: "Qual a diferença para outros cursos de precificação?",
-    a: "A maioria ensina fórmula de cálculo (custo, margem, imposto). O Método Pauta Premium não trabalha cálculo, trabalha conversa. A premissa é que o cliente decide o preço dentro da reunião, não na proposta. Os cinco módulos ensinam como conduzir essa conversa, não como somar custos.",
+    q: "A LiberEther ficará com meu dinheiro?",
+    a: "Não. A proposta é ensinar autocustódia. As carteiras, senhas e frases de recuperação permanecem sob o seu controle. A LiberEther não solicitará sua frase de recuperação.",
   },
   {
-    q: "Não tenho portfólio gigante. Funciona pra quem está começando?",
-    a: "O método foi pensado para quem já tem pelo menos um ano de mercado e portfólio formado, mesmo que pequeno. Quem começou semana passada não é o público ideal porque ainda precisa resolver a parte técnica antes da comercial. Quem tem de um a cinco anos de mercado é o perfil mais frequente entre os alunos.",
+    q: "Preciso comprar uma Trezor?",
+    a: "Não obrigatoriamente. A necessidade é avaliada conforme o volume armazenado, a frequência de utilização e o perfil de risco. Caso seja recomendada, a compra do dispositivo não está incluída no valor da mentoria.",
   },
   {
-    q: "E se o cliente não topar pagar o preço que vou cobrar?",
-    a: "Vai acontecer, e a premissa do método é que você precisa filtrar cliente. Cobrar R$ 28 mil de quem pagaria R$ 3 mil não funciona. O método ensina a identificar, nas primeiras três perguntas, se o cliente está no perfil do projeto e como redirecionar ou recusar quem não está. O resultado é menos reunião, mais fechamento e cliente melhor.",
+    q: "Qual é a diferença entre a mentoria e a plataforma de vídeos?",
+    a: "A plataforma reúne conteúdos educacionais que podem ser acessados durante um ano. A mentoria é individual e personalizada: os encontros são organizados para resolver suas necessidades específicas e acompanhar a implementação.",
+  },
+  {
+    q: "Quanto tempo preciso dedicar?",
+    a: "Um encontro de uma hora por semana. Também é necessário reservar algum tempo para realizar configurações, estudar conteúdos e aplicar as orientações definidas em cada encontro.",
+  },
+  {
+    q: "Posso contratar horas adicionais depois da mentoria?",
+    a: "Sim, conforme disponibilidade. Durante os 12 meses posteriores à mentoria, você tem 50% de desconto em serviços adicionais elegíveis da LiberEther.",
   },
 ];
 
@@ -1508,8 +1537,8 @@ function FAQ() {
       <Container>
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
-            <h2 className="display text-[32px] md:text-[44px]">
-              As objeções mais comuns, respondidas direto.
+            <h2 className="display text-[34px] md:text-[46px]">
+              Perguntas frequentes, respondidas com clareza.
             </h2>
           </div>
 
@@ -1553,40 +1582,48 @@ function FAQ() {
   );
 }
 
-/* ---------- linha do tempo (as 5 etapas) ---------- */
+/* ---------- linha do tempo (12 encontros) ---------- */
 
 function LinhaDoTempo() {
   const steps = [
     {
-      tag: "Etapa 1",
-      title: "Posicionamento de Diretor",
-      desc: "Você sai da categoria fornecedor de captação e entra na de consultor de narrativa. Bio, portfólio, primeira mensagem e abordagem inicial reformulados.",
-      bullets: ["Nova bio e portfólio", "Primeira mensagem que filtra", "Abordagem de consultor"],
-      duracao: "Módulo 1 — 6 aulas",
+      tag: "Encontros 1 e 2",
+      title: "Diagnóstico e Fundamentos de Web3",
+      desc: "Mapeamento da sua rotina financeira, objetivos e riscos atuais, seguido dos conceitos necessários para utilizar blockchain, Ethereum, stablecoins e carteiras.",
+      bullets: ["Mapa da sua operação atual", "Prioridades para os 3 meses", "Fundamentos aplicados de Web3"],
+      duracao: "2 encontros · 2 horas",
       img: step1,
     },
     {
-      tag: "Etapas 2 e 3",
-      title: "Briefing e Proposta",
-      desc: "As doze perguntas que fazem o cliente explicar o problema e a proposta narrativa que ele lê até o fim. Quem faz a pergunta certa controla o preço.",
-      bullets: ["12 perguntas de diagnóstico", "Proposta narrativa", "11 templates editáveis"],
-      duracao: "Módulos 2 e 3 — 15 aulas",
+      tag: "Encontros 3 e 4",
+      title: "Canais de Entrada e Recebimentos Internacionais",
+      desc: "Formas disponíveis para converter reais ou outras moedas em ativos digitais e construção de um fluxo para receber pagamentos de clientes ou empresas do exterior.",
+      bullets: ["Fluxo de recebimento", "Conversão em stablecoins", "Redução de custos e etapas"],
+      duracao: "2 encontros · 2 horas",
+      img: step2,
+    },
+    {
+      tag: "Encontros 5, 6 e 7",
+      title: "Autocustódia, Segurança e Trezor",
+      desc: "Configuração da carteira, endereços e redes; organização de senhas, frases de recuperação, backups e procedimentos de emergência; orientação sobre carteira física quando adequada.",
+      bullets: ["Carteira própria configurada", "Plano de segurança documentado", "Trezor orientada quando fizer sentido"],
+      duracao: "3 encontros · 3 horas",
       img: step3,
     },
     {
-      tag: "Etapa 4",
-      title: "Negociação que Filtra",
-      desc: "Roteiro de objeção testado em mais de 400 reuniões. A resposta certa para está caro, vou pensar e vou comparar. Fecha em até três contatos.",
-      bullets: ["Banco de respostas", "Ancoragem de preço", "Fechamento em 3 contatos"],
-      duracao: "Módulo 4 — 5 aulas",
+      tag: "Encontros 8 e 9",
+      title: "Stablecoins e Rendimento em DeFi",
+      desc: "Análise dos principais dólares digitais, funcionamento, utilidades e riscos. Explicação sobre protocolos, liquidez, origem de rendimentos e avaliação de riscos.",
+      bullets: ["Diferenças entre stablecoins", "Riscos de protocolo e contrato", "Critérios reais de decisão"],
+      duracao: "2 encontros · 2 horas",
       img: step4,
     },
     {
-      tag: "Etapa 5",
-      title: "Pauta Renovável",
-      desc: "Transforma cliente único em recorrente. Contrato anual, gatilhos de renovação e pós-produção que cria o próximo projeto sem desconto por fidelidade.",
-      bullets: ["Contrato anual", "Gatilhos de renovação", "Pós que gera o próximo projeto"],
-      duracao: "Módulo 5 — 6 aulas",
+      tag: "Encontros 10, 11 e 12",
+      title: "Utilização no Cotidiano, LiberEther e Plano de Continuidade",
+      desc: "Transferências, pagamentos, cartões internacionais e integração com a rotina financeira. Uso da LiberWallet e LiberPass. Revisão da estrutura e entrega do guia operacional.",
+      bullets: ["Rotina financeira integrada", "Ecossistema LiberEther em uso", "Guia operacional personalizado"],
+      duracao: "3 encontros · 3 horas",
       img: step5,
     },
   ];
@@ -1594,12 +1631,13 @@ function LinhaDoTempo() {
   return (
     <section className="section-light py-24 md:py-32">
       <Container>
-        <div className="mx-auto max-w-[820px]">
-          <h2 className="display text-[34px] leading-[1.05] md:text-[52px]">
-            Como o método se desenrola, etapa por etapa.
+        <div className="mx-auto max-w-[860px]">
+          <h2 className="display text-[36px] leading-[1.05] md:text-[54px]">
+            Os 12 encontros, mês a mês.
           </h2>
-          <p className="mt-5 max-w-[520px] text-[15px] leading-relaxed text-muted-foreground md:text-[16px]">
-            Do posicionamento à recorrência. Mensurável e replicável.
+          <p className="mt-5 max-w-[560px] text-[15px] leading-relaxed text-muted-foreground md:text-[16px]">
+            Uma sequência possível, sempre adaptada às suas prioridades no
+            diagnóstico. Do primeiro encontro à entrega do guia operacional.
           </p>
         </div>
 
@@ -1625,10 +1663,10 @@ function LinhaDoTempo() {
                   <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-ember">
                     {s.tag}
                   </div>
-                  <h3 className="display mt-2 text-[24px] leading-[1.1] md:text-[30px]">
+                  <h3 className="display mt-2 text-[26px] leading-[1.1] md:text-[34px]">
                     {s.title}
                   </h3>
-                  <p className="mt-3 max-w-[440px] text-[14.5px] leading-relaxed text-muted-foreground">
+                  <p className="mt-3 max-w-[460px] text-[14.5px] leading-relaxed text-muted-foreground">
                     {s.desc}
                   </p>
                   <ul className="mt-5 space-y-2.5">
@@ -1643,8 +1681,8 @@ function LinhaDoTempo() {
                     ))}
                   </ul>
                   <div className="mt-6">
-                    <span className="inline-flex items-center gap-2 text-[12.5px] font-semibold uppercase tracking-[0.18em] text-ember">
-                      <Film className="size-3.5" strokeWidth={2.5} />
+                    <span className="inline-flex items-center gap-2 font-mono text-[11.5px] font-semibold uppercase tracking-[0.18em] text-ember">
+                      <Layers className="size-3.5" strokeWidth={2.5} />
                       {s.duracao}
                     </span>
                   </div>
@@ -1669,7 +1707,7 @@ function LinhaDoTempo() {
   );
 }
 
-/* ---------- momento cinematográfico ---------- */
+/* ---------- momento editorial ---------- */
 
 function FridgeVideo() {
   return (
@@ -1682,9 +1720,9 @@ function FridgeVideo() {
       />
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/70 via-background/40 to-background/80" />
       <div className="relative z-[2] mx-auto flex min-h-[70vh] max-w-[1200px] flex-col items-center justify-center px-6 py-32 text-center md:min-h-[80vh] md:py-44">
-        <p className="text-xs uppercase tracking-[0.32em] text-ember">Próximo projeto</p>
-        <h2 className="display mt-6 max-w-[20ch] text-balance text-4xl text-foreground md:text-6xl lg:text-7xl">
-          Aperte o REC sabendo que o projeto já está vendido.
+        <p className="font-mono text-xs uppercase tracking-[0.32em] text-ember">Próximo capítulo</p>
+        <h2 className="display mt-6 max-w-[22ch] text-balance text-4xl text-foreground md:text-6xl lg:text-7xl">
+          Assuma o controle do que já é seu.
         </h2>
       </div>
     </section>
@@ -1706,20 +1744,20 @@ function FinalCTA() {
         className="pointer-events-none absolute inset-0 z-[2] opacity-50"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 100%, oklch(0.78 0.12 205 / 0.35), transparent 60%)",
+            "radial-gradient(ellipse at 50% 100%, oklch(0.74 0.14 275 / 0.35), transparent 60%)",
         }}
       />
       <Container className="relative z-10">
-        <div className="mx-auto max-w-[820px] text-center">
-          <h2 className="display display-tight text-[40px] md:text-[68px]">
-            5 etapas. De 3 a 12x mais por projeto.
+        <div className="mx-auto max-w-[860px] text-center">
+          <h2 className="display display-tight text-[42px] md:text-[72px]">
+            12 encontros. 3 meses. Uma estrutura financeira sua.
           </h2>
-          <p className="mx-auto mt-7 max-w-[560px] text-[16px] text-muted-foreground md:text-[17px]">
-            R$ 1.997 à vista ou 12× de R$ 197. Garantia incondicional de 15 dias.
-            Acesso liberado em minutos.
+          <p className="mx-auto mt-7 max-w-[600px] text-[16px] text-muted-foreground md:text-[17px]">
+            R$ 2.500 na condição comercial atual · compromisso contratual de
+            entrega · plataforma LiberEther incluída por 12 meses.
           </p>
           <div className="mt-10 flex justify-center">
-            <PrimaryCTA>Quero garantir minha vaga agora</PrimaryCTA>
+            <PrimaryCTA>Quero solicitar uma conversa de diagnóstico</PrimaryCTA>
           </div>
         </div>
       </Container>
@@ -1731,16 +1769,19 @@ function Footer() {
   return (
     <footer className="py-12">
       <Container className="flex flex-col items-center justify-between gap-4 text-[12.5px] text-muted-foreground md:flex-row">
-        <img
-          src={logo}
-          alt="Método Pauta Premium"
-          width={1024}
-          height={1024}
-          loading="lazy"
-          className="h-9 w-auto"
-        />
-        <div>© 2026, Todos os direitos reservados</div>
-        <div>Termos de uso, Política de privacidade</div>
+        <div className="flex items-center gap-2">
+          <img
+            src={logo}
+            alt="LiberEther"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            className="h-8 w-auto"
+          />
+          <span className="font-display text-[16px] text-foreground/90">LiberEther</span>
+        </div>
+        <div>© 2026 LiberEther · Todos os direitos reservados</div>
+        <div>Termos de uso · Política de privacidade</div>
       </Container>
     </footer>
   );

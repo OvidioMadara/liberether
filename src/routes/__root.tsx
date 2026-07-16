@@ -72,21 +72,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Pele Limpa em 90 Dias — Protocolo Barreira Primeiro" },
-      { name: "description", content: "Em 90 dias, com 5 ativos na ordem certa, sua pele para de depender de base. Protocolo Barreira Primeiro para pele oleosa, acne e manchas." },
-      { property: "og:title", content: "Pele Limpa em 90 Dias — Protocolo Barreira Primeiro" },
-      { property: "og:description", content: "Em 90 dias, com 5 ativos na ordem certa, sua pele para de depender de base. Protocolo Barreira Primeiro para pele oleosa, acne e manchas." },
+      { title: "Mentoria Autonomia Global — LiberEther" },
+      { name: "description", content: "Em 12 encontros individuais, construa uma estrutura financeira mais autônoma com stablecoins, autocustódia e ferramentas Web3. Mentoria personalizada por 3 meses." },
+      { property: "og:title", content: "Mentoria Autonomia Global — LiberEther" },
+      { property: "og:description", content: "12 encontros individuais para receber, converter, armazenar e utilizar seu dinheiro com Web3, stablecoins e autocustódia." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Pele Limpa em 90 Dias — Protocolo Barreira Primeiro" },
-      { name: "twitter:description", content: "Em 90 dias, com 5 ativos na ordem certa, sua pele para de depender de base. Protocolo Barreira Primeiro para pele oleosa, acne e manchas." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/d3b09714-86fe-4ea9-ac5a-a5c8c1a81400" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/d3b09714-86fe-4ea9-ac5a-a5c8c1a81400" },
+      { name: "twitter:title", content: "Mentoria Autonomia Global — LiberEther" },
+      { name: "twitter:description", content: "12 encontros individuais para construir uma estrutura financeira autônoma com Web3, stablecoins e autocustódia." },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" },
       { rel: "stylesheet", href: appCss },
     ],
   }),
@@ -95,6 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
+
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (

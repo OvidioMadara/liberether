@@ -134,9 +134,9 @@ function TopMark() {
           <img
             src={logo}
             alt="LiberEther"
-            width={1024}
-            height={1024}
-            className="h-10 w-auto md:h-12"
+            width={512}
+            height={512}
+            className="h-6 w-auto"
           />
           <span className="font-display text-[20px] tracking-[-0.01em] text-foreground md:text-[22px]">
             LiberEther

@@ -45,38 +45,38 @@
 :root {
   --radius: 1.25rem;
 
-  /* Web3 noir — deep navy canvas with ether violet-blue accent */
-  --canvas: oklch(0.15 0.02 265);            /* deep midnight navy */
-  --background: oklch(0.18 0.022 265);       /* raised section surface */
-  --foreground: oklch(0.96 0.008 265);       /* cool off-white ink */
-  --ink: oklch(0.97 0.006 265);
-  --ink-soft: oklch(0.82 0.014 265);
-  --surface: oklch(0.21 0.024 265);
-  --surface-raised: oklch(0.245 0.026 265);
-  --hairline: oklch(0.95 0.012 265 / 12%);
+  /* LiberEther — premium, minimalist light identity */
+  --canvas: #FFFFFF;                /* main background */
+  --background: #F7F7F8;            /* alternating sections */
+  --foreground: #111111;            /* primary text */
+  --ink: #111111;
+  --ink-soft: #6B7280;
+  --surface: #F7F7F8;
+  --surface-raised: #FFFFFF;
+  --hairline: #E5E7EB;
 
-  /* Ether violet-blue accent */
-  --ember: oklch(0.74 0.14 275);
-  --ember-soft: oklch(0.6 0.11 275);
-  --fresh: oklch(0.78 0.1 175);
+  /* LiberEther red accent */
+  --ember: #E82830;
+  --ember-soft: #A81820;
+  --fresh: #A81820;
 
-  --card: oklch(0.21 0.024 265);
-  --card-foreground: oklch(0.96 0.008 265);
-  --popover: oklch(0.21 0.024 265);
-  --popover-foreground: oklch(0.96 0.008 265);
-  --primary: oklch(0.74 0.14 275);
-  --primary-foreground: oklch(0.15 0.02 265);
-  --secondary: oklch(0.26 0.024 265);
-  --secondary-foreground: oklch(0.96 0.008 265);
-  --muted: oklch(0.26 0.024 265);
-  --muted-foreground: oklch(0.7 0.014 265);
-  --accent: oklch(0.74 0.14 275);
-  --accent-foreground: oklch(0.15 0.02 265);
-  --destructive: oklch(0.62 0.21 25);
-  --destructive-foreground: oklch(0.97 0.006 265);
-  --border: oklch(0.95 0.012 265 / 12%);
-  --input: oklch(0.95 0.012 265 / 16%);
-  --ring: oklch(0.74 0.14 275);
+  --card: #FFFFFF;
+  --card-foreground: #111111;
+  --popover: #FFFFFF;
+  --popover-foreground: #111111;
+  --primary: #E82830;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F7F7F8;
+  --secondary-foreground: #111111;
+  --muted: #F7F7F8;
+  --muted-foreground: #6B7280;
+  --accent: #E82830;
+  --accent-foreground: #FFFFFF;
+  --destructive: #A81820;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #E82830;
 }
 
 .section-light {

@@ -463,11 +463,11 @@ function Cardapios() {
         />
       </div>
       <Container>
-        <div className="mx-auto max-w-[760px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display display-tight text-balance text-[38px] md:text-[58px]">
             O Método — os 4 pilares da autonomia financeira.
           </h2>
-          <p className="mx-auto mt-5 max-w-[620px] text-[15.5px] leading-relaxed text-muted-foreground md:text-[17px]">
+          <p className="mx-auto mt-5 max-w-content-sm text-[15.5px] leading-relaxed text-muted-foreground md:text-[17px]">
             Acesso, Autocustódia, Alocação e Autonomia — precedidos por um
             diagnóstico individual do seu caixa e das taxas que você perde hoje.
           </p>

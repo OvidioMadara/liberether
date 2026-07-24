@@ -1374,7 +1374,7 @@ function Garantia() {
   return (
     <section className="section-light py-28 md:py-32">
       <Container>
-        <div className="mx-auto grid max-w-[1180px] items-center gap-10 p-4 md:grid-cols-[auto_1fr] md:gap-16 md:p-8">
+        <div className="mx-auto grid max-w-content-lg items-center gap-10 p-4 md:grid-cols-[auto_1fr] md:gap-16 md:p-8">
           <img
             src={garantiaImg}
             alt="Compromisso contratual de entrega LiberEther"

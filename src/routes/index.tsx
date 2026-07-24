@@ -1496,40 +1496,36 @@ function Oferta() {
 
 const faqs = [
   {
-    q: "Preciso entender de criptomoedas antes de começar?",
-    a: "Não. Os conceitos necessários são explicados durante os encontros. É recomendável ter familiaridade básica com aplicativos e tecnologia.",
+    q: "Preciso ter conhecimento prévio sobre criptomoedas?",
+    a: "Não. O acompanhamento é feito passo a passo a partir do seu nível atual. Se você já utiliza aplicativos bancários no celular, tem todo o conhecimento necessário para começar.",
   },
   {
-    q: "A mentoria vai me ensinar a receber pagamentos em dólar?",
-    a: "A mentoria apresenta e ajuda a estruturar os canais compatíveis com sua atividade, sua localização e as plataformas disponíveis. Nenhum canal específico pode ser garantido permanentemente, pois serviços de terceiros podem alterar regras e condições.",
+    q: "Vou precisar fechar minhas contas bancárias?",
+    a: "Não. Você continuará usando bancos locais para o dia a dia em reais (pagamento de contas e impostos), utilizando pontes rápidas de conversão via Pix sempre que precisar.",
   },
   {
-    q: "Vou conseguir deixar de usar bancos?",
-    a: "Você aprende a criar alternativas para receber, armazenar, converter e utilizar dinheiro. Isso pode reduzir a dependência de bancos, mas algumas operações ainda poderão utilizar instituições financeiras ou pontes entre moedas tradicionais e ativos digitais.",
+    q: "Qual a diferença entre manter saldo em corretoras e na autocustódia?",
+    a: "Em corretoras, a posse do dinheiro é da empresa. Se ela travar saques ou passar por instabilidade, seu saldo fica bloqueado. Na autocustódia, você possui a chave privada: o dinheiro é seu de fato e não pode ser bloqueado por terceiros.",
   },
   {
-    q: "A mentoria garante renda passiva?",
-    a: "Não. Você aprende como funcionam diferentes possibilidades de rendimento, de onde vêm as receitas e quais riscos estão envolvidos. Não existe garantia de retorno ou rentabilidade.",
+    q: "Como funcionam os testes com valores mínimos ($1 a $5)?",
+    a: "Antes de qualquer movimentação real, executamos testes assistidos com valores simbólicos para validar endereços, redes e backups. Você só opera valores reais depois de dominar cada etapa técnica.",
   },
   {
     q: "A LiberEther ficará com meu dinheiro?",
-    a: "Não. A proposta é ensinar autocustódia. As carteiras, senhas e frases de recuperação permanecem sob o seu controle. A LiberEther não solicitará sua frase de recuperação.",
+    a: "Não. A proposta é ensinar autocustódia. As carteiras, senhas e frases de recuperação permanecem sob o seu controle. A LiberEther nunca solicitará sua frase de recuperação.",
   },
   {
     q: "Preciso comprar uma Trezor?",
-    a: "Não obrigatoriamente. A necessidade é avaliada conforme o volume armazenado, a frequência de utilização e o perfil de risco. Caso seja recomendada, a compra do dispositivo não está incluída no valor da mentoria.",
+    a: "Não obrigatoriamente. A necessidade é avaliada conforme o volume armazenado e o perfil de risco. Quando recomendada, a compra do dispositivo não está incluída no valor da mentoria.",
   },
   {
-    q: "Qual é a diferença entre a mentoria e a plataforma de vídeos?",
-    a: "A plataforma reúne conteúdos educacionais que podem ser acessados durante um ano. A mentoria é individual e personalizada: os encontros são organizados para resolver suas necessidades específicas e acompanhar a implementação.",
-  },
-  {
-    q: "Quanto tempo preciso dedicar?",
-    a: "Um encontro de uma hora por semana. Também é necessário reservar algum tempo para realizar configurações, estudar conteúdos e aplicar as orientações definidas em cada encontro.",
+    q: "Este serviço é uma consultoria de investimentos?",
+    a: "Não. A Mentoria de Autonomia Global LiberEther é um serviço estritamente educacional e de consultoria de processos tecnológicos. Não prestamos recomendação de compra/venda de ativos, gestão de carteiras ou intermediação de operações financeiras reguladas.",
   },
   {
     q: "Posso contratar horas adicionais depois da mentoria?",
-    a: "Sim, conforme disponibilidade. Durante os 12 meses posteriores à mentoria, você tem 50% de desconto em serviços adicionais elegíveis da LiberEther.",
+    a: "Sim, conforme disponibilidade. Durante os 12 meses posteriores, você tem 50% de desconto em consultorias de expansão e serviços adicionais elegíveis da LiberEther.",
   },
 ];
 

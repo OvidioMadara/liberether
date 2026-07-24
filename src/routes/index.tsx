@@ -1023,7 +1023,7 @@ function Entregaveis() {
           })}
         </div>
 
-        <div className="mx-auto mt-14 max-w-[820px] text-center">
+        <div className="mx-auto mt-14 max-w-content text-center">
           <a
             href="#oferta"
             className="group inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 text-[15px] font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-[1px] hover:shadow-[0_20px_60px_-20px_color-mix(in_oklab,var(--color-ember)_55%,transparent)]"

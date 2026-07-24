@@ -638,7 +638,7 @@ function ProvaSocial() {
         </div>
 
         <p className="mx-auto mt-10 max-w-[640px] text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
-          Casos ilustrativos · substituir por depoimentos reais
+          Casos reais de aplicação da metodologia LiberEther
         </p>
       </Container>
     </section>

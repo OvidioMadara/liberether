@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface AnimatedTextCycleProps {
@@ -14,18 +14,6 @@ export default function AnimatedTextCycle({
   className = "",
 }: AnimatedTextCycleProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [width, setWidth] = useState("auto");
-  const measureRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (measureRef.current) {
-      const elements = measureRef.current.children;
-      if (elements.length > currentIndex) {
-        const newWidth = elements[currentIndex].getBoundingClientRect().width;
-        setWidth(`${newWidth}px`);
-      }
-    }
-  }, [currentIndex]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -34,8 +22,8 @@ export default function AnimatedTextCycle({
     return () => clearInterval(timer);
   }, [interval, words.length]);
 
-  const containerVariants = {
-    hidden: { y: -20, opacity: 0, filter: "blur(8px)" },
+  const variants = {
+    hidden: { y: -16, opacity: 0, filter: "blur(6px)" },
     visible: {
       y: 0,
       opacity: 1,
@@ -43,56 +31,27 @@ export default function AnimatedTextCycle({
       transition: { duration: 0.4, ease: "easeOut" as const },
     },
     exit: {
-      y: 20,
+      y: 16,
       opacity: 0,
-      filter: "blur(8px)",
+      filter: "blur(6px)",
       transition: { duration: 0.3, ease: "easeIn" as const },
     },
   };
 
   return (
-    <>
-      {/* Hidden measurement div with all words rendered */}
-      <div
-        ref={measureRef}
-        aria-hidden="true"
-        className="absolute opacity-0 pointer-events-none"
-        style={{ visibility: "hidden" }}
-      >
-        {words.map((word, i) => (
-          <span key={i} className={className}>
-            {word}
-          </span>
-        ))}
-      </div>
-
-      {/* Visible animated word */}
-      <motion.span
-        className="relative inline-block"
-        animate={{
-          width,
-          transition: {
-            type: "spring",
-            stiffness: 150,
-            damping: 15,
-            mass: 1.2,
-          },
-        }}
-      >
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.span
-            key={currentIndex}
-            className={`inline-block ${className}`}
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            style={{ whiteSpace: "nowrap" }}
-          >
-            {words[currentIndex]}
-          </motion.span>
-        </AnimatePresence>
-      </motion.span>
-    </>
+    <span className="relative inline">
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.span
+          key={currentIndex}
+          className={`inline ${className}`}
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          {words[currentIndex]}
+        </motion.span>
+      </AnimatePresence>
+    </span>
   );
 }

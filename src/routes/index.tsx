@@ -286,7 +286,7 @@ function Hero() {
 
         {/* VSL slot */}
         <div className="fade-up mt-14 md:mt-20">
-          <div className="relative mx-auto aspect-video max-w-[820px] overflow-hidden rounded-3xl bg-black shadow-float">
+          <div className="relative mx-auto aspect-video max-w-content-lg overflow-hidden rounded-3xl bg-black shadow-float">
             <img
               src={hero}
               alt="Workspace com carteira física Trezor, laptop e dólares digitais"

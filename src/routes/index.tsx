@@ -739,7 +739,7 @@ function Metodo() {
     <section id="metodo" className="section-light relative bg-background py-28 md:py-36">
       <Container>
         <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-[760px]">
+          <div className="max-w-content">
             <h2 className="display text-[36px] md:text-[54px]">
               A Estrutura Financeira 4A — como a mentoria se organiza.
             </h2>

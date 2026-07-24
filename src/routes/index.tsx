@@ -1434,7 +1434,7 @@ function Oferta() {
       className="section-light relative overflow-hidden bg-background py-28 md:py-36"
     >
       <Container>
-        <div className="mx-auto max-w-[820px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
             A oferta
           </div>
@@ -1443,7 +1443,7 @@ function Oferta() {
           </h2>
         </div>
 
-        <div className="mx-auto mt-16 max-w-[760px]">
+        <div className="mx-auto mt-16 max-w-content">
           <ul className="divide-y divide-foreground/10">
             {stack.map(([t, v]) => (
               <li
@@ -1462,7 +1462,7 @@ function Oferta() {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-[820px] text-center">
+        <div className="mx-auto mt-14 max-w-content text-center">
           <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
             Condição comercial atual
           </div>

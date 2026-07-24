@@ -106,7 +106,7 @@ function Container({
   className?: string;
 }) {
   return (
-    <div className={`mx-auto w-full max-w-[1240px] px-6 md:px-10 ${className}`}>
+    <div className={`mx-auto w-full max-w-page px-6 md:px-10 ${className}`}>
       {children}
     </div>
   );
@@ -246,7 +246,7 @@ function Hero() {
       />
 
       <Container className="relative z-10">
-        <div className="fade-up mx-auto max-w-[920px] text-center">
+        <div className="fade-up mx-auto max-w-content text-center">
           <h1 className="display display-tight text-balance text-[36px] sm:text-[52px] md:text-[68px]">
             Elimine as taxas invisíveis de conversão e receba em{" "}
             <AnimatedTextCycle
@@ -257,7 +257,7 @@ function Hero() {
             com saldo disponível em minutos.
           </h1>
 
-          <p className="mx-auto mt-7 max-w-[760px] text-pretty text-[16px] leading-relaxed text-muted-foreground md:text-[17.5px]">
+          <p className="mx-auto mt-7 max-w-content text-pretty text-[16px] leading-relaxed text-muted-foreground md:text-[17.5px]">
             Se você fatura alto — prestando serviços para o exterior ou operando
             seu negócio no Brasil — sabe quanto perde com taxas abusivas e
             burocracia bancária. A Mentoria de Autonomia Global LiberEther é um
@@ -267,7 +267,7 @@ function Hero() {
             assume o controle total do seu faturamento em moeda forte.
           </p>
 
-          <ul className="mx-auto mt-10 grid max-w-[980px] gap-3 text-left sm:grid-cols-3">
+          <ul className="mx-auto mt-10 grid max-w-content-lg gap-3 text-left sm:grid-cols-3">
             {[
               "Receba em USDC direto na sua carteira, sem SWIFT nem 2 a 5 dias úteis de espera.",
               "Elimine 3% a 6% de perda em cotações abusivas e tarifas bancárias empilhadas.",
@@ -286,7 +286,7 @@ function Hero() {
 
         {/* VSL slot */}
         <div className="fade-up mt-14 md:mt-20">
-          <div className="relative mx-auto aspect-video max-w-[820px] overflow-hidden rounded-3xl bg-black shadow-float">
+          <div className="relative mx-auto aspect-video max-w-content-lg overflow-hidden rounded-3xl bg-black shadow-float">
             <img
               src={hero}
               alt="Workspace com carteira física Trezor, laptop e dólares digitais"
@@ -358,11 +358,11 @@ function AnatomiaMarmita() {
       />
 
       <Container className="relative z-10">
-        <div className="mx-auto max-w-[760px] text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display display-tight text-balance text-[38px] md:text-[60px]">
             Engenharia financeira ajustada à realidade do seu faturamento.
           </h2>
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] leading-relaxed text-muted-foreground md:text-[17px]">
+          <p className="mx-auto mt-5 max-w-content-sm text-[16px] leading-relaxed text-muted-foreground md:text-[17px]">
             O fluxo de quem exporta serviços de tecnologia é diferente de quem
             paga fornecedores no exterior ou protege reservas líquidas no
             Brasil. Antes de qualquer implementação, mapeamos suas taxas,
@@ -372,7 +372,7 @@ function AnatomiaMarmita() {
         </div>
 
         {/* central kit with halo */}
-        <div className="relative mx-auto mt-16 flex max-w-[640px] items-center justify-center">
+        <div className="relative mx-auto mt-16 flex max-w-content items-center justify-center">
           <div
             className="absolute inset-10 rounded-full opacity-60 blur-3xl"
             style={{
@@ -395,7 +395,7 @@ function AnatomiaMarmita() {
         </div>
 
         {/* phase chips */}
-        <div className="relative mx-auto mt-12 grid max-w-[820px] grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="relative mx-auto mt-12 grid max-w-content-lg grid-cols-2 gap-3 md:grid-cols-4">
           {[
             ["90 dias", "de acompanhamento"],
             ["12 encontros", "individuais ao vivo"],
@@ -463,11 +463,11 @@ function Cardapios() {
         />
       </div>
       <Container>
-        <div className="mx-auto max-w-[760px] text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display display-tight text-balance text-[38px] md:text-[58px]">
             O Método — os 4 pilares da autonomia financeira.
           </h2>
-          <p className="mx-auto mt-5 max-w-[620px] text-[15.5px] leading-relaxed text-muted-foreground md:text-[17px]">
+          <p className="mx-auto mt-5 max-w-content-sm text-[15.5px] leading-relaxed text-muted-foreground md:text-[17px]">
             Acesso, Autocustódia, Alocação e Autonomia — precedidos por um
             diagnóstico individual do seu caixa e das taxas que você perde hoje.
           </p>
@@ -591,13 +591,13 @@ function ProvaSocial() {
   return (
     <section className="section-light relative bg-background py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display text-[36px] md:text-[54px]">
             Casos práticos: o resultado na rotina de quem já implementou.
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-content-lg gap-6 md:mt-20 md:grid-cols-3">
           {proofs.map((p, i) => (
             <article
               key={p.name}
@@ -637,7 +637,7 @@ function ProvaSocial() {
           ))}
         </div>
 
-        <p className="mx-auto mt-10 max-w-[640px] text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
+        <p className="mx-auto mt-10 max-w-content-sm text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
           Casos reais de aplicação da metodologia LiberEther
         </p>
       </Container>
@@ -663,11 +663,11 @@ function CTAMid() {
       <div className="pointer-events-none absolute inset-0 -z-10 grain opacity-40" />
 
       <Container>
-        <div className="mx-auto max-w-[880px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display text-[36px] text-white md:text-[54px]">
             O primeiro passo é o Diagnóstico Operacional do seu caixa.
           </h2>
-          <p className="mx-auto mt-6 max-w-[620px] text-[16px] leading-relaxed text-white/75 md:text-[17px]">
+          <p className="mx-auto mt-6 max-w-content-sm text-[16px] leading-relaxed text-white/75 md:text-[17px]">
             Mapeamos exatamente quanto você perde hoje em tarifas e cotações,
             escolhemos as redes e ativos adequados e desenhamos as pontes de
             conversão para Pix — antes de qualquer implementação.
@@ -739,7 +739,7 @@ function Metodo() {
     <section id="metodo" className="section-light relative bg-background py-28 md:py-36">
       <Container>
         <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-[760px]">
+          <div className="max-w-content-lg">
             <h2 className="display text-[36px] md:text-[54px]">
               A Estrutura Financeira 4A — como a mentoria se organiza.
             </h2>
@@ -890,11 +890,11 @@ function ParaQuem() {
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <h2 className="display mx-auto max-w-[860px] text-center text-[36px] md:text-[54px]">
+        <h2 className="display mx-auto max-w-content-lg text-center text-[36px] md:text-[54px]">
           Para quem é (e para quem não é) a Mentoria Autonomia Global.
         </h2>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-content-lg gap-6 md:grid-cols-2">
           <div className="rounded-3xl bg-gradient-to-br from-ember/10 via-surface/60 to-surface/30 p-8 md:p-10">
             <div className="font-mono text-[11px] tracking-[0.2em] text-ember uppercase">É pra você se</div>
             <ul className="mt-6 space-y-4">
@@ -960,17 +960,17 @@ function Entregaveis() {
       />
 
       <Container className="relative z-10">
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display text-[36px] text-foreground md:text-[58px]">
             Os 12 encontros — três meses de acompanhamento individual.
           </h2>
-          <p className="mt-5 text-[15px] text-foreground/75 md:text-[16px]">
+          <p className="mx-auto mt-5 max-w-content-sm text-[15px] text-foreground/75 md:text-[16px]">
             Uma organização possível dos encontros, sempre adaptada às suas
             prioridades no diagnóstico.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-[1180px] auto-rows-[minmax(180px,auto)] gap-5 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-content-lg auto-rows-[minmax(180px,auto)] gap-5 md:grid-cols-3">
           {modules.map((m, i) => {
             const featured = i === 0;
             return (
@@ -1023,7 +1023,7 @@ function Entregaveis() {
           })}
         </div>
 
-        <div className="mx-auto mt-14 max-w-[820px] text-center">
+        <div className="mx-auto mt-14 max-w-content text-center">
           <a
             href="#oferta"
             className="group inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 text-[15px] font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-[1px] hover:shadow-[0_20px_60px_-20px_color-mix(in_oklab,var(--color-ember)_55%,transparent)]"
@@ -1070,13 +1070,13 @@ function Bonus() {
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display text-[36px] md:text-[54px]">
             Bônus exclusivos que estendem os resultados além dos 90 dias.
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-content-lg gap-6 md:grid-cols-3">
           {bonuses.map((b) => (
             <article
               key={b.n}
@@ -1206,19 +1206,19 @@ function Depoimentos() {
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display text-[36px] md:text-[54px]">
             Profissionais construindo autonomia — cada um a partir do seu próprio caso.
           </h2>
         </div>
 
-        <div className="mt-16 flex justify-center gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_18%,black_82%,transparent)] max-h-[720px] overflow-hidden">
+        <div className="mx-auto mt-16 flex max-w-content-lg justify-center gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_18%,black_82%,transparent)] max-h-[720px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={18} />
           <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={22} />
           <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={20} />
         </div>
 
-        <p className="mx-auto mt-10 max-w-[640px] text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
+        <p className="mx-auto mt-10 max-w-content-sm text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
           Depoimentos ilustrativos · substituir por casos reais
         </p>
       </Container>
@@ -1339,11 +1339,11 @@ function Suporte() {
   return (
     <section className="section-light relative py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display text-balance text-[38px] md:text-[58px]">
             Como você é acompanhado durante e depois da mentoria.
           </h2>
-          <p className="mx-auto mt-7 max-w-[660px] text-[16.5px] leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-7 max-w-content-sm text-[16.5px] leading-relaxed text-muted-foreground">
             Você não recebe apenas informações e precisa descobrir sozinho como
             aplicá-las. O acompanhamento é ativo do primeiro ao último encontro
             — e continua na plataforma pelos 12 meses seguintes.
@@ -1357,7 +1357,7 @@ function Suporte() {
                 <Icon className="size-9" strokeWidth={1.4} />
               </div>
               <h3 className="display mt-6 text-[24px] md:text-[28px]">{title}</h3>
-              <p className="mt-3 max-w-[320px] text-[14.5px] leading-relaxed text-muted-foreground">
+              <p className="mt-3 text-[14.5px] leading-relaxed text-muted-foreground">
                 {desc}
               </p>
             </div>
@@ -1374,7 +1374,7 @@ function Garantia() {
   return (
     <section className="section-light py-28 md:py-32">
       <Container>
-        <div className="mx-auto grid max-w-[1180px] items-center gap-10 p-4 md:grid-cols-[auto_1fr] md:gap-16 md:p-8">
+        <div className="mx-auto grid max-w-content-lg items-center gap-10 p-4 md:grid-cols-[auto_1fr] md:gap-16 md:p-8">
           <img
             src={garantiaImg}
             alt="Compromisso contratual de entrega LiberEther"
@@ -1434,7 +1434,7 @@ function Oferta() {
       className="section-light relative overflow-hidden bg-background py-28 md:py-36"
     >
       <Container>
-        <div className="mx-auto max-w-[820px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
             A oferta
           </div>
@@ -1443,7 +1443,7 @@ function Oferta() {
           </h2>
         </div>
 
-        <div className="mx-auto mt-16 max-w-[760px]">
+        <div className="mx-auto mt-16 max-w-content">
           <ul className="divide-y divide-foreground/10">
             {stack.map(([t, v]) => (
               <li
@@ -1462,7 +1462,7 @@ function Oferta() {
           </div>
         </div>
 
-        <div className="mx-auto mt-14 max-w-[820px] text-center">
+        <div className="mx-auto mt-14 max-w-content text-center">
           <div className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
             Condição comercial atual
           </div>
@@ -1630,17 +1630,17 @@ function LinhaDoTempo() {
   return (
     <section className="section-light py-24 md:py-32">
       <Container>
-        <div className="mx-auto max-w-[860px]">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display text-[36px] leading-[1.05] md:text-[54px]">
             Os 12 encontros, mês a mês.
           </h2>
-          <p className="mt-5 max-w-[560px] text-[15px] leading-relaxed text-muted-foreground md:text-[16px]">
+          <p className="mx-auto mt-5 max-w-content-sm text-[15px] leading-relaxed text-muted-foreground md:text-[16px]">
             Uma sequência possível, sempre adaptada às suas prioridades no
             diagnóstico. Do primeiro encontro à entrega do guia operacional.
           </p>
         </div>
 
-        <ol className="mx-auto mt-16 max-w-[1080px]">
+        <ol className="mx-auto mt-16 max-w-content-lg">
           {steps.map((s, i) => (
             <motion.li
               key={s.tag}
@@ -1718,7 +1718,7 @@ function FridgeVideo() {
         className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-60"
       />
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/70 via-background/40 to-background/80" />
-      <div className="relative z-[2] mx-auto flex min-h-[70vh] max-w-[1200px] flex-col items-center justify-center px-6 py-32 text-center md:min-h-[80vh] md:py-44">
+      <div className="relative z-[2] mx-auto flex min-h-[70vh] max-w-content-lg flex-col items-center justify-center px-6 py-32 text-center md:min-h-[80vh] md:py-44">
         <p className="font-mono text-xs uppercase tracking-[0.32em] text-ember">Próximo capítulo</p>
         <h2 className="display mt-6 max-w-[22ch] text-balance text-4xl text-foreground md:text-6xl lg:text-7xl">
           Assuma o controle do que já é seu.
@@ -1747,11 +1747,11 @@ function FinalCTA() {
         }}
       />
       <Container className="relative z-10">
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display display-tight text-[42px] md:text-[72px]">
             12 encontros. 3 meses. Uma estrutura financeira sua.
           </h2>
-          <p className="mx-auto mt-7 max-w-[600px] text-[16px] text-muted-foreground md:text-[17px]">
+          <p className="mx-auto mt-7 max-w-content-sm text-[16px] text-muted-foreground md:text-[17px]">
             R$ 2.500 na condição comercial atual · compromisso contratual de
             entrega · plataforma LiberEther incluída por 12 meses.
           </p>

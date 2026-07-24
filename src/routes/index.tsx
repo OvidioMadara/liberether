@@ -422,10 +422,10 @@ function AnatomiaMarmita() {
 
 function StatsStrip() {
   const stats = [
-    ["4 pilares", "Acesso, Autocustódia, Alocação, Autonomia"],
-    ["12 encontros", "de uma hora, individuais, semanais"],
-    ["1 ano", "de acesso à plataforma LiberEther"],
-    ["50% off", "em serviços elegíveis por 12 meses"],
+    ["3% a 6%", "de perda evitada em cotações e taxas bancárias"],
+    ["Minutos", "para saldo disponível em USDC na sua carteira"],
+    ["12 encontros", "individuais ao vivo por videochamada"],
+    ["1 ano", "de plataforma educacional LiberEther incluída"],
   ];
   return (
     <section className="section-light py-12 md:py-16 bg-surface">

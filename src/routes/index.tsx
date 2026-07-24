@@ -502,11 +502,11 @@ function Dor() {
         <div className="grid gap-16 md:grid-cols-12">
           <div className="md:col-span-5">
             <h2 className="display text-[36px] md:text-[54px]">
-              Ter acesso às ferramentas não significa saber usá-las de forma integrada.
+              O custo real de depender da rota bancária tradicional.
             </h2>
             <motion.img
               src={shameStill}
-              alt="Ferramentas financeiras desconectadas — bancos, corretoras e apps espalhados"
+              alt="Comparativo entre rota bancária tradicional e estrutura autônoma em USDC"
               loading="lazy"
               width={1024}
               height={1024}
@@ -521,29 +521,34 @@ function Dor() {
             className="space-y-6 text-[16.5px] leading-[1.75] text-foreground/80 md:col-span-7 md:text-[17px]"
           >
             <p>
-              Hoje existem diferentes formas de receber pagamentos, converter
-              moedas, comprar stablecoins, armazenar ativos e acessar soluções
-              financeiras construídas sobre blockchain. O problema é que cada
-              parte costuma funcionar de maneira isolada.
+              Se você exporta serviços, paga fornecedores ou quer proteger o
+              caixa gerado pelo seu negócio no Brasil, a dependência de bancos
+              e plataformas tradicionais consome de{" "}
+              <strong className="text-foreground">3% a 8% do seu faturamento bruto</strong>.
             </p>
             <p>
-              Você recebe por uma plataforma, converte em outra, transfere para
-              um banco, envia para uma corretora e utiliza uma carteira que
-              talvez nunca tenha sido configurada corretamente. Vídeos, notícias
-              e conteúdos soltos apresentam possibilidades, mas raramente
-              explicam como construir uma operação completa para a sua realidade.
+              <strong className="text-foreground">Diferença abusiva na cotação do dólar (3% a 6%):</strong>{" "}
+              bancos e aplicativos cobram uma margem pesada em cima do dólar
+              oficial. Somam-se tarifas de intermediação, SWIFT e taxas fixas de
+              recepção e envio a cada movimentação.
             </p>
             <p>
-              O resultado: dependência de contas e intermediários, custos
-              desnecessários em conversões, receio de guardar o próprio dinheiro,
-              desorganização com senhas e frases de recuperação, e exposição a
-              riscos que não foram compreendidos.
+              <strong className="text-foreground">Capital travado por 2 a 5 dias úteis</strong>{" "}
+              aguardando aprovações manuais, envio de contratos de câmbio e
+              burocracia desnecessária — enquanto o seu caixa poderia estar
+              girando.
+            </p>
+            <p>
+              <strong className="text-foreground">Risco de custódia e bloqueios:</strong>{" "}
+              seu saldo fica sob as regras de plataformas que podem travar
+              saques, mudar taxas sem aviso prévio ou exigir documentações
+              complexas na última hora.
             </p>
             <p className="text-foreground">
-              A questão não é apenas aprender sobre criptomoedas.{" "}
+              A rota LiberEther troca isso por{" "}
               <strong>
-                É entender como utilizar essas tecnologias para resolver
-                necessidades financeiras reais.
+                taxas de rede residuais (centavos de dólar), saldo disponível em
+                minutos e controle exclusivo do seu USDC.
               </strong>
             </p>
           </motion.div>

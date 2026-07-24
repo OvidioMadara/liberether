@@ -8,6 +8,34 @@ interface AnimatedTextCycleProps {
   className?: string;
 }
 
+function parseMarkedText(text: string) {
+  const segments: React.ReactNode[] = [];
+  const regex = /\[\[(.*?)\]\]/g;
+  let lastIndex = 0;
+  let match;
+  let key = 0;
+
+  while ((match = regex.exec(text)) !== null) {
+    const before = text.slice(lastIndex, match.index);
+    if (before) {
+      segments.push(<span key={key++}>{before}</span>);
+    }
+    segments.push(
+      <span key={key++} className="text-ember">
+        {match[1]}
+      </span>
+    );
+    lastIndex = regex.lastIndex;
+  }
+
+  const after = text.slice(lastIndex);
+  if (after) {
+    segments.push(<span key={key++}>{after}</span>);
+  }
+
+  return segments;
+}
+
 export default function AnimatedTextCycle({
   words,
   interval = 3000,
@@ -49,7 +77,7 @@ export default function AnimatedTextCycle({
           animate="visible"
           exit="exit"
         >
-          {words[currentIndex]}
+          {parseMarkedText(words[currentIndex])}
         </motion.span>
       </AnimatePresence>
     </span>

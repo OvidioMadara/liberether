@@ -249,19 +249,19 @@ function Hero() {
             Elimine as taxas invisíveis de conversão{" "}
             <AnimatedTextCycle
               words={[
-                "e receba em moeda forte com saldo disponível em minutos.",
-                "e receba em dólar digital com saldo disponível em minutos.",
-                "e mantenha seu dinheiro em saldo dolarizado com mais autonomia.",
-                "e receba em stablecoins em dólar diretamente na sua carteira.",
-                "e organize sua renda internacional sem depender de uma estrutura bancária tradicional.",
-                "e construa uma reserva em dólar para proteger parte do seu patrimônio.",
-                "e receba pagamentos globais com mais controle sobre o seu dinheiro.",
-                "e transforme seus recebimentos em patrimônio dolarizado.",
-                "e tenha uma estrutura financeira global para receber, proteger e movimentar seu dinheiro.",
-                "e aprenda a utilizar ativos digitais com segurança e autonomia.",
+                "e receba em [[moeda forte]] com [[saldo disponível]] em minutos.",
+                "e receba em [[dólar digital]] com [[saldo disponível]] em minutos.",
+                "e mantenha seu dinheiro em [[saldo dolarizado]] com mais [[autonomia]].",
+                "e receba em [[stablecoins]] em [[dólar]] diretamente na sua carteira.",
+                "e organize sua [[renda internacional]] sem depender de uma [[estrutura bancária tradicional]].",
+                "e construa uma [[reserva em dólar]] para proteger parte do seu [[patrimônio]].",
+                "e receba [[pagamentos globais]] com mais [[controle]] sobre o seu dinheiro.",
+                "e transforme seus recebimentos em [[patrimônio dolarizado]].",
+                "e tenha uma [[estrutura financeira global]] para receber, proteger e movimentar seu dinheiro.",
+                "e aprenda a utilizar [[ativos digitais]] com [[segurança]] e [[autonomia]].",
               ]}
               interval={10000}
-              className="italic text-ember"
+              className="italic"
             />
           </h1>
 

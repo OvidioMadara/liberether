@@ -1417,16 +1417,16 @@ function Garantia() {
 
 function Oferta() {
   const stack = [
-    ["Diagnóstico individual (Encontro 1)", "Incluído"],
-    ["12 encontros semanais de 1 hora", "3 meses"],
-    ["Estrutura de recebimento e conversão", "Personalizada"],
-    ["Configuração de autocustódia e Trezor", "Acompanhada"],
-    ["Educação sobre stablecoins e DeFi", "Incluída"],
-    ["Integração com LiberWallet e LiberPass", "Incluída"],
-    ["Guia operacional personalizado", "Encontro 12"],
-    ["Bônus 1 — Plataforma LiberEther", "12 meses"],
-    ["Bônus 2 — 50% off em serviços", "12 meses"],
-    ["Bônus 3 — Plano de Continuidade", "Entregue ao final"],
+    ["12 encontros individuais ao vivo (tela compartilhada)", "3 meses"],
+    ["Diagnóstico operacional e mapeamento de taxas", "Encontro 1"],
+    ["Estrutura de recebimento em USDC e ponte para Pix", "Personalizada"],
+    ["Acompanhamento assistido de autocustódia e Trezor", "Incluído"],
+    ["Validação monitorada com testes de $1 a $5", "Incluída"],
+    ["Manual Operacional Prático do seu caixa", "Personalizado"],
+    ["Checklist de Segurança Digital Anti-Golpes", "Incluído"],
+    ["Suporte direto por mensagem durante 90 dias", "Incluído"],
+    ["Bônus 1 — Licença anual da Plataforma LiberEther", "12 meses"],
+    ["Bônus 2 — 50% off em consultorias de expansão", "12 meses"],
   ];
   return (
     <section
@@ -1439,7 +1439,7 @@ function Oferta() {
             A oferta
           </div>
           <h2 className="display display-tight mt-5 text-[38px] md:text-[58px]">
-            O que entra na Mentoria Autonomia Global.
+            Garanta sua estrutura financeira autônoma nos próximos 90 dias.
           </h2>
         </div>
 
@@ -1475,7 +1475,7 @@ function Oferta() {
           </div>
 
           <div className="mt-10 flex justify-center">
-            <PrimaryCTA>Quero solicitar uma conversa de diagnóstico</PrimaryCTA>
+            <PrimaryCTA>Agendar conversa de diagnóstico individual</PrimaryCTA>
           </div>
 
           <div className="mt-5 text-[12.5px] text-muted-foreground">

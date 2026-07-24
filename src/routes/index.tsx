@@ -130,7 +130,7 @@ function TopMark() {
   return (
     <header className="absolute inset-x-0 top-0 z-20">
       <Container className="flex items-center justify-center pt-8">
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0.5">
           <img
             src={logo}
             alt="LiberEther"

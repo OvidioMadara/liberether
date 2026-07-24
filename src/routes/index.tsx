@@ -665,14 +665,15 @@ function CTAMid() {
       <Container>
         <div className="mx-auto max-w-[880px] text-center">
           <h2 className="display text-[36px] text-white md:text-[54px]">
-            O primeiro passo é entender como a sua estrutura financeira funciona hoje.
+            O primeiro passo é o Diagnóstico Operacional do seu caixa.
           </h2>
           <p className="mx-auto mt-6 max-w-[620px] text-[16px] leading-relaxed text-white/75 md:text-[17px]">
-            Antes de recomendar qualquer ferramenta, precisamos conhecer sua
-            rotina, seus objetivos e os problemas que deseja resolver.
+            Mapeamos exatamente quanto você perde hoje em tarifas e cotações,
+            escolhemos as redes e ativos adequados e desenhamos as pontes de
+            conversão para Pix — antes de qualquer implementação.
           </p>
           <div className="mt-10 flex justify-center">
-            <PrimaryCTA>Quero solicitar um diagnóstico</PrimaryCTA>
+            <PrimaryCTA>Solicitar análise de viabilidade</PrimaryCTA>
           </div>
         </div>
       </Container>

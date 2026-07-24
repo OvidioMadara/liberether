@@ -562,28 +562,28 @@ function Dor() {
 
 const proofs = [
   {
-    name: "Lucas M.",
-    role: "Fotógrafo, clientes internacionais",
+    name: "João Vitor Sales",
+    role: "Importação e custos operacionais",
     avatar: a1,
-    before: "Recebia por três plataformas diferentes, com IOF, spread e taxas empilhadas em cada conversão.",
+    before: "Perdia margem relevante em cotações bancárias desfavoráveis e prazos longos para pagar fornecedores de vestuário na Ásia.",
     after:
-      "Estruturou um fluxo direto em stablecoins, reduziu custos operacionais e passou a receber em dólar digital sem depender de bancos intermediários.",
+      "Passou a pagar fornecedores diretamente em USDC: liberação imediata de pedidos, fim dos intermediários e queda drástica no custo de conversão.",
   },
   {
-    name: "Renata V.",
-    role: "Médica com atendimentos externos",
+    name: "Virgínia \"Tica\"",
+    role: "Serviços internacionais",
     avatar: a2,
-    before: "Tinha criptoativos parados em uma corretora, sem carteira própria e com senhas anotadas no bloco de notas.",
+    before: "Atendendo clientes estrangeiros no Brasil, perdia parte do faturamento com taxas de cartão e prazos longos de aplicativos de remessa.",
     after:
-      "Migrou para autocustódia com Trezor, organizou frases de recuperação, backups físicos e um plano de segurança documentado.",
+      "Recebe direto em dólares digitais com custódia própria — saldo na hora e conversão para Pix apenas dos valores necessários no dia a dia.",
   },
   {
-    name: "Diego A.",
-    role: "Desenvolvedor freelancer",
+    name: "Lucão Tatu",
+    role: "Estúdio · preservação patrimonial",
     avatar: a3,
-    before: "Convertia recebimentos em dólar por corretoras aleatórias, sem controle real do que estava alocado ou exposto.",
+    before: "Precisava receber em moeda forte e proteger reservas operacionais sem ficar exposto à inflação ou a riscos bancários.",
     after:
-      "Estruturou uma reserva em stablecoins, entendeu os riscos de cada protocolo e passou a movimentar com clareza pela LiberWallet.",
+      "Recebimentos em USDC, custos de intermediação perto de zero e reserva líquida em dólar guardada em cofre eletrônico (hardware wallet) sob controle exclusivo.",
   },
 ];
 
@@ -593,7 +593,7 @@ function ProvaSocial() {
       <Container>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="display text-[36px] md:text-[54px]">
-            O que muda quando a estrutura financeira funciona como um sistema.
+            Casos práticos: o resultado na rotina de quem já implementou.
           </h2>
         </div>
 

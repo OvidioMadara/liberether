@@ -960,17 +960,17 @@ function Entregaveis() {
       />
 
       <Container className="relative z-10">
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display text-[36px] text-foreground md:text-[58px]">
             Os 12 encontros — três meses de acompanhamento individual.
           </h2>
-          <p className="mt-5 text-[15px] text-foreground/75 md:text-[16px]">
+          <p className="mx-auto mt-5 max-w-content-sm text-[15px] text-foreground/75 md:text-[16px]">
             Uma organização possível dos encontros, sempre adaptada às suas
             prioridades no diagnóstico.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-[1180px] auto-rows-[minmax(180px,auto)] gap-5 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-content-lg auto-rows-[minmax(180px,auto)] gap-5 md:grid-cols-3">
           {modules.map((m, i) => {
             const featured = i === 0;
             return (

@@ -663,11 +663,11 @@ function CTAMid() {
       <div className="pointer-events-none absolute inset-0 -z-10 grain opacity-40" />
 
       <Container>
-        <div className="mx-auto max-w-[880px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display text-[36px] text-white md:text-[54px]">
             O primeiro passo é o Diagnóstico Operacional do seu caixa.
           </h2>
-          <p className="mx-auto mt-6 max-w-[620px] text-[16px] leading-relaxed text-white/75 md:text-[17px]">
+          <p className="mx-auto mt-6 max-w-content-sm text-[16px] leading-relaxed text-white/75 md:text-[17px]">
             Mapeamos exatamente quanto você perde hoje em tarifas e cotações,
             escolhemos as redes e ativos adequados e desenhamos as pontes de
             conversão para Pix — antes de qualquer implementação.

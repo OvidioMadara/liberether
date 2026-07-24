@@ -83,13 +83,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "12 encontros individuais para construir uma estrutura financeira mais autônoma com stablecoins, autocustódia e ferramentas Web3.",
+          "90 dias de acompanhamento individual para receber em dólares digitais (USDC), eliminar taxas bancárias e assumir a custódia do seu caixa.",
       },
       { property: "og:title", content: "Mentoria Autonomia Global — LiberEther" },
       {
         property: "og:description",
         content:
-          "12 encontros individuais para construir uma estrutura financeira mais autônoma com stablecoins, autocustódia e ferramentas Web3.",
+          "90 dias de acompanhamento individual para receber em dólares digitais (USDC), eliminar taxas bancárias e assumir a custódia do seu caixa.",
       },
     ],
   }),
@@ -248,26 +248,30 @@ function Hero() {
       <Container className="relative z-10">
         <div className="fade-up mx-auto max-w-[920px] text-center">
           <h1 className="display display-tight text-balance text-[36px] sm:text-[52px] md:text-[68px]">
-            Construa uma estrutura financeira mais{" "}
+            Elimine as taxas invisíveis de conversão e receba em{" "}
             <AnimatedTextCycle
-              words={["autônoma", "segura", "internacional", "resiliente", "sua"]}
+              words={["dólares digitais", "USDC", "moeda forte", "minutos", "autonomia"]}
               interval={2600}
               className="italic text-ember"
             />{" "}
-            em 12 encontros individuais.
+            com saldo disponível em minutos.
           </h1>
 
-          <p className="mx-auto mt-7 max-w-[720px] text-pretty text-[16px] leading-relaxed text-muted-foreground md:text-[17.5px]">
-            Aprenda a receber, converter, armazenar e utilizar seu dinheiro com
-            stablecoins, autocustódia e ferramentas Web3, por meio de um
-            acompanhamento personalizado durante três meses.
+          <p className="mx-auto mt-7 max-w-[760px] text-pretty text-[16px] leading-relaxed text-muted-foreground md:text-[17.5px]">
+            Se você fatura alto — prestando serviços para o exterior ou operando
+            seu negócio no Brasil — sabe quanto perde com taxas abusivas e
+            burocracia bancária. A Mentoria de Autonomia Global LiberEther é um
+            acompanhamento individual de 90 dias para implementar o uso de
+            dólares digitais (USDC) e carteiras de custódia própria. Você
+            elimina intermediários, reduz custos de transação para centavos e
+            assume o controle total do seu faturamento em moeda forte.
           </p>
 
           <ul className="mx-auto mt-10 grid max-w-[980px] gap-3 text-left sm:grid-cols-3">
             {[
-              "Receba pagamentos nacionais e internacionais com mais flexibilidade e menos intermediários.",
-              "Converta reais ou outras moedas em dólares digitais e organize uma reserva estável.",
-              "Assuma o controle dos próprios ativos com autocustódia, Trezor e um plano de segurança real.",
+              "Receba em USDC direto na sua carteira, sem SWIFT nem 2 a 5 dias úteis de espera.",
+              "Elimine 3% a 6% de perda em cotações abusivas e tarifas bancárias empilhadas.",
+              "Custódia própria, sem risco de bloqueio de saldo por bancos, fintechs ou corretoras.",
             ].map((t) => (
               <li
                 key={t}
@@ -285,7 +289,7 @@ function Hero() {
           <div className="relative mx-auto aspect-video max-w-[820px] overflow-hidden rounded-3xl bg-black shadow-float">
             <img
               src={hero}
-              alt="Workspace Web3 com carteira física, laptop e smartphone"
+              alt="Workspace com carteira física Trezor, laptop e dólares digitais"
               width={1600}
               height={1024}
               className="size-full object-cover opacity-90"
@@ -300,11 +304,11 @@ function Hero() {
         </div>
 
         <div className="fade-up mt-12 flex flex-col items-center gap-6">
-          <PrimaryCTA>Quero conhecer a mentoria</PrimaryCTA>
+          <PrimaryCTA>Quero agendar um diagnóstico individual</PrimaryCTA>
           <div className="flex items-center gap-6 text-[12.5px] text-muted-foreground">
             <span className="inline-flex items-center gap-2">
               <ShieldCheck className="size-3.5 text-ember" />
-              Compromisso contratual de entrega
+              Atendimento individual · tela compartilhada
             </span>
 
             <span className="inline-flex items-center gap-2.5">
@@ -316,7 +320,7 @@ function Hero() {
                   </Avatar>
                 ))}
               </div>
-              Profissionais construindo autonomia com a LiberEther
+              Vagas limitadas pela agenda
             </span>
           </div>
         </div>
@@ -356,13 +360,14 @@ function AnatomiaMarmita() {
       <Container className="relative z-10">
         <div className="mx-auto max-w-[760px] text-center">
           <h2 className="display display-tight text-balance text-[38px] md:text-[60px]">
-            Uma estrutura construída para a sua realidade — não uma fórmula genérica.
+            Engenharia financeira ajustada à realidade do seu faturamento.
           </h2>
           <p className="mx-auto mt-5 max-w-[640px] text-[16px] leading-relaxed text-muted-foreground md:text-[17px]">
-            Você não precisa aprender tudo sobre Web3. Precisa aprender o que
-            faz sentido para você. A partir do diagnóstico inicial, os 12
-            encontros são organizados para desenvolver a estrutura mais adequada
-            ao seu caso.
+            O fluxo de quem exporta serviços de tecnologia é diferente de quem
+            paga fornecedores no exterior ou protege reservas líquidas no
+            Brasil. Antes de qualquer implementação, mapeamos suas taxas,
+            escolhemos redes ágeis (Arbitrum, Base, Polygon), definimos os
+            ativos em USDC e configuramos pontes diretas para o Pix.
           </p>
         </div>
 
@@ -392,9 +397,9 @@ function AnatomiaMarmita() {
         {/* phase chips */}
         <div className="relative mx-auto mt-12 grid max-w-[820px] grid-cols-2 gap-3 md:grid-cols-4">
           {[
-            ["12", "encontros individuais"],
-            ["1h", "por semana"],
-            ["3 meses", "de acompanhamento"],
+            ["90 dias", "de acompanhamento"],
+            ["12 encontros", "individuais ao vivo"],
+            ["Testes com $1–$5", "antes de operar valores reais"],
             ["12 meses", "de plataforma LiberEther"],
           ].map(([n, l]) => (
             <div
@@ -417,10 +422,10 @@ function AnatomiaMarmita() {
 
 function StatsStrip() {
   const stats = [
-    ["4 pilares", "Acesso, Autocustódia, Alocação, Autonomia"],
-    ["12 encontros", "de uma hora, individuais, semanais"],
-    ["1 ano", "de acesso à plataforma LiberEther"],
-    ["50% off", "em serviços elegíveis por 12 meses"],
+    ["3% a 6%", "de perda evitada em cotações e taxas bancárias"],
+    ["Minutos", "para saldo disponível em USDC na sua carteira"],
+    ["12 encontros", "individuais ao vivo por videochamada"],
+    ["1 ano", "de plataforma educacional LiberEther incluída"],
   ];
   return (
     <section className="section-light py-12 md:py-16 bg-surface">
@@ -460,12 +465,11 @@ function Cardapios() {
       <Container>
         <div className="mx-auto max-w-[760px] text-center">
           <h2 className="display display-tight text-balance text-[38px] md:text-[58px]">
-            A Estrutura Financeira 4A — os pilares da mentoria.
+            O Método — os 4 pilares da autonomia financeira.
           </h2>
           <p className="mx-auto mt-5 max-w-[620px] text-[15.5px] leading-relaxed text-muted-foreground md:text-[17px]">
-            Uma estrutura financeira precisa funcionar como um sistema. Acesso,
-            Autocustódia, Alocação e Autonomia — precedidos por um diagnóstico
-            individual da sua realidade.
+            Acesso, Autocustódia, Alocação e Autonomia — precedidos por um
+            diagnóstico individual do seu caixa e das taxas que você perde hoje.
           </p>
         </div>
 
@@ -498,11 +502,11 @@ function Dor() {
         <div className="grid gap-16 md:grid-cols-12">
           <div className="md:col-span-5">
             <h2 className="display text-[36px] md:text-[54px]">
-              Ter acesso às ferramentas não significa saber usá-las de forma integrada.
+              O custo real de depender da rota bancária tradicional.
             </h2>
             <motion.img
               src={shameStill}
-              alt="Ferramentas financeiras desconectadas — bancos, corretoras e apps espalhados"
+              alt="Comparativo entre rota bancária tradicional e estrutura autônoma em USDC"
               loading="lazy"
               width={1024}
               height={1024}
@@ -517,29 +521,34 @@ function Dor() {
             className="space-y-6 text-[16.5px] leading-[1.75] text-foreground/80 md:col-span-7 md:text-[17px]"
           >
             <p>
-              Hoje existem diferentes formas de receber pagamentos, converter
-              moedas, comprar stablecoins, armazenar ativos e acessar soluções
-              financeiras construídas sobre blockchain. O problema é que cada
-              parte costuma funcionar de maneira isolada.
+              Se você exporta serviços, paga fornecedores ou quer proteger o
+              caixa gerado pelo seu negócio no Brasil, a dependência de bancos
+              e plataformas tradicionais consome de{" "}
+              <strong className="text-foreground">3% a 8% do seu faturamento bruto</strong>.
             </p>
             <p>
-              Você recebe por uma plataforma, converte em outra, transfere para
-              um banco, envia para uma corretora e utiliza uma carteira que
-              talvez nunca tenha sido configurada corretamente. Vídeos, notícias
-              e conteúdos soltos apresentam possibilidades, mas raramente
-              explicam como construir uma operação completa para a sua realidade.
+              <strong className="text-foreground">Diferença abusiva na cotação do dólar (3% a 6%):</strong>{" "}
+              bancos e aplicativos cobram uma margem pesada em cima do dólar
+              oficial. Somam-se tarifas de intermediação, SWIFT e taxas fixas de
+              recepção e envio a cada movimentação.
             </p>
             <p>
-              O resultado: dependência de contas e intermediários, custos
-              desnecessários em conversões, receio de guardar o próprio dinheiro,
-              desorganização com senhas e frases de recuperação, e exposição a
-              riscos que não foram compreendidos.
+              <strong className="text-foreground">Capital travado por 2 a 5 dias úteis</strong>{" "}
+              aguardando aprovações manuais, envio de contratos de câmbio e
+              burocracia desnecessária — enquanto o seu caixa poderia estar
+              girando.
+            </p>
+            <p>
+              <strong className="text-foreground">Risco de custódia e bloqueios:</strong>{" "}
+              seu saldo fica sob as regras de plataformas que podem travar
+              saques, mudar taxas sem aviso prévio ou exigir documentações
+              complexas na última hora.
             </p>
             <p className="text-foreground">
-              A questão não é apenas aprender sobre criptomoedas.{" "}
+              A rota LiberEther troca isso por{" "}
               <strong>
-                É entender como utilizar essas tecnologias para resolver
-                necessidades financeiras reais.
+                taxas de rede residuais (centavos de dólar), saldo disponível em
+                minutos e controle exclusivo do seu USDC.
               </strong>
             </p>
           </motion.div>
@@ -553,28 +562,28 @@ function Dor() {
 
 const proofs = [
   {
-    name: "Lucas M.",
-    role: "Fotógrafo, clientes internacionais",
+    name: "João Vitor Sales",
+    role: "Importação e custos operacionais",
     avatar: a1,
-    before: "Recebia por três plataformas diferentes, com IOF, spread e taxas empilhadas em cada conversão.",
+    before: "Perdia margem relevante em cotações bancárias desfavoráveis e prazos longos para pagar fornecedores de vestuário na Ásia.",
     after:
-      "Estruturou um fluxo direto em stablecoins, reduziu custos operacionais e passou a receber em dólar digital sem depender de bancos intermediários.",
+      "Passou a pagar fornecedores diretamente em USDC: liberação imediata de pedidos, fim dos intermediários e queda drástica no custo de conversão.",
   },
   {
-    name: "Renata V.",
-    role: "Médica com atendimentos externos",
+    name: "Virgínia \"Tica\"",
+    role: "Serviços internacionais",
     avatar: a2,
-    before: "Tinha criptoativos parados em uma corretora, sem carteira própria e com senhas anotadas no bloco de notas.",
+    before: "Atendendo clientes estrangeiros no Brasil, perdia parte do faturamento com taxas de cartão e prazos longos de aplicativos de remessa.",
     after:
-      "Migrou para autocustódia com Trezor, organizou frases de recuperação, backups físicos e um plano de segurança documentado.",
+      "Recebe direto em dólares digitais com custódia própria — saldo na hora e conversão para Pix apenas dos valores necessários no dia a dia.",
   },
   {
-    name: "Diego A.",
-    role: "Desenvolvedor freelancer",
+    name: "Lucão Tatu",
+    role: "Estúdio · preservação patrimonial",
     avatar: a3,
-    before: "Convertia recebimentos em dólar por corretoras aleatórias, sem controle real do que estava alocado ou exposto.",
+    before: "Precisava receber em moeda forte e proteger reservas operacionais sem ficar exposto à inflação ou a riscos bancários.",
     after:
-      "Estruturou uma reserva em stablecoins, entendeu os riscos de cada protocolo e passou a movimentar com clareza pela LiberWallet.",
+      "Recebimentos em USDC, custos de intermediação perto de zero e reserva líquida em dólar guardada em cofre eletrônico (hardware wallet) sob controle exclusivo.",
   },
 ];
 
@@ -584,7 +593,7 @@ function ProvaSocial() {
       <Container>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="display text-[36px] md:text-[54px]">
-            O que muda quando a estrutura financeira funciona como um sistema.
+            Casos práticos: o resultado na rotina de quem já implementou.
           </h2>
         </div>
 
@@ -629,7 +638,7 @@ function ProvaSocial() {
         </div>
 
         <p className="mx-auto mt-10 max-w-[640px] text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
-          Casos ilustrativos · substituir por depoimentos reais
+          Casos reais de aplicação da metodologia LiberEther
         </p>
       </Container>
     </section>
@@ -656,14 +665,15 @@ function CTAMid() {
       <Container>
         <div className="mx-auto max-w-[880px] text-center">
           <h2 className="display text-[36px] text-white md:text-[54px]">
-            O primeiro passo é entender como a sua estrutura financeira funciona hoje.
+            O primeiro passo é o Diagnóstico Operacional do seu caixa.
           </h2>
           <p className="mx-auto mt-6 max-w-[620px] text-[16px] leading-relaxed text-white/75 md:text-[17px]">
-            Antes de recomendar qualquer ferramenta, precisamos conhecer sua
-            rotina, seus objetivos e os problemas que deseja resolver.
+            Mapeamos exatamente quanto você perde hoje em tarifas e cotações,
+            escolhemos as redes e ativos adequados e desenhamos as pontes de
+            conversão para Pix — antes de qualquer implementação.
           </p>
           <div className="mt-10 flex justify-center">
-            <PrimaryCTA>Quero solicitar um diagnóstico</PrimaryCTA>
+            <PrimaryCTA>Solicitar análise de viabilidade</PrimaryCTA>
           </div>
         </div>
       </Container>
@@ -679,35 +689,28 @@ const pillars = [
     title: "Acesso",
     image: step2,
     desc:
-      "Construção dos caminhos para entrada e saída de recursos: recebimentos nacionais e internacionais, conversão para stablecoins, Pix como etapa de entrada e organização do fluxo até sua carteira.",
+      "Rotas eficientes para receber em dólares digitais com custo insignificante. Pontes diretas para conversão instantânea em Pix quando você precisa pagar despesas em reais.",
   },
   {
     n: "02",
     title: "Autocustódia",
     image: step3,
     desc:
-      "Estrutura segura de controle dos próprios ativos: carteiras, proteção de senhas, frases de recuperação, cópias de segurança, Trezor e procedimentos de emergência.",
+      "Carteiras privadas onde só você possui as chaves de acesso. Cofre eletrônico (Trezor) para volumes maiores e protocolos de backup que blindam seu patrimônio.",
   },
   {
     n: "03",
     title: "Alocação",
     image: step4,
     desc:
-      "Educação prática sobre stablecoins, liquidez, riscos de protocolo e contrato inteligente, origem dos rendimentos e critérios para comparar estratégias no ecossistema Ethereum.",
+      "Análise de segurança das emissoras de dólares digitais (foco em USDC), gestão de liquidez para o caixa e mapeamento dos riscos do ecossistema DeFi.",
   },
   {
     n: "04",
     title: "Autonomia",
     image: step5,
     desc:
-      "Integração das ferramentas à sua vida financeira: LiberWallet, LiberPass, movimentação de stablecoins, cartões internacionais e um plano financeiro pessoal em Web3.",
-  },
-  {
-    n: "05",
-    title: "Continuidade",
-    image: step1,
-    desc:
-      "Revisão da estrutura, organização das próximas etapas e entrega do guia operacional. Acompanhamento estendido pela plataforma LiberEther durante 12 meses.",
+      "Uso das ferramentas operacionais do ecossistema LiberEther, cartões internacionais em dólar digital e checklist prático de segurança digital anti-golpes.",
   },
 ];
 
@@ -871,16 +874,16 @@ function Metodo() {
 
 function ParaQuem() {
   const yes = [
-    "Empreendedores, autônomos e prestadores de serviço que querem mais autonomia financeira",
-    "Profissionais que recebem — ou desejam receber — em outras moedas, do Brasil ou do exterior",
-    "Pessoas que querem aprender a utilizar dólares digitais e reduzir a dependência de bancos",
-    "Quem já possui criptoativos mas não tem uma estrutura organizada, com autocustódia e segurança",
-    "Quem quer entender autocustódia antes de movimentar valores maiores com mais confiança",
+    "Prestadores de serviços e freelancers internacionais (devs, designers, consultores) que recebem do exterior",
+    "Empresários e infoprodutores que buscam otimizar o caixa e manter reservas em dólar digital",
+    "Importadores e gestores de compras que precisam pagar fornecedores no exterior sem travamentos bancários",
+    "Profissionais liberais e investidores que querem guardar patrimônio em estruturas privadas com alta segurança",
+    "Quem quer parar de perder 3% a 8% do faturamento com cotações ruins e intermediários",
   ];
   const no = [
-    "Quem procura garantia de lucro ou promessa de enriquecimento rápido",
-    "Quem espera receber sinais de compra e venda ou gestão terceirizada de patrimônio",
-    "Quem não quer assumir responsabilidade pelas próprias credenciais e chaves",
+    "Quem procura especulação, trade ou promessas ilógicas de enriquecimento rápido",
+    "Quem deseja gestão terceirizada de capital (nós ensinamos você a gerir e proteger o próprio dinheiro)",
+    "Quem não pretende seguir protocolos básicos de segurança para guardar suas chaves de acesso",
     "Quem busca apenas uma indicação rápida de qual ativo comprar",
   ];
 
@@ -888,7 +891,7 @@ function ParaQuem() {
     <section className="section-light py-28 md:py-36">
       <Container>
         <h2 className="display mx-auto max-w-[860px] text-center text-[36px] md:text-[54px]">
-          Antes de continuar, veja se a mentoria faz sentido para você.
+          Para quem é (e para quem não é) a Mentoria Autonomia Global.
         </h2>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2">
@@ -936,12 +939,12 @@ function ParaQuem() {
 /* ---------- entregáveis ---------- */
 
 const modules = [
-  { t: "1. Diagnóstico Financeiro", s: "Análise da sua rotina, moedas, plataformas e riscos atuais", v: "Encontro 1", img: mod01 },
-  { t: "2. Acesso e Recebimentos", s: "Canais de entrada, conversão em stablecoins e fluxo internacional", v: "Encontros 3–4", img: mod02 },
-  { t: "3. Autocustódia e Segurança", s: "Carteiras, senhas, frases de recuperação, Trezor e emergências", v: "Encontros 5–7", img: mod03 },
-  { t: "4. Stablecoins e DeFi", s: "Dólares digitais, protocolos, rendimentos e riscos reais", v: "Encontros 8–9", img: mod04 },
-  { t: "5. Ecossistema LiberEther", s: "LiberWallet, LiberPass e cartões internacionais", v: "Encontros 10–11", img: mod05 },
-  { t: "Plano de Continuidade", s: "Guia operacional personalizado e próximos 90 dias", v: "Encontro 12", img: mod06 },
+  { t: "Diagnóstico do Caixa e Mapeamento de Taxas", s: "Identificação exata do quanto você perde hoje em tarifas e cotações", v: "Encontro 1", img: mod01 },
+  { t: "Canais de Entrada e Recebimentos Globais", s: "Infraestrutura de redes (Arbitrum, Base, Polygon) e dólares digitais", v: "Encontros 2–3", img: mod02 },
+  { t: "Otimização de Conversões", s: "Eliminação de tarifas SWIFT, spread bancário e etapas desnecessárias", v: "Encontro 4", img: mod03 },
+  { t: "Autocustódia, Backups e Trezor", s: "Carteiras privadas, chaves de acesso e configuração de cofre eletrônico", v: "Encontros 5–7", img: mod04 },
+  { t: "Liquidez, USDC e Ecossistema DeFi", s: "Análise do USDC, gestão de riscos e critérios reais de decisão", v: "Encontros 8–9", img: mod05 },
+  { t: "Cartões, LiberEther e Manual de Governança", s: "Pagamento de despesas em dólar digital e entrega do manual personalizado", v: "Encontros 10–12", img: mod06 },
 ];
 
 function Entregaveis() {
@@ -1043,23 +1046,23 @@ function Bonus() {
   const bonuses = [
     {
       n: "01",
-      title: "1 ano de plataforma LiberEther",
-      desc: "12 meses de acesso à plataforma educacional com aulas e conteúdos sobre Web3, stablecoins, segurança digital, autocustódia, Ethereum e finanças descentralizadas.",
+      title: "Licença anual da plataforma LiberEther",
+      desc: "12 meses de acesso à plataforma educacional com guias práticos, tutoriais de segurança e atualizações do mercado de dólares digitais e Web3.",
       v: "12 meses de acesso",
       img: bonus01,
     },
     {
       n: "02",
-      title: "50% de desconto em serviços",
-      desc: "Durante os 12 meses após a mentoria, 50% off na contratação de serviços elegíveis: horas adicionais, novas aulas, revisões da estrutura e orientações complementares.",
+      title: "50% de desconto em consultorias de expansão",
+      desc: "Desconto garantido para contratar sessões estratégicas adicionais nos 12 meses seguintes à mentoria — horas de acompanhamento, revisões e orientações complementares.",
       v: "Válido por 12 meses",
       img: bonus02,
     },
     {
       n: "03",
-      title: "Plano de Continuidade",
-      desc: "Ao final da mentoria você recebe um plano com as prioridades para os próximos 90 dias: revisões de segurança, ajustes na operação, temas para aprofundar e frequência de revisão.",
-      v: "Entregue no encontro 12",
+      title: "Validação monitorada sem risco",
+      desc: "Todas as etapas são executadas de forma assistida. Antes de qualquer movimentação real, fazemos testes com valores mínimos ($1 a $5) para validar endereços, backups e domínio do processo.",
+      v: "Incluído nos 12 encontros",
       img: bonus03,
     },
   ];
@@ -1069,7 +1072,7 @@ function Bonus() {
       <Container>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="display text-[36px] md:text-[54px]">
-            A aprendizagem continua depois dos três meses de acompanhamento.
+            Bônus exclusivos que estendem os resultados além dos 90 dias.
           </h2>
         </div>
 
@@ -1414,16 +1417,16 @@ function Garantia() {
 
 function Oferta() {
   const stack = [
-    ["Diagnóstico individual (Encontro 1)", "Incluído"],
-    ["12 encontros semanais de 1 hora", "3 meses"],
-    ["Estrutura de recebimento e conversão", "Personalizada"],
-    ["Configuração de autocustódia e Trezor", "Acompanhada"],
-    ["Educação sobre stablecoins e DeFi", "Incluída"],
-    ["Integração com LiberWallet e LiberPass", "Incluída"],
-    ["Guia operacional personalizado", "Encontro 12"],
-    ["Bônus 1 — Plataforma LiberEther", "12 meses"],
-    ["Bônus 2 — 50% off em serviços", "12 meses"],
-    ["Bônus 3 — Plano de Continuidade", "Entregue ao final"],
+    ["12 encontros individuais ao vivo (tela compartilhada)", "3 meses"],
+    ["Diagnóstico operacional e mapeamento de taxas", "Encontro 1"],
+    ["Estrutura de recebimento em USDC e ponte para Pix", "Personalizada"],
+    ["Acompanhamento assistido de autocustódia e Trezor", "Incluído"],
+    ["Validação monitorada com testes de $1 a $5", "Incluída"],
+    ["Manual Operacional Prático do seu caixa", "Personalizado"],
+    ["Checklist de Segurança Digital Anti-Golpes", "Incluído"],
+    ["Suporte direto por mensagem durante 90 dias", "Incluído"],
+    ["Bônus 1 — Licença anual da Plataforma LiberEther", "12 meses"],
+    ["Bônus 2 — 50% off em consultorias de expansão", "12 meses"],
   ];
   return (
     <section
@@ -1436,7 +1439,7 @@ function Oferta() {
             A oferta
           </div>
           <h2 className="display display-tight mt-5 text-[38px] md:text-[58px]">
-            O que entra na Mentoria Autonomia Global.
+            Garanta sua estrutura financeira autônoma nos próximos 90 dias.
           </h2>
         </div>
 
@@ -1472,7 +1475,7 @@ function Oferta() {
           </div>
 
           <div className="mt-10 flex justify-center">
-            <PrimaryCTA>Quero solicitar uma conversa de diagnóstico</PrimaryCTA>
+            <PrimaryCTA>Agendar conversa de diagnóstico individual</PrimaryCTA>
           </div>
 
           <div className="mt-5 text-[12.5px] text-muted-foreground">
@@ -1493,40 +1496,36 @@ function Oferta() {
 
 const faqs = [
   {
-    q: "Preciso entender de criptomoedas antes de começar?",
-    a: "Não. Os conceitos necessários são explicados durante os encontros. É recomendável ter familiaridade básica com aplicativos e tecnologia.",
+    q: "Preciso ter conhecimento prévio sobre criptomoedas?",
+    a: "Não. O acompanhamento é feito passo a passo a partir do seu nível atual. Se você já utiliza aplicativos bancários no celular, tem todo o conhecimento necessário para começar.",
   },
   {
-    q: "A mentoria vai me ensinar a receber pagamentos em dólar?",
-    a: "A mentoria apresenta e ajuda a estruturar os canais compatíveis com sua atividade, sua localização e as plataformas disponíveis. Nenhum canal específico pode ser garantido permanentemente, pois serviços de terceiros podem alterar regras e condições.",
+    q: "Vou precisar fechar minhas contas bancárias?",
+    a: "Não. Você continuará usando bancos locais para o dia a dia em reais (pagamento de contas e impostos), utilizando pontes rápidas de conversão via Pix sempre que precisar.",
   },
   {
-    q: "Vou conseguir deixar de usar bancos?",
-    a: "Você aprende a criar alternativas para receber, armazenar, converter e utilizar dinheiro. Isso pode reduzir a dependência de bancos, mas algumas operações ainda poderão utilizar instituições financeiras ou pontes entre moedas tradicionais e ativos digitais.",
+    q: "Qual a diferença entre manter saldo em corretoras e na autocustódia?",
+    a: "Em corretoras, a posse do dinheiro é da empresa. Se ela travar saques ou passar por instabilidade, seu saldo fica bloqueado. Na autocustódia, você possui a chave privada: o dinheiro é seu de fato e não pode ser bloqueado por terceiros.",
   },
   {
-    q: "A mentoria garante renda passiva?",
-    a: "Não. Você aprende como funcionam diferentes possibilidades de rendimento, de onde vêm as receitas e quais riscos estão envolvidos. Não existe garantia de retorno ou rentabilidade.",
+    q: "Como funcionam os testes com valores mínimos ($1 a $5)?",
+    a: "Antes de qualquer movimentação real, executamos testes assistidos com valores simbólicos para validar endereços, redes e backups. Você só opera valores reais depois de dominar cada etapa técnica.",
   },
   {
     q: "A LiberEther ficará com meu dinheiro?",
-    a: "Não. A proposta é ensinar autocustódia. As carteiras, senhas e frases de recuperação permanecem sob o seu controle. A LiberEther não solicitará sua frase de recuperação.",
+    a: "Não. A proposta é ensinar autocustódia. As carteiras, senhas e frases de recuperação permanecem sob o seu controle. A LiberEther nunca solicitará sua frase de recuperação.",
   },
   {
     q: "Preciso comprar uma Trezor?",
-    a: "Não obrigatoriamente. A necessidade é avaliada conforme o volume armazenado, a frequência de utilização e o perfil de risco. Caso seja recomendada, a compra do dispositivo não está incluída no valor da mentoria.",
+    a: "Não obrigatoriamente. A necessidade é avaliada conforme o volume armazenado e o perfil de risco. Quando recomendada, a compra do dispositivo não está incluída no valor da mentoria.",
   },
   {
-    q: "Qual é a diferença entre a mentoria e a plataforma de vídeos?",
-    a: "A plataforma reúne conteúdos educacionais que podem ser acessados durante um ano. A mentoria é individual e personalizada: os encontros são organizados para resolver suas necessidades específicas e acompanhar a implementação.",
-  },
-  {
-    q: "Quanto tempo preciso dedicar?",
-    a: "Um encontro de uma hora por semana. Também é necessário reservar algum tempo para realizar configurações, estudar conteúdos e aplicar as orientações definidas em cada encontro.",
+    q: "Este serviço é uma consultoria de investimentos?",
+    a: "Não. A Mentoria de Autonomia Global LiberEther é um serviço estritamente educacional e de consultoria de processos tecnológicos. Não prestamos recomendação de compra/venda de ativos, gestão de carteiras ou intermediação de operações financeiras reguladas.",
   },
   {
     q: "Posso contratar horas adicionais depois da mentoria?",
-    a: "Sim, conforme disponibilidade. Durante os 12 meses posteriores à mentoria, você tem 50% de desconto em serviços adicionais elegíveis da LiberEther.",
+    a: "Sim, conforme disponibilidade. Durante os 12 meses posteriores, você tem 50% de desconto em consultorias de expansão e serviços adicionais elegíveis da LiberEther.",
   },
 ];
 
@@ -1588,41 +1587,41 @@ function LinhaDoTempo() {
   const steps = [
     {
       tag: "Encontros 1 e 2",
-      title: "Diagnóstico e Fundamentos de Web3",
-      desc: "Mapeamento da sua rotina financeira, objetivos e riscos atuais, seguido dos conceitos necessários para utilizar blockchain, Ethereum, stablecoins e carteiras.",
-      bullets: ["Mapa da sua operação atual", "Prioridades para os 3 meses", "Fundamentos aplicados de Web3"],
+      title: "Diagnóstico do Caixa e Infraestrutura Web3",
+      desc: "Diagnóstico do caixa e mapeamento das taxas que você perde hoje. Em seguida, a infraestrutura das redes (Arbitrum, Base, Polygon) e dos dólares digitais que serão utilizados.",
+      bullets: ["Diagnóstico do caixa e das taxas atuais", "Escolha de redes ágeis e ativos em USDC", "Base técnica para operar"],
       duracao: "2 encontros · 2 horas",
       img: step1,
     },
     {
       tag: "Encontros 3 e 4",
-      title: "Canais de Entrada e Recebimentos Internacionais",
-      desc: "Formas disponíveis para converter reais ou outras moedas em ativos digitais e construção de um fluxo para receber pagamentos de clientes ou empresas do exterior.",
-      bullets: ["Fluxo de recebimento", "Conversão em stablecoins", "Redução de custos e etapas"],
+      title: "Recebimentos Globais e Otimização de Conversões",
+      desc: "Canais de entrada e recebimentos internacionais, seguidos da otimização de conversões e da eliminação de tarifas SWIFT, spread bancário e etapas desnecessárias.",
+      bullets: ["Fluxo de recebimento em USDC", "Ponte direta para Pix quando necessário", "Redução drástica de custos"],
       duracao: "2 encontros · 2 horas",
       img: step2,
     },
     {
       tag: "Encontros 5, 6 e 7",
-      title: "Autocustódia, Segurança e Trezor",
-      desc: "Configuração da carteira, endereços e redes; organização de senhas, frases de recuperação, backups e procedimentos de emergência; orientação sobre carteira física quando adequada.",
-      bullets: ["Carteira própria configurada", "Plano de segurança documentado", "Trezor orientada quando fizer sentido"],
+      title: "Autocustódia, Backups e Cofre Eletrônico (Trezor)",
+      desc: "Criação de carteiras privadas e chaves de acesso, protocolos de backup e armazenamento seguro, e configuração prática de cofre eletrônico Trezor.",
+      bullets: ["Carteira privada com chaves só suas", "Backups organizados e testados", "Trezor configurada quando fizer sentido"],
       duracao: "3 encontros · 3 horas",
       img: step3,
     },
     {
       tag: "Encontros 8 e 9",
-      title: "Stablecoins e Rendimento em DeFi",
-      desc: "Análise dos principais dólares digitais, funcionamento, utilidades e riscos. Explicação sobre protocolos, liquidez, origem de rendimentos e avaliação de riscos.",
-      bullets: ["Diferenças entre stablecoins", "Riscos de protocolo e contrato", "Critérios reais de decisão"],
+      title: "Estratégia de Liquidez, USDC e Análise DeFi",
+      desc: "Estratégia de liquidez e segurança do USDC. Análise do ecossistema DeFi, origem dos rendimentos, riscos de contrato e critérios reais para avaliar estratégias.",
+      bullets: ["Segurança do USDC", "Gestão de liquidez do caixa", "Mitigação de riscos no DeFi"],
       duracao: "2 encontros · 2 horas",
       img: step4,
     },
     {
       tag: "Encontros 10, 11 e 12",
-      title: "Utilização no Cotidiano, LiberEther e Plano de Continuidade",
-      desc: "Transferências, pagamentos, cartões internacionais e integração com a rotina financeira. Uso da LiberWallet e LiberPass. Revisão da estrutura e entrega do guia operacional.",
-      bullets: ["Rotina financeira integrada", "Ecossistema LiberEther em uso", "Guia operacional personalizado"],
+      title: "Cartões Internacionais, LiberEther e Manual de Governança",
+      desc: "Cartões internacionais em dólar digital para despesas pessoais e da empresa, ferramentas do ecossistema LiberEther e entrega do Manual de Governança Financeira Personalizado.",
+      bullets: ["Cartão internacional operando", "Ecossistema LiberEther integrado", "Manual personalizado entregue"],
       duracao: "3 encontros · 3 horas",
       img: step5,
     },

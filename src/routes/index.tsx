@@ -1718,7 +1718,7 @@ function FridgeVideo() {
         className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-60"
       />
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-background/70 via-background/40 to-background/80" />
-      <div className="relative z-[2] mx-auto flex min-h-[70vh] max-w-[1200px] flex-col items-center justify-center px-6 py-32 text-center md:min-h-[80vh] md:py-44">
+      <div className="relative z-[2] mx-auto flex min-h-[70vh] max-w-content-lg flex-col items-center justify-center px-6 py-32 text-center md:min-h-[80vh] md:py-44">
         <p className="font-mono text-xs uppercase tracking-[0.32em] text-ember">Próximo capítulo</p>
         <h2 className="display mt-6 max-w-[22ch] text-balance text-4xl text-foreground md:text-6xl lg:text-7xl">
           Assuma o controle do que já é seu.

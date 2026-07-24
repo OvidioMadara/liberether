@@ -689,35 +689,28 @@ const pillars = [
     title: "Acesso",
     image: step2,
     desc:
-      "Construção dos caminhos para entrada e saída de recursos: recebimentos nacionais e internacionais, conversão para stablecoins, Pix como etapa de entrada e organização do fluxo até sua carteira.",
+      "Rotas eficientes para receber em dólares digitais com custo insignificante. Pontes diretas para conversão instantânea em Pix quando você precisa pagar despesas em reais.",
   },
   {
     n: "02",
     title: "Autocustódia",
     image: step3,
     desc:
-      "Estrutura segura de controle dos próprios ativos: carteiras, proteção de senhas, frases de recuperação, cópias de segurança, Trezor e procedimentos de emergência.",
+      "Carteiras privadas onde só você possui as chaves de acesso. Cofre eletrônico (Trezor) para volumes maiores e protocolos de backup que blindam seu patrimônio.",
   },
   {
     n: "03",
     title: "Alocação",
     image: step4,
     desc:
-      "Educação prática sobre stablecoins, liquidez, riscos de protocolo e contrato inteligente, origem dos rendimentos e critérios para comparar estratégias no ecossistema Ethereum.",
+      "Análise de segurança das emissoras de dólares digitais (foco em USDC), gestão de liquidez para o caixa e mapeamento dos riscos do ecossistema DeFi.",
   },
   {
     n: "04",
     title: "Autonomia",
     image: step5,
     desc:
-      "Integração das ferramentas à sua vida financeira: LiberWallet, LiberPass, movimentação de stablecoins, cartões internacionais e um plano financeiro pessoal em Web3.",
-  },
-  {
-    n: "05",
-    title: "Continuidade",
-    image: step1,
-    desc:
-      "Revisão da estrutura, organização das próximas etapas e entrega do guia operacional. Acompanhamento estendido pela plataforma LiberEther durante 12 meses.",
+      "Uso das ferramentas operacionais do ecossistema LiberEther, cartões internacionais em dólar digital e checklist prático de segurança digital anti-golpes.",
   },
 ];
 

@@ -465,12 +465,11 @@ function Cardapios() {
       <Container>
         <div className="mx-auto max-w-[760px] text-center">
           <h2 className="display display-tight text-balance text-[38px] md:text-[58px]">
-            A Estrutura Financeira 4A — os pilares da mentoria.
+            O Método — os 4 pilares da autonomia financeira.
           </h2>
           <p className="mx-auto mt-5 max-w-[620px] text-[15.5px] leading-relaxed text-muted-foreground md:text-[17px]">
-            Uma estrutura financeira precisa funcionar como um sistema. Acesso,
-            Autocustódia, Alocação e Autonomia — precedidos por um diagnóstico
-            individual da sua realidade.
+            Acesso, Autocustódia, Alocação e Autonomia — precedidos por um
+            diagnóstico individual do seu caixa e das taxas que você perde hoje.
           </p>
         </div>
 

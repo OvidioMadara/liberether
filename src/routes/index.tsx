@@ -358,11 +358,11 @@ function AnatomiaMarmita() {
       />
 
       <Container className="relative z-10">
-        <div className="mx-auto max-w-[760px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display display-tight text-balance text-[38px] md:text-[60px]">
             Engenharia financeira ajustada à realidade do seu faturamento.
           </h2>
-          <p className="mx-auto mt-5 max-w-[640px] text-[16px] leading-relaxed text-muted-foreground md:text-[17px]">
+          <p className="mx-auto mt-5 max-w-content-sm text-[16px] leading-relaxed text-muted-foreground md:text-[17px]">
             O fluxo de quem exporta serviços de tecnologia é diferente de quem
             paga fornecedores no exterior ou protege reservas líquidas no
             Brasil. Antes de qualquer implementação, mapeamos suas taxas,

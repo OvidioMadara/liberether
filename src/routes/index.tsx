@@ -1046,23 +1046,23 @@ function Bonus() {
   const bonuses = [
     {
       n: "01",
-      title: "1 ano de plataforma LiberEther",
-      desc: "12 meses de acesso à plataforma educacional com aulas e conteúdos sobre Web3, stablecoins, segurança digital, autocustódia, Ethereum e finanças descentralizadas.",
+      title: "Licença anual da plataforma LiberEther",
+      desc: "12 meses de acesso à plataforma educacional com guias práticos, tutoriais de segurança e atualizações do mercado de dólares digitais e Web3.",
       v: "12 meses de acesso",
       img: bonus01,
     },
     {
       n: "02",
-      title: "50% de desconto em serviços",
-      desc: "Durante os 12 meses após a mentoria, 50% off na contratação de serviços elegíveis: horas adicionais, novas aulas, revisões da estrutura e orientações complementares.",
+      title: "50% de desconto em consultorias de expansão",
+      desc: "Desconto garantido para contratar sessões estratégicas adicionais nos 12 meses seguintes à mentoria — horas de acompanhamento, revisões e orientações complementares.",
       v: "Válido por 12 meses",
       img: bonus02,
     },
     {
       n: "03",
-      title: "Plano de Continuidade",
-      desc: "Ao final da mentoria você recebe um plano com as prioridades para os próximos 90 dias: revisões de segurança, ajustes na operação, temas para aprofundar e frequência de revisão.",
-      v: "Entregue no encontro 12",
+      title: "Validação monitorada sem risco",
+      desc: "Todas as etapas são executadas de forma assistida. Antes de qualquer movimentação real, fazemos testes com valores mínimos ($1 a $5) para validar endereços, backups e domínio do processo.",
+      v: "Incluído nos 12 encontros",
       img: bonus03,
     },
   ];
@@ -1072,7 +1072,7 @@ function Bonus() {
       <Container>
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="display text-[36px] md:text-[54px]">
-            A aprendizagem continua depois dos três meses de acompanhamento.
+            Bônus exclusivos que estendem os resultados além dos 90 dias.
           </h2>
         </div>
 

@@ -237,8 +237,6 @@ function Hero() {
       <FloatingFood
         containerRef={heroRef}
         items={[
-          { src: floatWallet, alt: "", className: "left-[3%] top-[18%] w-[110px] md:w-[150px]", depth: 0.6, rotate: -8 },
-          { src: floatShield, alt: "", className: "right-[4%] top-[12%] w-[120px] md:w-[160px]", depth: 0.45, rotate: 14, delay: 0.1 },
           { src: floatKey, alt: "", className: "left-[8%] bottom-[14%] w-[90px] md:w-[120px]", depth: 0.7, rotate: 12, delay: 0.15 },
           { src: floatCoin, alt: "", className: "right-[6%] bottom-[20%] w-[120px] md:w-[160px]", depth: 0.55, rotate: -10, delay: 0.05 },
           { src: floatStack, alt: "", className: "hidden md:block left-[12%] top-[55%] w-[110px]", depth: 0.35, rotate: -6, delay: 0.2 },

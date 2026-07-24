@@ -129,19 +129,24 @@ function PrimaryCTA({ children }: { children: React.ReactNode }) {
 function TopMark() {
   return (
     <header className="absolute inset-x-0 top-0 z-20">
-      <Container className="flex items-center justify-center pt-8">
-        <div className="flex items-center gap-0.5">
+      <Container className="flex items-center justify-center pt-6 sm:pt-8">
+        <a
+          href="#top"
+          className="inline-flex items-center justify-center gap-1 leading-none"
+          aria-label="LiberEther"
+        >
           <img
             src={logo}
-            alt="LiberEther"
+            alt=""
+            aria-hidden="true"
             width={512}
             height={512}
-            className="h-18 w-auto"
+            className="block h-14 w-auto shrink-0 sm:h-16 md:h-[72px]"
           />
-          <span className="font-display text-[32px] leading-none tracking-[-0.01em] text-foreground md:text-[36px]">
+          <span className="font-display tracking-[-0.01em] text-foreground leading-none text-[26px] sm:text-[30px] md:text-[36px]">
             LiberEther
           </span>
-        </div>
+        </a>
       </Container>
     </header>
   );

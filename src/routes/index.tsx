@@ -1070,13 +1070,13 @@ function Bonus() {
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display text-[36px] md:text-[54px]">
             Bônus exclusivos que estendem os resultados além dos 90 dias.
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-content-lg gap-6 md:grid-cols-3">
           {bonuses.map((b) => (
             <article
               key={b.n}

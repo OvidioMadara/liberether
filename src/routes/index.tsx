@@ -246,7 +246,7 @@ function Hero() {
       />
 
       <Container className="relative z-10">
-        <div className="fade-up mx-auto max-w-[920px] text-center">
+        <div className="fade-up mx-auto max-w-content text-center">
           <h1 className="display display-tight text-balance text-[36px] sm:text-[52px] md:text-[68px]">
             Elimine as taxas invisíveis de conversão e receba em{" "}
             <AnimatedTextCycle
@@ -257,7 +257,7 @@ function Hero() {
             com saldo disponível em minutos.
           </h1>
 
-          <p className="mx-auto mt-7 max-w-[760px] text-pretty text-[16px] leading-relaxed text-muted-foreground md:text-[17.5px]">
+          <p className="mx-auto mt-7 max-w-content text-pretty text-[16px] leading-relaxed text-muted-foreground md:text-[17.5px]">
             Se você fatura alto — prestando serviços para o exterior ou operando
             seu negócio no Brasil — sabe quanto perde com taxas abusivas e
             burocracia bancária. A Mentoria de Autonomia Global LiberEther é um
@@ -267,7 +267,7 @@ function Hero() {
             assume o controle total do seu faturamento em moeda forte.
           </p>
 
-          <ul className="mx-auto mt-10 grid max-w-[980px] gap-3 text-left sm:grid-cols-3">
+          <ul className="mx-auto mt-10 grid max-w-content-lg gap-3 text-left sm:grid-cols-3">
             {[
               "Receba em USDC direto na sua carteira, sem SWIFT nem 2 a 5 dias úteis de espera.",
               "Elimine 3% a 6% de perda em cotações abusivas e tarifas bancárias empilhadas.",

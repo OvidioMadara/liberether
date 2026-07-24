@@ -83,13 +83,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "12 encontros individuais para construir uma estrutura financeira mais autônoma com stablecoins, autocustódia e ferramentas Web3.",
+          "90 dias de acompanhamento individual para receber em dólares digitais (USDC), eliminar taxas bancárias e assumir a custódia do seu caixa.",
       },
       { property: "og:title", content: "Mentoria Autonomia Global — LiberEther" },
       {
         property: "og:description",
         content:
-          "12 encontros individuais para construir uma estrutura financeira mais autônoma com stablecoins, autocustódia e ferramentas Web3.",
+          "90 dias de acompanhamento individual para receber em dólares digitais (USDC), eliminar taxas bancárias e assumir a custódia do seu caixa.",
       },
     ],
   }),

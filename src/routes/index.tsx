@@ -372,7 +372,7 @@ function AnatomiaMarmita() {
         </div>
 
         {/* central kit with halo */}
-        <div className="relative mx-auto mt-16 flex max-w-[640px] items-center justify-center">
+        <div className="relative mx-auto mt-16 flex max-w-content items-center justify-center">
           <div
             className="absolute inset-10 rounded-full opacity-60 blur-3xl"
             style={{
@@ -395,7 +395,7 @@ function AnatomiaMarmita() {
         </div>
 
         {/* phase chips */}
-        <div className="relative mx-auto mt-12 grid max-w-[820px] grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="relative mx-auto mt-12 grid max-w-content-lg grid-cols-2 gap-3 md:grid-cols-4">
           {[
             ["90 dias", "de acompanhamento"],
             ["12 encontros", "individuais ao vivo"],

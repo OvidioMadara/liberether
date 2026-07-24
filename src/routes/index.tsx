@@ -874,16 +874,16 @@ function Metodo() {
 
 function ParaQuem() {
   const yes = [
-    "Empreendedores, autônomos e prestadores de serviço que querem mais autonomia financeira",
-    "Profissionais que recebem — ou desejam receber — em outras moedas, do Brasil ou do exterior",
-    "Pessoas que querem aprender a utilizar dólares digitais e reduzir a dependência de bancos",
-    "Quem já possui criptoativos mas não tem uma estrutura organizada, com autocustódia e segurança",
-    "Quem quer entender autocustódia antes de movimentar valores maiores com mais confiança",
+    "Prestadores de serviços e freelancers internacionais (devs, designers, consultores) que recebem do exterior",
+    "Empresários e infoprodutores que buscam otimizar o caixa e manter reservas em dólar digital",
+    "Importadores e gestores de compras que precisam pagar fornecedores no exterior sem travamentos bancários",
+    "Profissionais liberais e investidores que querem guardar patrimônio em estruturas privadas com alta segurança",
+    "Quem quer parar de perder 3% a 8% do faturamento com cotações ruins e intermediários",
   ];
   const no = [
-    "Quem procura garantia de lucro ou promessa de enriquecimento rápido",
-    "Quem espera receber sinais de compra e venda ou gestão terceirizada de patrimônio",
-    "Quem não quer assumir responsabilidade pelas próprias credenciais e chaves",
+    "Quem procura especulação, trade ou promessas ilógicas de enriquecimento rápido",
+    "Quem deseja gestão terceirizada de capital (nós ensinamos você a gerir e proteger o próprio dinheiro)",
+    "Quem não pretende seguir protocolos básicos de segurança para guardar suas chaves de acesso",
     "Quem busca apenas uma indicação rápida de qual ativo comprar",
   ];
 
@@ -891,7 +891,7 @@ function ParaQuem() {
     <section className="section-light py-28 md:py-36">
       <Container>
         <h2 className="display mx-auto max-w-[860px] text-center text-[36px] md:text-[54px]">
-          Antes de continuar, veja se a mentoria faz sentido para você.
+          Para quem é (e para quem não é) a Mentoria Autonomia Global.
         </h2>
 
         <div className="mt-16 grid gap-6 md:grid-cols-2">

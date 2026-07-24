@@ -358,7 +358,7 @@ function AnatomiaMarmita() {
       />
 
       <Container className="relative z-10">
-        <div className="mx-auto max-w-content text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display display-tight text-balance text-[38px] md:text-[60px]">
             Engenharia financeira ajustada à realidade do seu faturamento.
           </h2>
@@ -463,7 +463,7 @@ function Cardapios() {
         />
       </div>
       <Container>
-        <div className="mx-auto max-w-content text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display display-tight text-balance text-[38px] md:text-[58px]">
             O Método — os 4 pilares da autonomia financeira.
           </h2>
@@ -591,7 +591,7 @@ function ProvaSocial() {
   return (
     <section className="section-light relative bg-background py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-content text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display text-[36px] md:text-[54px]">
             Casos práticos: o resultado na rotina de quem já implementou.
           </h2>
@@ -739,7 +739,7 @@ function Metodo() {
     <section id="metodo" className="section-light relative bg-background py-28 md:py-36">
       <Container>
         <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-content">
+          <div className="max-w-content-lg">
             <h2 className="display text-[36px] md:text-[54px]">
               A Estrutura Financeira 4A — como a mentoria se organiza.
             </h2>
@@ -890,7 +890,7 @@ function ParaQuem() {
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <h2 className="display mx-auto max-w-content text-center text-[36px] md:text-[54px]">
+        <h2 className="display mx-auto max-w-content-lg text-center text-[36px] md:text-[54px]">
           Para quem é (e para quem não é) a Mentoria Autonomia Global.
         </h2>
 
@@ -960,7 +960,7 @@ function Entregaveis() {
       />
 
       <Container className="relative z-10">
-        <div className="mx-auto max-w-content text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display text-[36px] text-foreground md:text-[58px]">
             Os 12 encontros — três meses de acompanhamento individual.
           </h2>
@@ -1070,7 +1070,7 @@ function Bonus() {
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-content text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display text-[36px] md:text-[54px]">
             Bônus exclusivos que estendem os resultados além dos 90 dias.
           </h2>
@@ -1339,7 +1339,7 @@ function Suporte() {
   return (
     <section className="section-light relative py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-content text-center">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display text-balance text-[38px] md:text-[58px]">
             Como você é acompanhado durante e depois da mentoria.
           </h2>
@@ -1357,7 +1357,7 @@ function Suporte() {
                 <Icon className="size-9" strokeWidth={1.4} />
               </div>
               <h3 className="display mt-6 text-[24px] md:text-[28px]">{title}</h3>
-              <p className="mt-3 max-w-[320px] text-[14.5px] leading-relaxed text-muted-foreground">
+              <p className="mt-3 text-[14.5px] leading-relaxed text-muted-foreground">
                 {desc}
               </p>
             </div>
@@ -1630,7 +1630,7 @@ function LinhaDoTempo() {
   return (
     <section className="section-light py-24 md:py-32">
       <Container>
-        <div className="mx-auto max-w-content">
+        <div className="mx-auto max-w-content-lg text-center">
           <h2 className="display text-[36px] leading-[1.05] md:text-[54px]">
             Os 12 encontros, mês a mês.
           </h2>

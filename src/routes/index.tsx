@@ -1339,11 +1339,11 @@ function Suporte() {
   return (
     <section className="section-light relative py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display text-balance text-[38px] md:text-[58px]">
             Como você é acompanhado durante e depois da mentoria.
           </h2>
-          <p className="mx-auto mt-7 max-w-[660px] text-[16.5px] leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-7 max-w-content-sm text-[16.5px] leading-relaxed text-muted-foreground">
             Você não recebe apenas informações e precisa descobrir sozinho como
             aplicá-las. O acompanhamento é ativo do primeiro ao último encontro
             — e continua na plataforma pelos 12 meses seguintes.

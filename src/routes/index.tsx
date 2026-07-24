@@ -1206,19 +1206,19 @@ function Depoimentos() {
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display text-[36px] md:text-[54px]">
             Profissionais construindo autonomia — cada um a partir do seu próprio caso.
           </h2>
         </div>
 
-        <div className="mt-16 flex justify-center gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_18%,black_82%,transparent)] max-h-[720px] overflow-hidden">
+        <div className="mx-auto mt-16 flex max-w-content-lg justify-center gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_18%,black_82%,transparent)] max-h-[720px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={18} />
           <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={22} />
           <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={20} />
         </div>
 
-        <p className="mx-auto mt-10 max-w-[640px] text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
+        <p className="mx-auto mt-10 max-w-content-sm text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
           Depoimentos ilustrativos · substituir por casos reais
         </p>
       </Container>

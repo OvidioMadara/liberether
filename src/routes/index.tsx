@@ -1747,11 +1747,11 @@ function FinalCTA() {
         }}
       />
       <Container className="relative z-10">
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display display-tight text-[42px] md:text-[72px]">
             12 encontros. 3 meses. Uma estrutura financeira sua.
           </h2>
-          <p className="mx-auto mt-7 max-w-[600px] text-[16px] text-muted-foreground md:text-[17px]">
+          <p className="mx-auto mt-7 max-w-content-sm text-[16px] text-muted-foreground md:text-[17px]">
             R$ 2.500 na condição comercial atual · compromisso contratual de
             entrega · plataforma LiberEther incluída por 12 meses.
           </p>

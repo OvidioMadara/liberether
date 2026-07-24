@@ -1630,17 +1630,17 @@ function LinhaDoTempo() {
   return (
     <section className="section-light py-24 md:py-32">
       <Container>
-        <div className="mx-auto max-w-[860px]">
+        <div className="mx-auto max-w-content">
           <h2 className="display text-[36px] leading-[1.05] md:text-[54px]">
             Os 12 encontros, mês a mês.
           </h2>
-          <p className="mt-5 max-w-[560px] text-[15px] leading-relaxed text-muted-foreground md:text-[16px]">
+          <p className="mx-auto mt-5 max-w-content-sm text-[15px] leading-relaxed text-muted-foreground md:text-[16px]">
             Uma sequência possível, sempre adaptada às suas prioridades no
             diagnóstico. Do primeiro encontro à entrega do guia operacional.
           </p>
         </div>
 
-        <ol className="mx-auto mt-16 max-w-[1080px]">
+        <ol className="mx-auto mt-16 max-w-content-lg">
           {steps.map((s, i) => (
             <motion.li
               key={s.tag}

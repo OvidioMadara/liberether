@@ -890,11 +890,11 @@ function ParaQuem() {
   return (
     <section className="section-light py-28 md:py-36">
       <Container>
-        <h2 className="display mx-auto max-w-[860px] text-center text-[36px] md:text-[54px]">
+        <h2 className="display mx-auto max-w-content text-center text-[36px] md:text-[54px]">
           Para quem é (e para quem não é) a Mentoria Autonomia Global.
         </h2>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-content-lg gap-6 md:grid-cols-2">
           <div className="rounded-3xl bg-gradient-to-br from-ember/10 via-surface/60 to-surface/30 p-8 md:p-10">
             <div className="font-mono text-[11px] tracking-[0.2em] text-ember uppercase">É pra você se</div>
             <ul className="mt-6 space-y-4">

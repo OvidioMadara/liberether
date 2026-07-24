@@ -248,26 +248,30 @@ function Hero() {
       <Container className="relative z-10">
         <div className="fade-up mx-auto max-w-[920px] text-center">
           <h1 className="display display-tight text-balance text-[36px] sm:text-[52px] md:text-[68px]">
-            Construa uma estrutura financeira mais{" "}
+            Elimine as taxas invisíveis de conversão e receba em{" "}
             <AnimatedTextCycle
-              words={["autônoma", "segura", "internacional", "resiliente", "sua"]}
+              words={["dólares digitais", "USDC", "moeda forte", "minutos", "autonomia"]}
               interval={2600}
               className="italic text-ember"
             />{" "}
-            em 12 encontros individuais.
+            com saldo disponível em minutos.
           </h1>
 
-          <p className="mx-auto mt-7 max-w-[720px] text-pretty text-[16px] leading-relaxed text-muted-foreground md:text-[17.5px]">
-            Aprenda a receber, converter, armazenar e utilizar seu dinheiro com
-            stablecoins, autocustódia e ferramentas Web3, por meio de um
-            acompanhamento personalizado durante três meses.
+          <p className="mx-auto mt-7 max-w-[760px] text-pretty text-[16px] leading-relaxed text-muted-foreground md:text-[17.5px]">
+            Se você fatura alto — prestando serviços para o exterior ou operando
+            seu negócio no Brasil — sabe quanto perde com taxas abusivas e
+            burocracia bancária. A Mentoria de Autonomia Global LiberEther é um
+            acompanhamento individual de 90 dias para implementar o uso de
+            dólares digitais (USDC) e carteiras de custódia própria. Você
+            elimina intermediários, reduz custos de transação para centavos e
+            assume o controle total do seu faturamento em moeda forte.
           </p>
 
           <ul className="mx-auto mt-10 grid max-w-[980px] gap-3 text-left sm:grid-cols-3">
             {[
-              "Receba pagamentos nacionais e internacionais com mais flexibilidade e menos intermediários.",
-              "Converta reais ou outras moedas em dólares digitais e organize uma reserva estável.",
-              "Assuma o controle dos próprios ativos com autocustódia, Trezor e um plano de segurança real.",
+              "Receba em USDC direto na sua carteira, sem SWIFT nem 2 a 5 dias úteis de espera.",
+              "Elimine 3% a 6% de perda em cotações abusivas e tarifas bancárias empilhadas.",
+              "Custódia própria, sem risco de bloqueio de saldo por bancos, fintechs ou corretoras.",
             ].map((t) => (
               <li
                 key={t}
@@ -285,7 +289,7 @@ function Hero() {
           <div className="relative mx-auto aspect-video max-w-[820px] overflow-hidden rounded-3xl bg-black shadow-float">
             <img
               src={hero}
-              alt="Workspace Web3 com carteira física, laptop e smartphone"
+              alt="Workspace com carteira física Trezor, laptop e dólares digitais"
               width={1600}
               height={1024}
               className="size-full object-cover opacity-90"
@@ -300,11 +304,11 @@ function Hero() {
         </div>
 
         <div className="fade-up mt-12 flex flex-col items-center gap-6">
-          <PrimaryCTA>Quero conhecer a mentoria</PrimaryCTA>
+          <PrimaryCTA>Quero agendar um diagnóstico individual</PrimaryCTA>
           <div className="flex items-center gap-6 text-[12.5px] text-muted-foreground">
             <span className="inline-flex items-center gap-2">
               <ShieldCheck className="size-3.5 text-ember" />
-              Compromisso contratual de entrega
+              Atendimento individual · tela compartilhada
             </span>
 
             <span className="inline-flex items-center gap-2.5">
@@ -316,7 +320,7 @@ function Hero() {
                   </Avatar>
                 ))}
               </div>
-              Profissionais construindo autonomia com a LiberEther
+              Vagas limitadas pela agenda
             </span>
           </div>
         </div>

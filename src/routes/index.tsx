@@ -260,7 +260,7 @@ function Hero() {
                 "e tenha uma estrutura financeira global para receber, proteger e movimentar seu dinheiro.",
                 "e aprenda a utilizar ativos digitais com segurança e autonomia.",
               ]}
-              interval={7000}
+              interval={10000}
               className="italic text-ember"
             />
           </h1>

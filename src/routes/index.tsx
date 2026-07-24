@@ -136,7 +136,7 @@ function TopMark() {
             alt="LiberEther"
             width={512}
             height={512}
-            className="h-6 w-auto"
+            className="h-18 w-auto"
           />
           <span className="font-display text-[20px] tracking-[-0.01em] text-foreground md:text-[22px]">
             LiberEther

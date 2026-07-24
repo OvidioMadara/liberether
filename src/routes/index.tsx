@@ -939,12 +939,12 @@ function ParaQuem() {
 /* ---------- entregáveis ---------- */
 
 const modules = [
-  { t: "1. Diagnóstico Financeiro", s: "Análise da sua rotina, moedas, plataformas e riscos atuais", v: "Encontro 1", img: mod01 },
-  { t: "2. Acesso e Recebimentos", s: "Canais de entrada, conversão em stablecoins e fluxo internacional", v: "Encontros 3–4", img: mod02 },
-  { t: "3. Autocustódia e Segurança", s: "Carteiras, senhas, frases de recuperação, Trezor e emergências", v: "Encontros 5–7", img: mod03 },
-  { t: "4. Stablecoins e DeFi", s: "Dólares digitais, protocolos, rendimentos e riscos reais", v: "Encontros 8–9", img: mod04 },
-  { t: "5. Ecossistema LiberEther", s: "LiberWallet, LiberPass e cartões internacionais", v: "Encontros 10–11", img: mod05 },
-  { t: "Plano de Continuidade", s: "Guia operacional personalizado e próximos 90 dias", v: "Encontro 12", img: mod06 },
+  { t: "Diagnóstico do Caixa e Mapeamento de Taxas", s: "Identificação exata do quanto você perde hoje em tarifas e cotações", v: "Encontro 1", img: mod01 },
+  { t: "Canais de Entrada e Recebimentos Globais", s: "Infraestrutura de redes (Arbitrum, Base, Polygon) e dólares digitais", v: "Encontros 2–3", img: mod02 },
+  { t: "Otimização de Conversões", s: "Eliminação de tarifas SWIFT, spread bancário e etapas desnecessárias", v: "Encontro 4", img: mod03 },
+  { t: "Autocustódia, Backups e Trezor", s: "Carteiras privadas, chaves de acesso e configuração de cofre eletrônico", v: "Encontros 5–7", img: mod04 },
+  { t: "Liquidez, USDC e Ecossistema DeFi", s: "Análise do USDC, gestão de riscos e critérios reais de decisão", v: "Encontros 8–9", img: mod05 },
+  { t: "Cartões, LiberEther e Manual de Governança", s: "Pagamento de despesas em dólar digital e entrega do manual personalizado", v: "Encontros 10–12", img: mod06 },
 ];
 
 function Entregaveis() {

@@ -360,13 +360,14 @@ function AnatomiaMarmita() {
       <Container className="relative z-10">
         <div className="mx-auto max-w-[760px] text-center">
           <h2 className="display display-tight text-balance text-[38px] md:text-[60px]">
-            Uma estrutura construída para a sua realidade — não uma fórmula genérica.
+            Engenharia financeira ajustada à realidade do seu faturamento.
           </h2>
           <p className="mx-auto mt-5 max-w-[640px] text-[16px] leading-relaxed text-muted-foreground md:text-[17px]">
-            Você não precisa aprender tudo sobre Web3. Precisa aprender o que
-            faz sentido para você. A partir do diagnóstico inicial, os 12
-            encontros são organizados para desenvolver a estrutura mais adequada
-            ao seu caso.
+            O fluxo de quem exporta serviços de tecnologia é diferente de quem
+            paga fornecedores no exterior ou protege reservas líquidas no
+            Brasil. Antes de qualquer implementação, mapeamos suas taxas,
+            escolhemos redes ágeis (Arbitrum, Base, Polygon), definimos os
+            ativos em USDC e configuramos pontes diretas para o Pix.
           </p>
         </div>
 
@@ -396,9 +397,9 @@ function AnatomiaMarmita() {
         {/* phase chips */}
         <div className="relative mx-auto mt-12 grid max-w-[820px] grid-cols-2 gap-3 md:grid-cols-4">
           {[
-            ["12", "encontros individuais"],
-            ["1h", "por semana"],
-            ["3 meses", "de acompanhamento"],
+            ["90 dias", "de acompanhamento"],
+            ["12 encontros", "individuais ao vivo"],
+            ["Testes com $1–$5", "antes de operar valores reais"],
             ["12 meses", "de plataforma LiberEther"],
           ].map(([n, l]) => (
             <div

@@ -591,13 +591,13 @@ function ProvaSocial() {
   return (
     <section className="section-light relative bg-background py-28 md:py-36">
       <Container>
-        <div className="mx-auto max-w-[860px] text-center">
+        <div className="mx-auto max-w-content text-center">
           <h2 className="display text-[36px] md:text-[54px]">
             Casos práticos: o resultado na rotina de quem já implementou.
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-content-lg gap-6 md:mt-20 md:grid-cols-3">
           {proofs.map((p, i) => (
             <article
               key={p.name}
@@ -637,7 +637,7 @@ function ProvaSocial() {
           ))}
         </div>
 
-        <p className="mx-auto mt-10 max-w-[640px] text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
+        <p className="mx-auto mt-10 max-w-content-sm text-center font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground/60">
           Casos reais de aplicação da metodologia LiberEther
         </p>
       </Container>

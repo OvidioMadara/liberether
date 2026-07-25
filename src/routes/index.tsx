@@ -22,9 +22,13 @@ import { motion, useScroll, useTransform } from "motion/react";
 import AnimatedTextCycle from "@/components/AnimatedTextCycle";
 
 import logo from "@/assets/av-logo.png";
-import hero from "@/assets/av-hero.jpg";
+import hero from "@/assets/le-hero-phone.png";
 import heroBg from "@/assets/av-flatlay.jpg";
 import creator from "@/assets/av-creator.jpg";
+import coinsTrio from "@/assets/le-coins-trio.png";
+import shieldCheck from "@/assets/le-shield-check.png";
+import dividerNet from "@/assets/le-divider-network.png";
+import markRuby from "@/assets/le-mark-ruby.png";
 import a1 from "@/assets/avatar-1.jpg";
 import a2 from "@/assets/avatar-2.jpg";
 import a3 from "@/assets/avatar-3.jpg";

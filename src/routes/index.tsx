@@ -375,8 +375,8 @@ function AnatomiaMarmita() {
             }}
           />
           <motion.img
-            src={kit}
-            alt="Ecossistema LiberEther — Trezor, LiberWallet, notebook"
+            src={coinsTrio}
+            alt="USDT, Ethereum e USDC — os ativos digitais que a mentoria ensina a usar"
             width={1024}
             height={1024}
             loading="lazy"

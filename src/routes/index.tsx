@@ -355,16 +355,6 @@ function AnatomiaMarmita() {
     >
       <div className="pointer-events-none absolute inset-0 grain opacity-40" />
 
-      <FloatingFood
-        containerRef={sectionRef}
-        items={[
-          { src: floatWallet, alt: "", className: "left-[2%] top-[14%] w-[120px] md:w-[160px]", depth: 0.55, rotate: -14 },
-          { src: floatKey, alt: "", className: "right-[3%] top-[10%] w-[90px] md:w-[130px]", depth: 0.4, rotate: 12, delay: 0.1 },
-          { src: floatCoin, alt: "", className: "right-[6%] bottom-[12%] w-[120px] md:w-[160px]", depth: 0.65, rotate: -8, delay: 0.15 },
-          { src: floatShield, alt: "", className: "left-[5%] bottom-[16%] w-[120px] md:w-[160px]", depth: 0.5, rotate: 18, delay: 0.2 },
-          { src: floatStack, alt: "", className: "hidden md:block left-[18%] top-[58%] w-[100px]", depth: 0.3, rotate: -22, delay: 0.25 },
-        ]}
-      />
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-content-lg text-center">

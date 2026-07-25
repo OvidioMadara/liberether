@@ -1802,6 +1802,7 @@ function Landing() {
       <AnatomiaMarmita />
       <StatsStrip />
       <Cardapios />
+      <NetworkDivider />
       <Dor />
       <ProvaSocial />
       <CTAMid />

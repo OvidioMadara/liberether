@@ -22,9 +22,13 @@ import { motion, useScroll, useTransform } from "motion/react";
 import AnimatedTextCycle from "@/components/AnimatedTextCycle";
 
 import logo from "@/assets/av-logo.png";
-import hero from "@/assets/av-hero.jpg";
+import hero from "@/assets/le-hero-phone.png";
 import heroBg from "@/assets/av-flatlay.jpg";
 import creator from "@/assets/av-creator.jpg";
+import coinsTrio from "@/assets/le-coins-trio.png";
+import shieldCheck from "@/assets/le-shield-check.png";
+import dividerNet from "@/assets/le-divider-network.png";
+import markRuby from "@/assets/le-mark-ruby.png";
 import a1 from "@/assets/avatar-1.jpg";
 import a2 from "@/assets/avatar-2.jpg";
 import a3 from "@/assets/avatar-3.jpg";
@@ -44,11 +48,6 @@ import bonus03 from "@/assets/av-bonus-3.png";
 import kit from "@/assets/av-kit.png";
 import flatlay from "@/assets/av-flatlay.jpg";
 
-import floatCoin from "@/assets/av-float-camera.png";
-import floatWallet from "@/assets/av-float-lens.png";
-import floatKey from "@/assets/av-float-mic.png";
-import floatShield from "@/assets/av-float-clapper.png";
-import floatStack from "@/assets/av-float-reel.png";
 
 import shameStill from "@/assets/av-shame.jpg";
 
@@ -239,14 +238,6 @@ function Hero() {
         <div className="absolute inset-0 grain opacity-50" />
       </div>
 
-      <FloatingFood
-        containerRef={heroRef}
-        items={[
-          { src: floatKey, alt: "", className: "left-[8%] bottom-[14%] w-[90px] md:w-[120px]", depth: 0.7, rotate: 12, delay: 0.15 },
-          { src: floatCoin, alt: "", className: "right-[6%] bottom-[20%] w-[120px] md:w-[160px]", depth: 0.55, rotate: -10, delay: 0.05 },
-          { src: floatStack, alt: "", className: "hidden md:block left-[12%] top-[55%] w-[110px]", depth: 0.35, rotate: -6, delay: 0.2 },
-        ]}
-      />
 
       <Container className="relative z-10">
         <div className="fade-up mx-auto max-w-content text-center">
@@ -299,16 +290,16 @@ function Hero() {
 
         {/* VSL slot */}
         <div className="fade-up mt-14 md:mt-20">
-          <div className="relative mx-auto aspect-video max-w-content-lg overflow-hidden rounded-3xl bg-black shadow-float">
+          <div className="relative mx-auto aspect-video max-w-content-lg overflow-hidden rounded-3xl bg-surface shadow-float">
             <img
               src={hero}
-              alt="Workspace com carteira física Trezor, laptop e dólares digitais"
+              alt="LiberWallet no iPhone com pingente Ethereum vermelho"
               width={1600}
               height={1024}
-              className="size-full object-cover opacity-90"
+              className="size-full object-contain p-6 md:p-10"
             />
-            <div className="pointer-events-none absolute inset-0 grid place-items-center">
-              <div className="flex items-center gap-3 rounded-full bg-background/90 px-5 py-3 text-[13px] font-medium text-foreground shadow-xl ring-1 ring-ember/40 backdrop-blur">
+            <div className="pointer-events-none absolute inset-x-0 bottom-6 grid place-items-center">
+              <div className="flex items-center gap-3 rounded-full bg-background/95 px-5 py-3 text-[13px] font-medium text-foreground shadow-xl ring-1 ring-ember/40 backdrop-blur">
                 <span className="grid size-7 place-items-center rounded-full bg-ember text-primary-foreground">▶</span>
                 Insira sua apresentação aqui
               </div>
@@ -359,16 +350,6 @@ function AnatomiaMarmita() {
     >
       <div className="pointer-events-none absolute inset-0 grain opacity-40" />
 
-      <FloatingFood
-        containerRef={sectionRef}
-        items={[
-          { src: floatWallet, alt: "", className: "left-[2%] top-[14%] w-[120px] md:w-[160px]", depth: 0.55, rotate: -14 },
-          { src: floatKey, alt: "", className: "right-[3%] top-[10%] w-[90px] md:w-[130px]", depth: 0.4, rotate: 12, delay: 0.1 },
-          { src: floatCoin, alt: "", className: "right-[6%] bottom-[12%] w-[120px] md:w-[160px]", depth: 0.65, rotate: -8, delay: 0.15 },
-          { src: floatShield, alt: "", className: "left-[5%] bottom-[16%] w-[120px] md:w-[160px]", depth: 0.5, rotate: 18, delay: 0.2 },
-          { src: floatStack, alt: "", className: "hidden md:block left-[18%] top-[58%] w-[100px]", depth: 0.3, rotate: -22, delay: 0.25 },
-        ]}
-      />
 
       <Container className="relative z-10">
         <div className="mx-auto max-w-content-lg text-center">
@@ -394,8 +375,8 @@ function AnatomiaMarmita() {
             }}
           />
           <motion.img
-            src={kit}
-            alt="Ecossistema LiberEther — Trezor, LiberWallet, notebook"
+            src={coinsTrio}
+            alt="USDT, Ethereum e USDC — os ativos digitais que a mentoria ensina a usar"
             width={1024}
             height={1024}
             loading="lazy"
@@ -1389,12 +1370,12 @@ function Garantia() {
       <Container>
         <div className="mx-auto grid max-w-content-lg items-center gap-10 p-4 md:grid-cols-[auto_1fr] md:gap-16 md:p-8">
           <img
-            src={garantiaImg}
-            alt="Compromisso contratual de entrega LiberEther"
+            src={shieldCheck}
+            alt="Escudo de garantia LiberEther"
             loading="lazy"
             width={1024}
             height={1024}
-            className="h-80 w-80 rounded-3xl object-cover md:h-[520px] md:w-[520px]"
+            className="h-64 w-64 object-contain md:h-[420px] md:w-[420px]"
           />
 
           <div>
@@ -1801,6 +1782,18 @@ function Footer() {
 
 /* ---------- page ---------- */
 
+function NetworkDivider() {
+  return (
+    <div aria-hidden="true" className="relative w-full overflow-hidden bg-surface" style={{ height: 96 }}>
+      <img
+        src={dividerNet}
+        alt=""
+        className="h-full w-full object-cover object-center opacity-80"
+      />
+    </div>
+  );
+}
+
 function Landing() {
   useEffect(() => {
     const onScroll = () => {
@@ -1816,11 +1809,13 @@ function Landing() {
 
   return (
     <main className="relative bg-background text-foreground">
+
       <TopMark />
       <Hero />
       <AnatomiaMarmita />
       <StatsStrip />
       <Cardapios />
+      <NetworkDivider />
       <Dor />
       <ProvaSocial />
       <CTAMid />

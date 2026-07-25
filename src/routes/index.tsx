@@ -48,11 +48,6 @@ import bonus03 from "@/assets/av-bonus-3.png";
 import kit from "@/assets/av-kit.png";
 import flatlay from "@/assets/av-flatlay.jpg";
 
-import floatCoin from "@/assets/av-float-camera.png";
-import floatWallet from "@/assets/av-float-lens.png";
-import floatKey from "@/assets/av-float-mic.png";
-import floatShield from "@/assets/av-float-clapper.png";
-import floatStack from "@/assets/av-float-reel.png";
 
 import shameStill from "@/assets/av-shame.jpg";
 

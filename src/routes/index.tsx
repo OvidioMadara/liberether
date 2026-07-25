@@ -295,16 +295,16 @@ function Hero() {
 
         {/* VSL slot */}
         <div className="fade-up mt-14 md:mt-20">
-          <div className="relative mx-auto aspect-video max-w-content-lg overflow-hidden rounded-3xl bg-black shadow-float">
+          <div className="relative mx-auto aspect-video max-w-content-lg overflow-hidden rounded-3xl bg-surface shadow-float">
             <img
               src={hero}
-              alt="Workspace com carteira física Trezor, laptop e dólares digitais"
+              alt="LiberWallet no iPhone com pingente Ethereum vermelho"
               width={1600}
               height={1024}
-              className="size-full object-cover opacity-90"
+              className="size-full object-contain p-6 md:p-10"
             />
-            <div className="pointer-events-none absolute inset-0 grid place-items-center">
-              <div className="flex items-center gap-3 rounded-full bg-background/90 px-5 py-3 text-[13px] font-medium text-foreground shadow-xl ring-1 ring-ember/40 backdrop-blur">
+            <div className="pointer-events-none absolute inset-x-0 bottom-6 grid place-items-center">
+              <div className="flex items-center gap-3 rounded-full bg-background/95 px-5 py-3 text-[13px] font-medium text-foreground shadow-xl ring-1 ring-ember/40 backdrop-blur">
                 <span className="grid size-7 place-items-center rounded-full bg-ember text-primary-foreground">▶</span>
                 Insira sua apresentação aqui
               </div>

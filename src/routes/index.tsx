@@ -1782,6 +1782,18 @@ function Footer() {
 
 /* ---------- page ---------- */
 
+function NetworkDivider() {
+  return (
+    <div aria-hidden="true" className="relative w-full overflow-hidden bg-surface" style={{ height: 96 }}>
+      <img
+        src={dividerNet}
+        alt=""
+        className="h-full w-full object-cover object-center opacity-80"
+      />
+    </div>
+  );
+}
+
 function Landing() {
   useEffect(() => {
     const onScroll = () => {

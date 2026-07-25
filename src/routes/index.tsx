@@ -1370,12 +1370,12 @@ function Garantia() {
       <Container>
         <div className="mx-auto grid max-w-content-lg items-center gap-10 p-4 md:grid-cols-[auto_1fr] md:gap-16 md:p-8">
           <img
-            src={garantiaImg}
-            alt="Compromisso contratual de entrega LiberEther"
+            src={shieldCheck}
+            alt="Escudo de garantia LiberEther"
             loading="lazy"
             width={1024}
             height={1024}
-            className="h-80 w-80 rounded-3xl object-cover md:h-[520px] md:w-[520px]"
+            className="h-64 w-64 object-contain md:h-[420px] md:w-[420px]"
           />
 
           <div>

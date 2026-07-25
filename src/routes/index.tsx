@@ -243,14 +243,6 @@ function Hero() {
         <div className="absolute inset-0 grain opacity-50" />
       </div>
 
-      <FloatingFood
-        containerRef={heroRef}
-        items={[
-          { src: floatKey, alt: "", className: "left-[8%] bottom-[14%] w-[90px] md:w-[120px]", depth: 0.7, rotate: 12, delay: 0.15 },
-          { src: floatCoin, alt: "", className: "right-[6%] bottom-[20%] w-[120px] md:w-[160px]", depth: 0.55, rotate: -10, delay: 0.05 },
-          { src: floatStack, alt: "", className: "hidden md:block left-[12%] top-[55%] w-[110px]", depth: 0.35, rotate: -6, delay: 0.2 },
-        ]}
-      />
 
       <Container className="relative z-10">
         <div className="fade-up mx-auto max-w-content text-center">

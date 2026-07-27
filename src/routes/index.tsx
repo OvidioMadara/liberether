@@ -1239,15 +1239,16 @@ function Criador() {
       <Container>
         <div className="grid items-center gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <div className="relative overflow-hidden rounded-3xl">
+            <div className="relative overflow-hidden rounded-3xl bg-[#0B0B0C]">
               <img
                 src={creator}
-                alt="Mentor LiberEther"
+                alt="Rede global de stablecoins — Ethereum, USDT e USDC"
                 loading="lazy"
                 width={1024}
                 height={1280}
-                className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
+                className="aspect-[4/5] w-full object-contain p-8 transition-transform duration-700 hover:scale-[1.02]"
               />
+
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
                 <div className="text-[18px] font-medium text-white">LiberEther</div>
                 <div className="mt-1 text-[12.5px] text-white/70">

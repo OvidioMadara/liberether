@@ -46,12 +46,18 @@ import step3 from "@/assets/av-step-3.jpg";
 import step4 from "@/assets/av-step-4.jpg";
 import step5 from "@/assets/av-step-5.jpg";
 
-import bonus01 from "@/assets/av-bonus-1.png";
-import bonus02 from "@/assets/av-bonus-2.png";
-import bonus03 from "@/assets/av-bonus-3.png";
+import bonus01Asset from "@/assets/le-card-wallet.png.asset.json";
+import bonus02Asset from "@/assets/le-card-global.png.asset.json";
+import bonus03Asset from "@/assets/le-notify.png.asset.json";
+import kitAsset from "@/assets/le-vault.png.asset.json";
 
-import kit from "@/assets/av-kit.png";
+const bonus01 = bonus01Asset.url;
+const bonus02 = bonus02Asset.url;
+const bonus03 = bonus03Asset.url;
+const kit = kitAsset.url;
+
 import flatlay from "@/assets/av-flatlay.jpg";
+
 
 
 import shameStill from "@/assets/av-shame.jpg";

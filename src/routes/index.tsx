@@ -56,6 +56,18 @@ const bonus02 = bonus02Asset.url;
 const bonus03 = bonus03Asset.url;
 const kit = kitAsset.url;
 
+import keyAsset from "@/assets/le-key.png.asset.json";
+import arrowDownAsset from "@/assets/le-arrow-down.png.asset.json";
+import arrowUpAsset from "@/assets/le-arrow-up.png.asset.json";
+import orbitAsset from "@/assets/le-orbit.png.asset.json";
+
+const keyRuby = keyAsset.url;
+const arrowDown = arrowDownAsset.url;
+const arrowUp = arrowUpAsset.url;
+const orbit = orbitAsset.url;
+const cardGlobal = bonus02Asset.url;
+const cardWallet = bonus01Asset.url;
+
 import flatlay from "@/assets/av-flatlay.jpg";
 
 
@@ -692,28 +704,28 @@ const pillars = [
   {
     n: "01",
     title: "Acesso",
-    image: step2,
+    image: arrowDown,
     desc:
       "Rotas eficientes para receber em dólares digitais com custo insignificante. Pontes diretas para conversão instantânea em Pix quando você precisa pagar despesas em reais.",
   },
   {
     n: "02",
     title: "Autocustódia",
-    image: step3,
+    image: keyRuby,
     desc:
       "Carteiras privadas onde só você possui as chaves de acesso. Cofre eletrônico (Trezor) para volumes maiores e protocolos de backup que blindam seu patrimônio.",
   },
   {
     n: "03",
     title: "Alocação",
-    image: step4,
+    image: cardGlobal,
     desc:
       "Análise de segurança das emissoras de dólares digitais (foco em USDC), gestão de liquidez para o caixa e mapeamento dos riscos do ecossistema DeFi.",
   },
   {
     n: "04",
     title: "Autonomia",
-    image: step5,
+    image: cardWallet,
     desc:
       "Uso das ferramentas operacionais do ecossistema LiberEther, cartões internacionais em dólar digital e checklist prático de segurança digital anti-golpes.",
   },

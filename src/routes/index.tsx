@@ -24,11 +24,16 @@ import AnimatedTextCycle from "@/components/AnimatedTextCycle";
 import logo from "@/assets/av-logo.png";
 import hero from "@/assets/le-hero-phone.png";
 import heroBg from "@/assets/av-flatlay.jpg";
-import creator from "@/assets/av-creator.jpg";
-import coinsTrio from "@/assets/le-coins-trio.png";
+import creatorAsset from "@/assets/le-globe.png.asset.json";
+import vaultAsset from "@/assets/le-vault.png.asset.json";
 import shieldCheck from "@/assets/le-shield-check.png";
-import dividerNet from "@/assets/le-divider-network.png";
+import dividerAsset from "@/assets/le-divider-eth.png.asset.json";
 import markRuby from "@/assets/le-mark-ruby.png";
+
+const creator = creatorAsset.url;
+const coinsTrio = vaultAsset.url;
+const dividerNet = dividerAsset.url;
+
 import a1 from "@/assets/avatar-1.jpg";
 import a2 from "@/assets/avatar-2.jpg";
 import a3 from "@/assets/avatar-3.jpg";
@@ -41,12 +46,26 @@ import step3 from "@/assets/av-step-3.jpg";
 import step4 from "@/assets/av-step-4.jpg";
 import step5 from "@/assets/av-step-5.jpg";
 
-import bonus01 from "@/assets/av-bonus-1.png";
-import bonus02 from "@/assets/av-bonus-2.png";
-import bonus03 from "@/assets/av-bonus-3.png";
+import bonus01Asset from "@/assets/le-card-wallet.png.asset.json";
+import bonus02Asset from "@/assets/le-card-global.png.asset.json";
+import bonus03Asset from "@/assets/le-notify.png.asset.json";
+import kitAsset from "@/assets/le-vault.png.asset.json";
 
-import kit from "@/assets/av-kit.png";
+const bonus01 = bonus01Asset.url;
+const bonus02 = bonus02Asset.url;
+const bonus03 = bonus03Asset.url;
+const kit = kitAsset.url;
+
+import keyAsset from "@/assets/le-key.png.asset.json";
+import arrowDownAsset from "@/assets/le-arrow-down.png.asset.json";
+
+const keyRuby = keyAsset.url;
+const arrowDown = arrowDownAsset.url;
+const cardGlobal = bonus02Asset.url;
+const cardWallet = bonus01Asset.url;
+
 import flatlay from "@/assets/av-flatlay.jpg";
+
 
 
 import shameStill from "@/assets/av-shame.jpg";
@@ -681,28 +700,28 @@ const pillars = [
   {
     n: "01",
     title: "Acesso",
-    image: step2,
+    image: arrowDown,
     desc:
       "Rotas eficientes para receber em dólares digitais com custo insignificante. Pontes diretas para conversão instantânea em Pix quando você precisa pagar despesas em reais.",
   },
   {
     n: "02",
     title: "Autocustódia",
-    image: step3,
+    image: keyRuby,
     desc:
       "Carteiras privadas onde só você possui as chaves de acesso. Cofre eletrônico (Trezor) para volumes maiores e protocolos de backup que blindam seu patrimônio.",
   },
   {
     n: "03",
     title: "Alocação",
-    image: step4,
+    image: cardGlobal,
     desc:
       "Análise de segurança das emissoras de dólares digitais (foco em USDC), gestão de liquidez para o caixa e mapeamento dos riscos do ecossistema DeFi.",
   },
   {
     n: "04",
     title: "Autonomia",
-    image: step5,
+    image: cardWallet,
     desc:
       "Uso das ferramentas operacionais do ecossistema LiberEther, cartões internacionais em dólar digital e checklist prático de segurança digital anti-golpes.",
   },
@@ -778,30 +797,30 @@ function Metodo() {
                   key={p.n}
                   className="basis-[88%] pl-4 sm:basis-[60%] md:basis-[44%] md:pl-6 lg:basis-[36%]"
                 >
-                  <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-surface-raised/60">
-                    <div className="relative aspect-[4/5] w-full overflow-hidden">
+                  <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-surface-raised/60 ring-1 ring-border/50">
+                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface">
                       <img
                         src={p.image}
                         alt={p.title}
                         loading="lazy"
                         width={1024}
                         height={1280}
-                        className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                        className="size-full object-contain p-10 transition-transform duration-700 group-hover:scale-[1.04]"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/10" />
                       <div className="absolute top-5 left-5 font-mono text-[12px] tracking-[0.18em] text-ember">
                         PILAR {p.n}
                       </div>
-                      <div className="absolute inset-x-5 bottom-5">
-                        <h3 className="display text-[30px] leading-tight text-white md:text-[36px]">
-                          {p.title}
-                        </h3>
-                        <p className="mt-3 text-[14px] leading-relaxed text-white/85">
-                          {p.desc}
-                        </p>
-                      </div>
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="display text-[30px] leading-tight text-foreground md:text-[34px]">
+                        {p.title}
+                      </h3>
+                      <p className="mt-3 text-[14px] leading-relaxed text-muted-foreground">
+                        {p.desc}
+                      </p>
                     </div>
                   </article>
+
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -1228,21 +1247,23 @@ function Criador() {
       <Container>
         <div className="grid items-center gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <div className="relative overflow-hidden rounded-3xl">
+            <div className="relative overflow-hidden rounded-3xl bg-surface">
               <img
                 src={creator}
-                alt="Mentor LiberEther"
+                alt="Rede global de stablecoins — Ethereum, USDT e USDC"
                 loading="lazy"
                 width={1024}
                 height={1280}
-                className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
+                className="aspect-[4/5] w-full object-contain p-8 transition-transform duration-700 hover:scale-[1.02]"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
-                <div className="text-[18px] font-medium text-white">LiberEther</div>
-                <div className="mt-1 text-[12.5px] text-white/70">
+
+              <div className="border-t border-border/60 p-6">
+                <div className="text-[18px] font-medium text-foreground">LiberEther</div>
+                <div className="mt-1 text-[12.5px] text-muted-foreground">
                   Educação, autocustódia e ferramentas Web3
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -1788,9 +1809,10 @@ function NetworkDivider() {
       <img
         src={dividerNet}
         alt=""
-        className="h-full w-full object-cover object-center opacity-80"
+        className="h-full w-full object-contain object-center"
       />
     </div>
+
   );
 }
 

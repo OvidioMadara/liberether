@@ -1257,12 +1257,13 @@ function Criador() {
                 className="aspect-[4/5] w-full object-contain p-8 transition-transform duration-700 hover:scale-[1.02]"
               />
 
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-6">
-                <div className="text-[18px] font-medium text-white">LiberEther</div>
-                <div className="mt-1 text-[12.5px] text-white/70">
+              <div className="border-t border-border/60 p-6">
+                <div className="text-[18px] font-medium text-foreground">LiberEther</div>
+                <div className="mt-1 text-[12.5px] text-muted-foreground">
                   Educação, autocustódia e ferramentas Web3
                 </div>
               </div>
+
             </div>
           </div>
 

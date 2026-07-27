@@ -58,13 +58,9 @@ const kit = kitAsset.url;
 
 import keyAsset from "@/assets/le-key.png.asset.json";
 import arrowDownAsset from "@/assets/le-arrow-down.png.asset.json";
-import arrowUpAsset from "@/assets/le-arrow-up.png.asset.json";
-import orbitAsset from "@/assets/le-orbit.png.asset.json";
 
 const keyRuby = keyAsset.url;
 const arrowDown = arrowDownAsset.url;
-const arrowUp = arrowUpAsset.url;
-const orbit = orbitAsset.url;
 const cardGlobal = bonus02Asset.url;
 const cardWallet = bonus01Asset.url;
 

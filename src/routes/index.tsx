@@ -798,7 +798,7 @@ function Metodo() {
                   className="basis-[88%] pl-4 sm:basis-[60%] md:basis-[44%] md:pl-6 lg:basis-[36%]"
                 >
                   <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-surface-raised/60">
-                    <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#0B0B0C]">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden bg-surface">
                       <img
                         src={p.image}
                         alt={p.title}
@@ -1248,7 +1248,7 @@ function Criador() {
       <Container>
         <div className="grid items-center gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <div className="relative overflow-hidden rounded-3xl bg-[#0B0B0C]">
+            <div className="relative overflow-hidden rounded-3xl bg-surface">
               <img
                 src={creator}
                 alt="Rede global de stablecoins — Ethereum, USDT e USDC"
@@ -1805,7 +1805,7 @@ function Footer() {
 
 function NetworkDivider() {
   return (
-    <div aria-hidden="true" className="relative w-full overflow-hidden bg-[#0B0B0C]" style={{ height: 96 }}>
+    <div aria-hidden="true" className="relative w-full overflow-hidden bg-surface" style={{ height: 96 }}>
       <img
         src={dividerNet}
         alt=""

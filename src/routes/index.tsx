@@ -790,15 +790,16 @@ function Metodo() {
                   className="basis-[88%] pl-4 sm:basis-[60%] md:basis-[44%] md:pl-6 lg:basis-[36%]"
                 >
                   <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-surface-raised/60">
-                    <div className="relative aspect-[4/5] w-full overflow-hidden">
+                    <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#0B0B0C]">
                       <img
                         src={p.image}
                         alt={p.title}
                         loading="lazy"
                         width={1024}
                         height={1280}
-                        className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                        className="size-full object-contain p-8 transition-transform duration-700 group-hover:scale-[1.04]"
                       />
+
                       <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/10" />
                       <div className="absolute top-5 left-5 font-mono text-[12px] tracking-[0.18em] text-ember">
                         PILAR {p.n}

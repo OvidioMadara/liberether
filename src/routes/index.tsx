@@ -1796,13 +1796,14 @@ function Footer() {
 
 function NetworkDivider() {
   return (
-    <div aria-hidden="true" className="relative w-full overflow-hidden bg-surface" style={{ height: 96 }}>
+    <div aria-hidden="true" className="relative w-full overflow-hidden bg-[#0B0B0C]" style={{ height: 96 }}>
       <img
         src={dividerNet}
         alt=""
-        className="h-full w-full object-cover object-center opacity-80"
+        className="h-full w-full object-contain object-center"
       />
     </div>
+
   );
 }
 

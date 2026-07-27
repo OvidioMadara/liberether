@@ -24,11 +24,16 @@ import AnimatedTextCycle from "@/components/AnimatedTextCycle";
 import logo from "@/assets/av-logo.png";
 import hero from "@/assets/le-hero-phone.png";
 import heroBg from "@/assets/av-flatlay.jpg";
-import creator from "@/assets/av-creator.jpg";
-import coinsTrio from "@/assets/le-coins-trio.png";
+import creatorAsset from "@/assets/le-globe.png.asset.json";
+import vaultAsset from "@/assets/le-vault.png.asset.json";
 import shieldCheck from "@/assets/le-shield-check.png";
-import dividerNet from "@/assets/le-divider-network.png";
+import dividerAsset from "@/assets/le-divider-eth.png.asset.json";
 import markRuby from "@/assets/le-mark-ruby.png";
+
+const creator = creatorAsset.url;
+const coinsTrio = vaultAsset.url;
+const dividerNet = dividerAsset.url;
+
 import a1 from "@/assets/avatar-1.jpg";
 import a2 from "@/assets/avatar-2.jpg";
 import a3 from "@/assets/avatar-3.jpg";

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 interface AnimatedTextCycleProps {
   words: string[];
   interval?: number;
+  intervals?: number[];
   className?: string;
 }
 
@@ -39,16 +40,18 @@ function parseMarkedText(text: string) {
 export default function AnimatedTextCycle({
   words,
   interval = 3000,
+  intervals,
   className = "",
 }: AnimatedTextCycleProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const delay = intervals?.[currentIndex] ?? interval;
+    const timer = setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, interval);
-    return () => clearInterval(timer);
-  }, [interval, words.length]);
+    }, delay);
+    return () => clearTimeout(timer);
+  }, [currentIndex, interval, intervals, words.length]);
 
   const variants = {
     hidden: { y: -16, opacity: 0, filter: "blur(6px)" },

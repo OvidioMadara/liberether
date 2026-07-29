@@ -2,27 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import React from "react";
 import { ArrowRight, Check, X, ChevronDown } from "lucide-react";
 
+import { liberetherAssets } from "@/assets/liberether";
 import logo from "@/assets/av-logo.png";
-import hero from "@/assets/le-hero-phone.png";
-import shieldCheck from "@/assets/le-shield-check.png";
+import AnimatedTextCycle from "@/components/AnimatedTextCycle";
 
-import vaultAsset from "@/assets/le-vault.png.asset.json";
-import globeAsset from "@/assets/le-globe.png.asset.json";
-import keyAsset from "@/assets/le-key.png.asset.json";
-import cardWalletAsset from "@/assets/le-card-wallet.png.asset.json";
-import cardGlobalAsset from "@/assets/le-card-global.png.asset.json";
-import arrowDownAsset from "@/assets/le-arrow-down.png.asset.json";
+import avatarJoao from "@/assets/casos/joao.png";
+import avatarChica from "@/assets/casos/chica.png";
+import avatarLucas from "@/assets/casos/lucas.png";
 
-import avatarA from "@/assets/avatar-a.jpg";
-import avatarB from "@/assets/avatar-b.jpg";
-import avatarC from "@/assets/avatar-c.jpg";
-
-const vault = vaultAsset.url;
-const globe = globeAsset.url;
-const keyRuby = keyAsset.url;
-const cardWallet = cardWalletAsset.url;
-const cardGlobal = cardGlobalAsset.url;
-const arrowDown = arrowDownAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -76,7 +63,7 @@ function Section({
   return (
     <section
       id={id}
-      className={`${alt ? "section-light" : ""} py-20 md:py-28 ${className}`}
+      className={`${alt ? "section-light" : ""} py-12 md:py-16 ${className}`}
     >
       <Container>{children}</Container>
     </section>
@@ -107,26 +94,33 @@ function Title({
   );
 }
 
+const WHATSAPP_NUMBER = "554896237167";
+const WHATSAPP_MESSAGE =
+  "Olá! Quero agendar meu diagnóstico da Mentoria Autonomia Global.";
+
+function whatsappHref() {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+}
+
 function CTA({
   children,
-  variant = "solid",
+  section,
 }: {
   children: React.ReactNode;
-  variant?: "solid" | "ghost";
+  section: string;
 }) {
   const base =
     "group inline-flex items-center gap-3 rounded-full px-7 py-4 text-[15px] font-medium transition-all duration-300 hover:-translate-y-[1px]";
   return (
     <a
-      href="#contato"
-      className={
-        variant === "solid"
-          ? `${base} bg-primary text-primary-foreground hover:shadow-[0_20px_60px_-20px_color-mix(in_oklab,var(--color-ember)_55%,transparent)]`
-          : `${base} border border-hairline bg-surface-raised text-foreground hover:border-ember/40`
-      }
+      href={whatsappHref()}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-section={section}
+      className={`${base} bg-primary text-primary-foreground hover:shadow-[0_20px_60px_-20px_color-mix(in_oklab,var(--color-ember)_55%,transparent)]`}
     >
       <span>{children}</span>
-      <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+      <ArrowRight className="size-4 text-primary-foreground transition-transform duration-300 group-hover:translate-x-0.5" />
     </a>
   );
 }
@@ -139,18 +133,20 @@ function TopMark() {
       <Container className="flex items-center justify-center pt-6 sm:pt-8">
         <a
           href="#top"
-          className="inline-flex items-center justify-center gap-1 leading-none"
+          className="inline-flex items-center justify-center leading-none"
           aria-label="LiberEther"
         >
-          <img
-            src={logo}
-            alt=""
-            aria-hidden="true"
-            width={512}
-            height={512}
-            className="block h-14 w-auto shrink-0 sm:h-16 md:h-[72px]"
-          />
-          <span className="font-display leading-none tracking-[-0.01em] text-foreground text-[26px] sm:text-[30px] md:text-[36px]">
+          <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden sm:h-12 sm:w-12 md:h-[52px] md:w-[52px]">
+            <img
+              src={logo}
+              alt=""
+              aria-hidden="true"
+              width={512}
+              height={512}
+              className="block h-[170%] w-[170%] max-w-none object-contain"
+            />
+          </span>
+          <span className="-ml-1 font-display leading-none tracking-[-0.01em] text-foreground text-[34px] sm:-ml-1.5 sm:text-[42px] md:-ml-2 md:text-[52px]">
             LiberEther
           </span>
         </a>
@@ -159,17 +155,32 @@ function TopMark() {
   );
 }
 
+/* ---------- shared visuals ---------- */
+
+const sectionHeroImageClass =
+  "h-auto w-full max-w-[640px] object-contain md:max-h-[500px] md:max-w-full lg:max-h-[560px]";
+
 /* ---------- 01. hero ---------- */
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28">
+    <section id="top" className="relative overflow-x-clip pt-40 pb-10 md:pt-52 md:pb-24 lg:pb-28">
       <Container>
-        <div className="grid items-center gap-14 md:grid-cols-[1.05fr_0.95fr]">
-          <div>
+        <div className="grid items-center gap-14 md:grid-cols-[0.92fr_1.08fr] md:gap-10 lg:gap-12">
+          <div className="relative z-10 md:max-w-[33rem]">
             <h1 className="display display-tight text-[38px] leading-[1.04] md:text-[62px]">
               Receba, proteja e movimente seu dinheiro em{" "}
-              <span className="text-ember">dólares digitais</span>.
+              <AnimatedTextCycle
+                words={[
+                  "dólares digitais",
+                  "autocustódia",
+                  "uma moeda forte",
+                  "qualquer lugar",
+                ]}
+                intervals={[6000, 4000, 4000, 4000]}
+                className="text-ember"
+              />
+              .
             </h1>
 
             <p className="mt-7 max-w-content-sm text-[17px] leading-relaxed text-muted-foreground md:text-[19px]">
@@ -186,7 +197,7 @@ function Hero() {
             </p>
 
             <div className="mt-9">
-              <CTA>Agende seu diagnóstico com nosso time</CTA>
+              <CTA section="hero">Agende seu diagnóstico com nosso time</CTA>
             </div>
 
             <p className="mt-5 text-[13px] italic text-muted-foreground">
@@ -195,13 +206,13 @@ function Hero() {
             </p>
           </div>
 
-          <div className="relative">
+          <div className="relative flex justify-center md:justify-end">
             <img
-              src={hero}
-              alt="Celular exibindo a carteira LiberEther ao lado de cadernos"
-              width={1024}
-              height={1024}
-              className="mx-auto w-full max-w-[520px] object-contain"
+              src={liberetherAssets.hero.liberwalletPhone}
+              alt={liberetherAssets.hero.liberwalletPhoneAlt}
+              width={1600}
+              height={1600}
+              className={sectionHeroImageClass}
             />
           </div>
         </div>
@@ -294,7 +305,7 @@ function Custo() {
         </div>
 
         <div className="mt-10">
-          <CTA variant="ghost">Descubra quanto você pode estar perdendo</CTA>
+          <CTA section="custo">Descubra quanto você pode estar perdendo</CTA>
         </div>
       </div>
     </Section>
@@ -330,18 +341,20 @@ function Diagnostico() {
             ))}
           </ul>
           <div className="mt-9">
-            <CTA>Agende seu diagnóstico</CTA>
+            <CTA section="diagnostico">Agende seu diagnóstico</CTA>
           </div>
         </div>
 
-        <img
-          src={vault}
-          alt="Cofre de vidro com tokens ETH, USDT e USDC"
-          loading="lazy"
-          width={1024}
-          height={1024}
-          className="mx-auto w-full max-w-[460px] object-contain"
-        />
+        <div className="relative flex justify-center md:justify-end">
+          <img
+            src={liberetherAssets.hero.globeCryptoNetwork}
+            alt={liberetherAssets.hero.globeCryptoNetworkAlt}
+            loading="lazy"
+            width={1600}
+            height={1600}
+            className={sectionHeroImageClass}
+          />
+        </div>
       </div>
     </Section>
   );
@@ -351,25 +364,35 @@ function Diagnostico() {
 
 const casos = [
   {
-    nome: "João Vitor Sales",
-    area: "Importação",
-    texto:
-      "Estruturação de pagamentos internacionais em dólares digitais para reduzir intermediários e agilizar pagamentos a fornecedores.",
-    img: avatarA,
+    nome: "João",
+    area: "Moda · Importação",
+    paragrafos: [
+      "João é estudante de medicina e participa da gestão do negócio de roupas da família. Antes da mentoria, os pagamentos a fornecedores internacionais, especialmente da China, ainda dependiam de processos pouco estruturados.",
+      "Durante a mentoria, organizamos uma estratégia adequada à realidade da empresa. João passou a utilizar USDC para pagar fornecedores no exterior e a alocar parte das reservas do caixa em stablecoins com estratégias de rendimento.",
+      "Cada rota de pagamento, limite de exposição e rotina de gestão foi definida de acordo com o perfil da família, o fluxo da empresa e as necessidades da operação — sem soluções genéricas ou decisões no improviso.",
+    ],
+    img: avatarJoao,
   },
   {
-    nome: 'Virgínia "Tica"',
-    area: "Serviços internacionais",
-    texto:
-      "Recebimento direto em dólares digitais, com conversão para Pix apenas quando necessário.",
-    img: avatarB,
+    nome: 'Virgínia "Chica"',
+    area: "Agente de turismo · Argentina no RJ",
+    paragrafos: [
+      "Virgínia é argentina, vive no Rio de Janeiro e atua com turismo para clientes brasileiros e internacionais. Sua operação precisava conciliar diferentes formas de recebimento, além de organizar corretamente os fluxos ligados à Argentina e ao CNPJ brasileiro.",
+      "Durante a mentoria, estruturamos uma operação para receber pagamentos internacionais via Bitwage, realizar cobranças locais por QR Code Pix e separar com clareza os recursos de cada atividade.",
+      "As reservas passaram a ser organizadas no Piggy Bank da LiberWallet, enquanto os valores destinados às despesas e liquidações do dia a dia podem ser utilizados por meio do cartão Ether.fi ou da Yodl.",
+      "Cada rota foi definida de acordo com a origem, a finalidade e o enquadramento de cada recurso, trazendo mais organização, rastreabilidade e controle para a operação.",
+    ],
+    img: avatarChica,
   },
   {
-    nome: "Lucão Tatu",
-    area: "Proteção de reservas",
-    texto:
-      "Organização de recebimentos e armazenamento de reservas em carteira própria e cofre eletrônico.",
-    img: avatarC,
+    nome: "Lucas Oliveira",
+    area: "Tatuador profissional",
+    paragrafos: [
+      "Lucas buscava uma forma de receber em dólar digital sem depender exclusivamente de bancos tradicionais, além de organizar melhor o pagamento de fornecedores e a compra de materiais.",
+      "Durante a mentoria, estruturamos rotas para converter recebimentos via Pix em stablecoins de forma automática, utilizar um cartão de débito cripto nas despesas do dia a dia e alocar parte das reservas em ativos digitais estáveis com estratégias de rendimento.",
+      "Todo o processo foi desenvolvido com orientação sobre volatilidade, autocustódia, segurança e riscos operacionais — respeitando a rotina, os objetivos e o perfil de Lucas.",
+    ],
+    img: avatarLucas,
   },
 ];
 
@@ -399,15 +422,22 @@ function Aplicacoes() {
             <p className="mt-1 text-[13px] uppercase tracking-[0.16em] text-ember">
               {c.area}
             </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-              {c.texto}
-            </p>
+            <div className="mt-4 space-y-3">
+              {c.paragrafos.map((paragrafo, index) => (
+                <p
+                  key={index}
+                  className="text-[15px] leading-relaxed text-muted-foreground"
+                >
+                  {paragrafo}
+                </p>
+              ))}
+            </div>
           </article>
         ))}
       </div>
 
       <div className="mt-10">
-        <CTA variant="ghost">Fale com nosso time</CTA>
+        <CTA section="aplicacoes">Fale com nosso time</CTA>
       </div>
     </Section>
   );
@@ -421,28 +451,36 @@ const pilares = [
     titulo: "Acesso",
     texto:
       "Configure rotas eficientes para receber dólares digitais e converter valores para Pix.",
-    img: arrowDown,
+    img: liberetherAssets.icons.download,
+    alt: liberetherAssets.icons.downloadAlt,
+    imgClass: "max-h-[114px] w-auto scale-[1.625]",
   },
   {
     n: "2",
     titulo: "Autocustódia",
     texto:
       "Aprenda a utilizar carteiras privadas, backups e cofres eletrônicos com segurança.",
-    img: keyRuby,
+    img: liberetherAssets.security.keyEthereum,
+    alt: liberetherAssets.security.keyEthereumAlt,
+    imgClass: "rotate-90 max-h-[156px] w-auto scale-[1.43]",
   },
   {
     n: "3",
     titulo: "Alocação",
     texto:
       "Organize sua liquidez e compreenda os riscos dos dólares digitais e do ecossistema DeFi.",
-    img: cardGlobal,
+    img: liberetherAssets.ui.walletDashboard,
+    alt: liberetherAssets.ui.walletDashboardAlt,
+    imgClass: "max-h-[172px] w-full",
   },
   {
     n: "4",
     titulo: "Autonomia",
     texto:
       "Utilize sua estrutura no dia a dia para receber, guardar, converter e movimentar recursos.",
-    img: cardWallet,
+    img: liberetherAssets.ui.dashboardGlobe,
+    alt: liberetherAssets.ui.dashboardGlobeAlt,
+    imgClass: "max-h-[190px] w-full",
   },
 ];
 
@@ -460,15 +498,14 @@ function Metodo() {
             key={p.titulo}
             className="flex h-full flex-col rounded-3xl border border-hairline bg-surface-raised p-7"
           >
-            <img
-              src={p.img}
-              alt=""
-              aria-hidden="true"
-              loading="lazy"
-              width={512}
-              height={512}
-              className="h-24 w-auto self-start object-contain"
-            />
+            <div className="flex h-[187px] w-full items-center justify-center md:h-52">
+              <img
+                src={p.img}
+                alt={p.alt}
+                loading="lazy"
+                className={`object-contain ${p.imgClass}`}
+              />
+            </div>
             <p className="mt-6 font-mono text-[12px] text-ember">0{p.n}</p>
             <h3 className="mt-2 display text-[24px]">{p.titulo}</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
@@ -479,7 +516,7 @@ function Metodo() {
       </div>
 
       <div className="mt-10">
-        <CTA variant="ghost">Conheça o método na prática</CTA>
+        <CTA section="metodo">Conheça o método na prática</CTA>
       </div>
     </Section>
   );
@@ -560,7 +597,7 @@ function ComoFunciona() {
       </ol>
 
       <div className="mt-10">
-        <CTA>Agende uma conversa com nosso time</CTA>
+        <CTA section="como-funciona">Agende uma conversa com nosso time</CTA>
       </div>
     </Section>
   );
@@ -581,7 +618,6 @@ const naoE = [
   "Procura trade ou enriquecimento rápido",
   "Deseja entregar a gestão do dinheiro para terceiros",
   "Não pretende seguir protocolos básicos de segurança",
-  "Busca recomendações de compra e venda de ativos",
 ];
 
 function ParaQuem() {
@@ -629,7 +665,7 @@ function ParaQuem() {
       </div>
 
       <div className="mt-10">
-        <CTA variant="ghost">Descubra se a mentoria é para você</CTA>
+        <CTA section="para-quem">Descubra se a mentoria é para você</CTA>
       </div>
     </Section>
   );
@@ -679,16 +715,14 @@ function Incluido() {
           </div>
 
           <div className="mt-10">
-            <CTA>Quero conhecer todos os benefícios</CTA>
+            <CTA section="incluido">Quero conhecer todos os benefícios</CTA>
           </div>
         </div>
 
         <img
-          src={globe}
-          alt="Globo com rotas e moedas digitais em órbita"
+          src={liberetherAssets.hero.glassSafeCrypto}
+          alt={liberetherAssets.hero.glassSafeCryptoAlt}
           loading="lazy"
-          width={1024}
-          height={1024}
           className="mx-auto w-full max-w-[420px] object-contain"
         />
       </div>
@@ -712,11 +746,9 @@ function Implementacao() {
     <Section id="implementacao">
       <div className="grid gap-14 md:grid-cols-[0.8fr_1fr] md:items-center">
         <img
-          src={shieldCheck}
-          alt="Escudo com selo de verificação"
+          src={liberetherAssets.security.shieldCheckRed}
+          alt={liberetherAssets.security.shieldCheckRedAlt}
           loading="lazy"
-          width={1024}
-          height={1024}
           className="mx-auto w-full max-w-[360px] object-contain"
         />
 
@@ -740,7 +772,7 @@ function Implementacao() {
             independente.
           </p>
           <div className="mt-9">
-            <CTA variant="ghost">Fale com um especialista</CTA>
+            <CTA section="implementacao">Fale com um especialista</CTA>
           </div>
         </div>
       </div>
@@ -762,10 +794,6 @@ const faqs = [
   {
     q: "Qual é a diferença entre corretora e autocustódia?",
     a: "Em uma corretora, a empresa controla o acesso ao saldo. Na autocustódia, você controla diretamente as chaves da carteira e assume a responsabilidade pela segurança dos recursos.",
-  },
-  {
-    q: "Vou receber recomendações de investimento?",
-    a: "Não. A mentoria possui caráter educacional e tecnológico. O objetivo é ensinar processos, ferramentas, segurança e gestão operacional.",
   },
 ];
 
@@ -791,7 +819,7 @@ function FAQ() {
         </div>
 
         <div className="mt-10">
-          <CTA variant="ghost">Ainda tenho dúvidas — falar com nosso time</CTA>
+          <CTA section="faq">Ainda tenho dúvidas — falar com nosso time</CTA>
         </div>
       </div>
     </Section>
@@ -812,10 +840,10 @@ const recebe = [
 
 function FinalCTA() {
   return (
-    <section id="contato" className="py-24 md:py-32">
+    <section id="contato" className="py-14 md:py-20">
       <Container>
         <div className="mx-auto max-w-content text-center">
-          <Title className="mx-auto max-w-[16ch]">
+          <Title className="mx-auto max-w-[16ch] text-[45px] md:text-[66px]">
             Construa sua <span className="text-ember">estrutura financeira global</span>
           </Title>
           <p className="mx-auto mt-6 max-w-content-sm text-[16px] leading-relaxed text-muted-foreground">
@@ -836,7 +864,7 @@ function FinalCTA() {
           </ul>
 
           <div className="mt-12">
-            <CTA>Agende seu diagnóstico com nosso time</CTA>
+            <CTA section="cta-final">Agende seu diagnóstico com nosso time</CTA>
           </div>
 
           <p className="mt-6 text-[13px] italic text-muted-foreground">
@@ -853,7 +881,7 @@ function FinalCTA() {
 
 function Footer() {
   return (
-    <footer className="section-light hairline-t py-16">
+    <footer className="section-light hairline-t py-10 md:py-12">
       <Container>
         <div className="mx-auto max-w-content">
           <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-muted-foreground">
@@ -865,8 +893,8 @@ function Footer() {
               de orientação sobre processos tecnológicos.
             </p>
             <p>
-              Não realizamos gestão de patrimônio, intermediação financeira ou
-              recomendações de compra e venda de ativos.
+              Não realizamos gestão de patrimônio ou intermediação financeira —
+              ensinamos você a tomar as decisões sobre seu dinheiro.
             </p>
             <p>
               O uso de moedas digitais e redes blockchain envolve riscos
@@ -880,7 +908,7 @@ function Footer() {
           </div>
 
           <div className="mt-9">
-            <CTA variant="ghost">Fale com nosso time</CTA>
+            <CTA section="footer">Fale com nosso time</CTA>
           </div>
 
           <p className="mt-12 text-[13px] text-muted-foreground">
@@ -897,7 +925,7 @@ function Footer() {
 
 function Landing() {
   return (
-    <main className="relative bg-canvas">
+    <main className="relative overflow-x-clip bg-canvas">
       <TopMark />
       <Hero />
       <Custo />

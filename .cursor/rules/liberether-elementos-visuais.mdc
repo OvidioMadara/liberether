@@ -1,0 +1,52 @@
+---
+description: Catálogo de elementos visuais LiberEther (pasta "elementos visuais") para uso na landing page
+globs: src/**/*.{tsx,ts,css}
+alwaysApply: false
+---
+
+# Elementos visuais LiberEther
+
+Quando o usuário pedir para usar, trocar ou adicionar elementos visuais da marca LiberEther, use **sempre** o catálogo do projeto — não invente URLs nem baixe de outras pastas.
+
+## Fonte canônica no projeto
+
+- **Pasta:** `src/assets/liberether/` (24 PNGs, organizados por categoria)
+- **Catálogo tipado:** `src/assets/liberether/index.ts`
+- **Origem externa (backup):** `C:\Users\ovidi\Downloads\elementos visuais\`
+
+## Como importar no código
+
+```tsx
+import { liberetherAssets, liberetherAssetCatalog, getLiberetherAsset } from "@/assets/liberether";
+
+// Por categoria
+<img src={liberetherAssets.hero.glassSafeCrypto} alt={liberetherAssets.hero.glassSafeCryptoAlt} />
+
+// Por ID do catálogo (ex.: "security.shieldCheckRed" ou arquivo "22.png")
+const asset = getLiberetherAsset("security.shieldCheckRed");
+<img src={asset?.src} alt={asset?.alt} />
+```
+
+## Categorias e IDs disponíveis
+
+| Categoria | IDs | Uso típico |
+|-----------|-----|------------|
+| `hero` | liberwalletPhone, glassSafeCrypto, globeCryptoNetwork | Hero, VSL, autonomia global |
+| `coins` | ethereumRed, usdtCoin, usdcCoin, cryptoTrio | Parallax, stablecoins, alocação |
+| `security` | shieldPadlockSilver, shieldGlobe, shieldCheckWhite, shieldCheckRed, keyEthereum | Garantia, autocustódia, confiança |
+| `ui` | dashboardGlobe, walletDashboard, transactionCard | Método, entregáveis, prova operacional |
+| `decorative` | networkPlexus, waveLines, ethOrbitRings, ethTimelineDivider, hudElements | Fundos, divisores, timeline |
+| `icons` | upload, download, hierarchy, refresh | CTAs, fluxos, bullets |
+
+## Mapeamento nome original → arquivo no projeto
+
+Consulte o campo `origem` em `liberetherAssetCatalog` (ex.: `22.png` → `security/shield-check-red.png`).
+
+**Nota:** `02.png` não existe na pasta original.
+
+## Regras ao aplicar na landing
+
+1. Preferir assets do catálogo `liberether` em vez de placeholders genéricos ou assets legados (`le-*.png`, `av-*.png`) quando o pedido for explícito sobre elementos visuais LiberEther.
+2. Usar sempre o `alt` definido no catálogo (acessibilidade + compliance).
+3. Respeitar identidade visual: vermelho `#C8102E`, fundos claros, elementos discretos que não competem com o título.
+4. Ao pedir por número (ex. "usa o 16"), resolver via `origem` no catálogo antes de importar.
